@@ -5,39 +5,61 @@
   padding: 0;
 }
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: hsl(212, 45%, 89%);
-  border: 3px solid red;
   font-family: "Outfit", sans-serif;
   font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  border: 3px solid black;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  width: 90%;
+  padding: 1rem;
   background-color: hsl(0, 0%, 100%);
-  border: 5px solid pink;
+  border-radius: 15px;
 }
 .image-container {
-  border: 4px solid brown;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 img {
-  height: 30vh;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: fill;
 }
 .text {
-  border: 4px solid purple;
   text-align: center;
+  margin: 0 0.5rem 1.5rem;
 }
 .text-1 {
+  color: hsl(218, 44%, 22%);
   font-size: 1.5rem;
+  font-weight: 700;
+}
+.text-2 {
+  color: hsl(220, 15%, 55%);
+  font-weight: 400;
+  margin: 0 1.5rem 1rem;
+}
+
+@media (min-width: 490px) {
+  .card {
+    width: 70%;
+  }
+}
+@media (min-width: 630px) {
+  .card {
+    width: 50%;
+  }
+}
+@media (min-width: 950px) {
+  .card {
+    width: 30%;
+  }
+}
+@media (min-width: 1220px) {
+  .card {
+    width: 23%;
+  }
 }
