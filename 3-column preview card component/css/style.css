@@ -13,15 +13,10 @@ body {
   font-size: 1rem;
 }
 
-section {
+.container {
   display: flex;
   max-width: 53rem;
-}
-
-@media (max-width: 884px) {
-  section {
-    flex-wrap: wrap;
-  }
+  padding: 2rem;
 }
 
 .card {
@@ -38,6 +33,7 @@ section {
   background-color: hsl(179, 100%, 13%);
   border-radius: 0 15px 15px 0;
 }
+
 button {
   cursor: pointer;
   padding: 0.8rem 2.5rem;
@@ -58,12 +54,30 @@ button:hover {
 .luxury-button {
   color: hsl(179, 100%, 13%);
 }
-p {
+.text-card {
   margin: 0 0 5rem 0;
   color: hsla(0, 0%, 100%, 0.75);
 }
-h2 {
+.header-card {
   margin: 2rem 0;
   color: hsl(0, 0%, 95%);
   font-family: "Big Shoulders Display", sans-serif;
+}
+
+@media (max-width: 884px) {
+  section {
+    flex-wrap: wrap;
+  }
+  .sedan-card {
+    border-radius: 15px 15px 0 0;
+  }
+  .luxury-card {
+    border-radius: 0 0 15px 15px;
+  }
+  .text-card {
+    margin: 0 0 2rem 0;
+  }
+  .header-card {
+    margin: 1rem 0;
+  }
 }
