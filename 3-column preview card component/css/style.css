@@ -10,7 +10,6 @@ body {
   min-height: 100vh;
   background-color: hsl(0, 0%, 95%);
   font-family: "Lexend Deca", sans-serif;
-  font-size: 1rem;
 }
 
 .container {
@@ -41,17 +40,22 @@ button {
   border: none;
 }
 button:hover {
-  color: hsl(0, 0%, 95%);
   border: 2px solid hsl(0, 0%, 95%);
   background-color: transparent;
 }
-.sedan-button {
+.learn-more-link {
+  text-decoration: none;
+}
+.learn-more-link:hover {
+  color: hsl(0, 0%, 95%);
+}
+.sedan-link {
   color: hsl(31, 77%, 52%);
 }
-.suv-button {
+.suv-link {
   color: hsl(184, 100%, 22%);
 }
-.luxury-button {
+.luxury-link {
   color: hsl(179, 100%, 13%);
 }
 .text-card {
@@ -62,6 +66,7 @@ button:hover {
   margin: 2rem 0;
   color: hsl(0, 0%, 95%);
   font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
 }
 
 @media (max-width: 884px) {
