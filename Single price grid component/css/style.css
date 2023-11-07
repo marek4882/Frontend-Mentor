@@ -1,7 +1,10 @@
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 body {
+  line-height: 1.5;
   font-family: "Karla", sans-serif;
   color: white;
   background: hsl(204, 43%, 93%);
@@ -13,16 +16,17 @@ main {
   align-content: center;
 }
 .container {
-  margin: 3rem 1rem;
   display: grid;
-  max-width: 40rem;
-  padding: 0.3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 3rem 1rem;
+  max-width: 40.5rem;
 }
 section {
   padding: 2rem;
 }
-h2,
-h3 {
+h1,
+h2 {
   font-weight: 700;
 }
 
@@ -38,36 +42,47 @@ h3 {
 .library-description {
   color: hsl(218, 22%, 67%);
   margin-top: 0;
-  line-height: 1.6;
 }
 
 .monthly-subscription-section {
   background-color: hsl(179, 62%, 43%);
 }
-.signup-button {
-  width: 100%;
-  margin-top: 1rem;
+.subscription-price {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(204, 43%, 93%);
+}
+.price-amount {
+  color: white;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.signup-btn {
+  display: block;
+  cursor: pointer;
+  margin-top: 2rem;
   padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
   background-color: hsl(71, 73%, 54%);
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   box-shadow: 0 2px 10px rgba(30, 30, 30, 0.312);
 }
-a {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-}
-
 .benefits-section {
   background-color: hsl(179, 47%, 52%);
 }
-.benefits-description {
-  width: 24ch;
+.education-list {
+  margin-top: 3rem;
+  padding: 0;
   color: hsl(204, 43%, 93%);
+  font-weight: 400;
+  list-style-type: none;
 }
-
 @media screen and (min-width: 600px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
