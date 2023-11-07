@@ -13,6 +13,7 @@ main {
   align-content: center;
 }
 .container {
+  margin: 3rem 1rem;
   display: grid;
   max-width: 40rem;
   padding: 0.3rem;
