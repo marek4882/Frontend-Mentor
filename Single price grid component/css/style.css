@@ -56,18 +56,18 @@ h2 {
   color: hsl(204, 43%, 93%);
 }
 .subscription-description {
-  margin: 0 0 1.5rem;
+  margin: 0 0 2.5rem;
 }
 .price-amount {
   color: white;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2rem;
 }
 .signup-btn {
   display: block;
   cursor: pointer;
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: center;
   text-decoration: none;
   font-weight: 700;
@@ -80,6 +80,7 @@ h2 {
 .benefits-section {
   background-color: hsl(179, 47%, 52%);
 }
+
 .education-list {
   padding: 0;
   color: hsl(204, 43%, 93%);
