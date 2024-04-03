@@ -14,7 +14,7 @@ body{
     font-weight: 400;
 }
 .social-media__heading{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .container{
@@ -38,7 +38,6 @@ body{
 
 img{
     max-width: 100%;
-    border-radius: 1rem;
 }
 .social-media__main-topic{
     background-color: rgba(199, 0, 0, 0.857);
@@ -48,7 +47,7 @@ img{
     border-radius: 0 0 1rem 1rem;
 }
 .social-media__item{
-    margin:0.5rem 0 0.5rem 0.7rem;
+    margin:0.6rem 0 0.6rem 0.7rem;
     display: flex;
     align-items: center;
     gap: 1.1rem;
@@ -70,5 +69,5 @@ img{
 }
 .social-media__description{
     color: rgba(0, 0, 0, 0.54);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
