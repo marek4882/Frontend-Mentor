@@ -47,7 +47,7 @@ img{
     border-radius: 0 0 1rem 1rem;
 }
 .social-media__item{
-    margin:0.6rem 0 0.6rem 0.7rem;
+    margin:0.6rem 0.7rem 0.6rem 0.7rem;
     display: flex;
     align-items: center;
     gap: 1.1rem;
