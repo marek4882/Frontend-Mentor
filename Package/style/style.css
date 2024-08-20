@@ -1,0 +1,415 @@
+:root {
+  --headings-color: #3d3d3d;
+  --primary-color: #499aa2;
+  --women-packages-color: #e88f8b;
+  --men-packages-color: #5e9072;
+  --family-packages-color: #b89c73;
+  /* specific packages */
+  --covid-package-color: #97d1ce;
+  --cardiologic-package-color: #df1d28;
+  --women-zone-color: #e88f8b;
+  --endocrinology-color: #be6b98;
+  --gynecology-color: #f2bab8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--body-color);
+}
+h1,
+h2,
+h3 {
+  color: var(--headings-color);
+  margin-bottom: 0.625rem;
+  line-height: 1.1;
+}
+h1 {
+  font-size: 4.375rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.875rem;
+}
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.header--color {
+  color: var(--primary-color);
+}
+/* Images */
+img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0.625rem 0;
+  padding: 1.25rem 4vw;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+}
+.btn .icon {
+  vertical-align: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+}
+.btn--primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: #418990;
+}
+.btn--women--packages {
+  background: var(--women-packages-color);
+  color: #fff;
+}
+
+.btn--women--packages:hover {
+  background: #cf7f7b;
+}
+.btn--men--packages {
+  background: var(--men-packages-color);
+  color: #fff;
+}
+.btn--men--packages:hover {
+  background: #58866b;
+}
+.btn--family--packages {
+  background: var(--family-packages-color);
+  color: #fff;
+}
+.btn--family--packages:hover {
+  background: #ad936c;
+}
+
+.btn--covid--package {
+  background: var(--covid-package-color);
+  color: #fff;
+}
+.btn--covid--package:hover {
+  background: #7eaeac;
+}
+.btn--cardiologic--package {
+  background: var(--cardiologic-package-color);
+  color: #fff;
+}
+.btn--cardiologic--package:hover {
+  background-color: #c71b24;
+}
+.btn--women-zone-package {
+  background: var(--women-zone-color);
+  color: #fff;
+}
+.btn--women-zone-package:hover {
+  background: #ca7e7a;
+}
+.btn--endocrinology-color {
+  background: var(--endocrinology-color);
+  color: #fff;
+}
+.btn--endocrinology-color:hover {
+  background: #af638d;
+}
+.btn--gynecology-color {
+  background: var(--gynecology-color);
+  color: #fff;
+}
+.btn--gynecology-color:hover {
+  background: #c29492;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--headings-color);
+  border: 2px solid var(--headings-color);
+}
+.btn--outline:hover {
+  background: var(--headings-color);
+  color: #fff;
+}
+.btn--stretched {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 0.9375rem;
+  }
+}
+/* Icon */
+.icon {
+  width: 100px;
+  height: 100px;
+}
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+.grid__center {
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+.grid--gap {
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Blocks */
+.block {
+  --padding-vertical: 0.75rem;
+  padding: var(--padding-vertical) 0.25rem;
+}
+.block__header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.block__heading {
+  margin-top: 0;
+}
+.block__reminder {
+  margin-bottom: 2rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Plan Block */
+.block-plans .grid {
+  gap: 5rem 2.5rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.block-plans .card--small {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 1.25rem 1.875rem;
+}
+.card--primary .card__header {
+  background: var(--primary-color);
+  color: #fff;
+}
+.card--secondary .card__header {
+  background: var(--secondary-color);
+  color: #fff;
+}
+.card--primary .badge--primary {
+  background: #126de4;
+}
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  text-align: center;
+}
+.plan__name__women {
+  color: var(--women-packages-color);
+}
+.plan__name__men {
+  color: var(--men-packages-color);
+}
+.plan__name__family {
+  color: var(--family-packages-color);
+}
+.plan__price {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
+}
+.plan__billing-cycle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+.plan__description {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.plan .list-item {
+  margin-bottom: 1.25rem;
+}
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.list--tick {
+  list-style-image: url(/images/check-mark-regular.svg);
+  padding-left: 1.875rem;
+  color: var(--headings-color);
+  font-size: 1.25rem; /* Ensure font size is appropriate */
+  background-size: 24px 24px; /* Size of the checkmark icon */
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.list--tick .list__item {
+  padding-left: 2.5rem; /* Adjust to provide space for larger icon */
+  margin-bottom: 0.625rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0rem; /* Adjust this for larger screens if needed */
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.packages-container,
+.package-details {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+.packages-container-all {
+  text-align: center;
+  padding: 0 1rem;
+  border: 2px solid black;
+}
+
+.package {
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.package:hover {
+  background-color: #f0f0f0;
+}
+
+.package-details {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
