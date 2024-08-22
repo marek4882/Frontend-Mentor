@@ -3,6 +3,7 @@ const allPackages = [
     id: 1,
     name: "Strefa Kobiet",
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+    btn: "btn--women--zone--package",
     color: "#e88f8b",
     picture: "/images/gynegolocy_icon_40x40.svg",
     packageDetails: [
@@ -49,6 +50,7 @@ const allPackages = [
     id: 2,
     name: "Pakiet Endokrynologiczny",
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+    btn: "btn--endocrinology--package",
     color: "#BE6B98",
     picture: "/images/strefa_kobiet_icon_40x40.svg",
     packageDetails: [
@@ -91,6 +93,7 @@ const allPackages = [
     id: 3,
     name: "Pakiet Kardiologiczny",
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+    btn: "btn--cardiologic--package",
     color: "#DF1D28",
     picture: "/images/cardiologic_icon_40x40.svg",
     packageDetails: [
@@ -125,8 +128,9 @@ const allPackages = [
   },
   {
     id: 4,
-    name: "Pakiet Ginekologiczny - Zdrowa Kobieta",
+    name: "Pakiet Ginekologiczny",
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+    btn: "btn--gynecology--package",
     color: "#F2BAB8",
     picture: "/images/strefa_kobiet_icon_40x40.svg",
     packageDetails: [
@@ -160,6 +164,7 @@ const allPackages = [
     id: 5,
     name: "Pakiet Covid",
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+    btn: "btn--covid--package",
     color: "#97D1CE",
     picture: "/images/covid_icon_40x40.svg",
     packageDetails: [
@@ -206,48 +211,53 @@ const allPackages = [
 ];
 
 const categories = {
-  women: [1, 4, 5],
-  men: [3, 4, 5],
+  women: [3, 1, 4, 5],
+  men: [3, 5],
   family: [5, 6],
 };
 function showPackages(category, planName) {
   const packagesContainer = document.getElementById("packages");
-  packagesContainer.innerHTML = ""; // Clear previous packages
+  packagesContainer.innerHTML = "";
 
-  // Find the packages that match the selected category
   const selectedPackages = allPackages.filter((pkg) =>
     categories[category].includes(pkg.id)
   );
 
-  // Generate the HTML for the selected packages
   packagesContainer.innerHTML = `
-      <header class="plan__name">
-        <h2>${planName}</h2>
-      </header>
-      <div class="grid grid--1x3">
-        ${selectedPackages
-          .map(
-            (pkg) => `
-              <picture class="packages-container-all grid grid__center" data-package-id="${pkg.id}">
+    <header class="block__header">
+      <h2 class="block__heading">${planName}</h2>
+    </header>
+    <div class="container grid grid--1x3">
+      ${selectedPackages
+        .map(
+          (pkg) => `
+            <div class="plan package">
+              <picture class="grid grid__center" data-package-id="${pkg.id}">
                 <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
-                <h3 class="" style="text-align: center">${pkg.name}</h3>
+                <h3 class="plan__name">${pkg.name}</h3>
+                <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
+                  Zobacz Szczegóły
+                </button>
               </picture>
-            `
-          )
-          .join("")}
-      </div>
-    `;
+            </div>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 
-  // Add click event listeners to each package element
-  const packageElements = packagesContainer.querySelectorAll(
-    ".packages-container-all"
-  );
-  packageElements.forEach((element) => {
-    element.addEventListener("click", function () {
+  // Attach event listeners to the buttons
+  const detailButtons = packagesContainer.querySelectorAll(".btn");
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", function () {
       const packageId = parseInt(this.getAttribute("data-package-id"));
       const selectedPackage = allPackages.find((pkg) => pkg.id === packageId);
       if (selectedPackage) {
         showPackageDetails(selectedPackage);
+        window.scrollTo({
+          top: document.getElementById("package-details").offsetTop,
+          behavior: "smooth",
+        });
       }
     });
   });
@@ -259,46 +269,48 @@ function showPackageDetails(pkg) {
 
   // Set the inner HTML with proper structure
   packageDetails.innerHTML = `
-      <header class="block__header" style="color: ${pkg.color};">
-        <h2>${pkg.name}</h2>
-        <p>${pkg.description}</p>
-      </header>
-      <div class="grid grid--1x3">
+    <header class="block__header">
+      <h2 class="block__heading">${pkg.name}</h2>
+      <p>${pkg.description}</p>
+    </header>
+    <div class="grid grid--1x3 grid--gap container">
       ${pkg.packageDetails
         .map(
-          (detail) => ` 
-        
-          <div class="plan">
-            <div class="card card--secondary">
-              <header >
-                <h3 class="plan__name">${detail.header}</h3>
-                ${
-                  detail.subheader
-                    ? `<h4 class="plan__subheader>${detail.subheader}</h4>`
-                    : ""
-                }
-                ${
-                  detail.specificInfo
-                    ? `<p class="plan__specific_info><em>${detail.specificInfo}</p>`
-                    : ""
-                }
-                <p class="plan__price">${detail.price} ${detail.currency}</p>
-              </header>
-              <div class="card__body">
-                <ul class="list list--tick">
-                  ${detail.services
-                    .map((service) => `<li class="list__item">${service}</li>`)
-                    .join("")}
-                </ul>
+          (detail) => `
+            <div class="plan">
+              <div class="card card--secondary">
+                <header class="card__header">
+                  <h3>${detail.header}</h3>
+                  ${
+                    detail.subheader
+                      ? `<h4 class="plan__subheader">${detail.subheader}</h4>`
+                      : ""
+                  }
+                  ${
+                    detail.specificInfo
+                      ? `<p class="plan__specific__info"><em>${detail.specificInfo}</em></p>`
+                      : ""
+                  }
+                  <p class="plan__price">${detail.price} ${detail.currency}</p>
+                </header>
+                <div class="card__body">
+                  <ul class="list list--tick">
+                    ${detail.services
+                      .map(
+                        (service) => `<li class="list__item">${service}</li>`
+                      )
+                      .join("")}
+                  </ul>
+                  <a href="" class="btn btn--block ${pkg.btn}"
+                    >Zamów Pakiet</a>
+                </div>
               </div>
             </div>
-          </div>
-       
-      `
+          `
         )
         .join("")}
-        </div>
-    `;
+    </div>
+  `;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
