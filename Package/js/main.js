@@ -227,26 +227,49 @@ function showPackages(category, planName) {
     <header class="block__header">
       <h2 class="block__heading">${planName}</h2>
     </header>
-    <div class="container grid grid--1x3">
-      ${selectedPackages
-        .map(
-          (pkg) => `
-            <div class="plan package">
-              <picture class="grid grid__center" data-package-id="${pkg.id}">
-                <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
-                <h3 class="plan__name">${pkg.name}</h3>
-                <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
-                  Zobacz Szczegóły
-                </button>
-              </picture>
-            </div>
-          `
-        )
-        .join("")}
-    </div>
+    
+      <div id="splide-packages" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            ${selectedPackages
+              .map(
+                (pkg) => `
+                  <li class="splide__slide">
+                    <div class="plan package">
+                      <picture class="grid grid__center" data-package-id="${pkg.id}">
+                        <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
+                        <h3 class="plan__name">${pkg.name}</h3>
+                        <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
+                          Zobacz Szczegóły
+                        </button>
+                      </picture>
+                    </div>
+                  </li>
+                `
+              )
+              .join("")}
+          </ul>
+        </div>
+      </div>
+
   `;
 
-  // Attach event listeners to the buttons
+  new Splide("#splide-packages", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    autoplay: true,
+    interval: 3000,
+    breakpoints: {
+      768: {
+        perPage: 1,
+      },
+      1024: {
+        perPage: 2,
+      },
+    },
+  }).mount();
+
   const detailButtons = packagesContainer.querySelectorAll(".btn");
   detailButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -265,52 +288,77 @@ function showPackages(category, planName) {
 
 function showPackageDetails(pkg) {
   const packageDetails = document.getElementById("package-details");
-  packageDetails.innerHTML = ""; // Clear previous details
+  packageDetails.innerHTML = "";
 
-  // Set the inner HTML with proper structure
   packageDetails.innerHTML = `
     <header class="block__header">
       <h2 class="block__heading">${pkg.name}</h2>
       <p>${pkg.description}</p>
     </header>
-    <div class="grid grid--1x3 grid--gap container">
-      ${pkg.packageDetails
-        .map(
-          (detail) => `
-            <div class="plan">
-              <div class="card card--secondary">
-                <header class="card__header">
-                  <h3>${detail.header}</h3>
-                  ${
-                    detail.subheader
-                      ? `<h4 class="plan__subheader">${detail.subheader}</h4>`
-                      : ""
-                  }
-                  ${
-                    detail.specificInfo
-                      ? `<p class="plan__specific__info"><em>${detail.specificInfo}</em></p>`
-                      : ""
-                  }
-                  <p class="plan__price">${detail.price} ${detail.currency}</p>
-                </header>
-                <div class="card__body">
-                  <ul class="list list--tick">
-                    ${detail.services
-                      .map(
-                        (service) => `<li class="list__item">${service}</li>`
-                      )
-                      .join("")}
-                  </ul>
-                  <a href="" class="btn btn--block ${pkg.btn}"
-                    >Zamów Pakiet</a>
-                </div>
-              </div>
-            </div>
-          `
-        )
-        .join("")}
+    <div id="splide-package-details" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          ${pkg.packageDetails
+            .map(
+              (detail) => `
+                <li class="splide__slide">
+                  <div class="plan">
+                    <div class="card card--secondary">
+                      <header class="card__header">
+                        <h3>${detail.header}</h3>
+                        ${
+                          detail.subheader
+                            ? `<h4 class="plan__subheader">${detail.subheader}</h4>`
+                            : ""
+                        }
+                        ${
+                          detail.specificInfo
+                            ? `<p class="plan__specific__info"><em>${detail.specificInfo}</em></p>`
+                            : ""
+                        }
+                        <p class="plan__price">${detail.price} ${
+                detail.currency
+              }</p>
+                      </header>
+                      <div class="card__body">
+                        <ul class="list list--tick">
+                          ${detail.services
+                            .map(
+                              (service) =>
+                                `<li class="list__item">${service}</li>`
+                            )
+                            .join("")}
+                        </ul>
+                        <a href="" class="btn btn--block ${
+                          pkg.btn
+                        }">Zamów Pakiet</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              `
+            )
+            .join("")}
+        </ul>
+      </div>
     </div>
   `;
+
+  new Splide("#splide-package-details", {
+    type: "loop",
+    perPage: 1,
+    perMove: 1,
+    autoplay: true,
+    interval: 3000,
+    breakpoints: {
+      768: {
+        perPage: 1,
+      },
+      1024: {
+        perPage: 2,
+      },
+    },
+  }).mount();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
