@@ -5,7 +5,7 @@ const allPackages = [
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
     btn: "btn--women--zone--package",
     color: "#e88f8b",
-    picture: "/images/gynegolocy_icon_40x40.svg",
+    picture: "./images/gynegolocy_icon_40x40.svg",
     packageDetails: [
       {
         header: "Pakiet Podstawowy",
@@ -52,7 +52,7 @@ const allPackages = [
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
     btn: "btn--endocrinology--package",
     color: "#BE6B98",
-    picture: "/images/strefa_kobiet_icon_40x40.svg",
+    picture: "./images/strefa_kobiet_icon_40x40.svg",
     packageDetails: [
       {
         header: "Pakiet Podstawowy",
@@ -95,7 +95,7 @@ const allPackages = [
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
     btn: "btn--cardiologic--package",
     color: "#DF1D28",
-    picture: "/images/cardiologic_icon_40x40.svg",
+    picture: "./images/cardiologic_icon_40x40.svg",
     packageDetails: [
       {
         header: "Pakiet Kardiologiczny",
@@ -132,7 +132,7 @@ const allPackages = [
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
     btn: "btn--gynecology--package",
     color: "#F2BAB8",
-    picture: "/images/strefa_kobiet_icon_40x40.svg",
+    picture: "./images/strefa_kobiet_icon_40x40.svg",
     packageDetails: [
       {
         header: "Pakiet Ginekologiczny",
@@ -166,7 +166,7 @@ const allPackages = [
     description: "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
     btn: "btn--covid--package",
     color: "#97D1CE",
-    picture: "/images/covid_icon_40x40.svg",
+    picture: "./images/covid_icon_40x40.svg",
     packageDetails: [
       {
         header: "Pakiet Covid I",
