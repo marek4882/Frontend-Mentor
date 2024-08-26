@@ -353,7 +353,7 @@ function showPackageDetails(pkg) {
 
   new Splide("#splide-package-details", {
     type: "loop",
-    perPage: 1,
+    perPage: 3,
     perMove: 1,
     autoplay: true,
     interval: 3000,
