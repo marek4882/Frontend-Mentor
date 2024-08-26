@@ -34,8 +34,8 @@ const allPackages = [
         ],
       },
       {
-        header: "Pakiet Kobiecość",
-        subheader: "Pakiet Piękno",
+        header: "Pakiet Piękno",
+        subheader: "Piękna i Zdrowa Twarz",
         price: 350,
         currency: "zł",
         services: [
@@ -77,7 +77,7 @@ const allPackages = [
       },
       {
         header: "Pakiet Full",
-        price: 659,
+        price: 1509,
         currency: "zł",
         services: [
           "USG Tarczycy",
@@ -112,7 +112,7 @@ const allPackages = [
       },
       {
         header: "Pakiet Kardiologiczny Premium",
-        price: 1309,
+        price: 1609,
         currency: "zł",
         services: [
           "Konsultacja Kardiologiczna",
