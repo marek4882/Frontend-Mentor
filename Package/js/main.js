@@ -344,7 +344,7 @@ function showPackageDetails(pkg) {
                         </ul>
                         <a href="" class="btn btn--block ${
                           pkg.btn
-                        }"><i class="ph ph-basket"></i>Zamów Pakiet</a>
+                        }"><i class="ph ph-basket icon"></i>Zamów Pakiet</a>
                       </div>
                     </div>
                   </div>
