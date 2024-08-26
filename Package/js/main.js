@@ -215,7 +215,12 @@ const categories = {
   men: [3, 5],
   family: [5, 6],
 };
+
 function showPackages(category, planName) {
+  const packagesDetailsContainer = document.getElementById("package-details");
+
+  packagesDetailsContainer.style.display = "none";
+
   const packagesContainer = document.getElementById("packages");
   packagesContainer.innerHTML = "";
 
@@ -233,29 +238,29 @@ function showPackages(category, planName) {
       <h2 class="block__heading">${planName}</h2>
     </header>
     
-      <div id="splide-packages" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            ${selectedPackages
-              .map(
-                (pkg) => `
-                  <li class="splide__slide">
-                    <div class="plan package">
-                      <picture class="grid grid__center" data-package-id="${pkg.id}">
-                        <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
-                        <h3 class="plan__name">${pkg.name}</h3>
-                        <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
-                          Zobacz Szczegóły
-                        </button>
-                      </picture>
-                    </div>
-                  </li>
-                `
-              )
-              .join("")}
-          </ul>
-        </div>
+    <div id="splide-packages" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          ${selectedPackages
+            .map(
+              (pkg) => `
+                <li class="splide__slide">
+                  <div class="plan package">
+                    <picture class="grid grid__center" data-package-id="${pkg.id}">
+                      <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
+                      <h3 class="plan__name">${pkg.name}</h3>
+                      <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
+                        <i class="ph ph-magnifying-glass icon"></i>Zobacz Szczegóły
+                      </button>
+                    </picture>
+                  </div>
+                </li>
+              `
+            )
+            .join("")}
+        </ul>
       </div>
+    </div>
   `;
 
   // Initialize Splide.js for the packages
@@ -295,7 +300,8 @@ function showPackages(category, planName) {
 
 function showPackageDetails(pkg) {
   const packageDetails = document.getElementById("package-details");
-  packageDetails.innerHTML = "";
+
+  packageDetails.style.display = "block";
 
   packageDetails.innerHTML = `
     <header class="block__header">
@@ -351,6 +357,7 @@ function showPackageDetails(pkg) {
     </div>
   `;
 
+  // Initialize Splide.js for the package details
   new Splide("#splide-package-details", {
     type: "loop",
     perPage: 3,
