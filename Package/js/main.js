@@ -219,6 +219,11 @@ function showPackages(category, planName) {
   const packagesContainer = document.getElementById("packages");
   packagesContainer.innerHTML = "";
 
+  if (!categories[category]) {
+    console.error(`Category "${category}" not found.`);
+    return;
+  }
+
   const selectedPackages = allPackages.filter((pkg) =>
     categories[category].includes(pkg.id)
   );
@@ -251,9 +256,9 @@ function showPackages(category, planName) {
           </ul>
         </div>
       </div>
-
   `;
 
+  // Initialize Splide.js for the packages
   new Splide("#splide-packages", {
     type: "loop",
     perPage: 3,
@@ -270,8 +275,10 @@ function showPackages(category, planName) {
     },
   }).mount();
 
-  const detailButtons = packagesContainer.querySelectorAll(".btn");
-  detailButtons.forEach((button) => {
+  packagesContainer.scrollIntoView({ behavior: "smooth" });
+
+  const buttons = packagesContainer.querySelectorAll(".btn");
+  buttons.forEach((button) => {
     button.addEventListener("click", function () {
       const packageId = parseInt(this.getAttribute("data-package-id"));
       const selectedPackage = allPackages.find((pkg) => pkg.id === packageId);
