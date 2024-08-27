@@ -248,7 +248,7 @@ function showPackages(category, planName) {
                   <div class="plan package">
                     <picture class="grid grid__center" data-package-id="${pkg.id}">
                       <img src="${pkg.picture}" class="icon" alt="${pkg.name}" />
-                      <h3 class="plan__name">${pkg.name}</h3>
+                      <h3 class="plan__name" style="color: ${pkg.color};">${pkg.name}</h3>
                       <button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
                         <i class="ph ph-magnifying-glass icon"></i>Zobacz Szczegóły
                       </button>
@@ -268,6 +268,7 @@ function showPackages(category, planName) {
     type: "loop",
     perPage: 3,
     perMove: 1,
+    focus: "center",
     autoplay: true,
     interval: 3000,
     breakpoints: {
@@ -305,7 +306,7 @@ function showPackageDetails(pkg) {
 
   packageDetails.innerHTML = `
     <header class="block__header">
-      <h2 class="block__heading">${pkg.name}</h2>
+      <h2 class="block__heading" style="color: ${pkg.color};">${pkg.name}</h2>
       <p>${pkg.description}</p>
     </header>
     <div id="splide-package-details" class="splide">
@@ -318,7 +319,7 @@ function showPackageDetails(pkg) {
                   <div class="plan">
                     <div class="card card--secondary">
                       <header class="card__header">
-                        <h3>${detail.header}</h3>
+                        <h3  style="color: ${pkg.color};">${detail.header}</h3>
                         ${
                           detail.subheader
                             ? `<h4 class="plan__subheader">${detail.subheader}</h4>`
@@ -362,6 +363,7 @@ function showPackageDetails(pkg) {
     type: "loop",
     perPage: 3,
     perMove: 1,
+    focus: "center",
     autoplay: true,
     interval: 3000,
     breakpoints: {
@@ -380,6 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "loop",
     perPage: 3,
     perMove: 1,
+    focus: "center",
     autoplay: true,
     interval: 3000,
     breakpoints: {
