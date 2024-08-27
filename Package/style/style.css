@@ -458,3 +458,7 @@ ul {
 .splide__pagination__page.is-active {
   background: #831d1d;
 }
+.is-visible.is-active {
+  transition: transform 0.2s ease-out;
+  transform: scale(1.05);
+}
