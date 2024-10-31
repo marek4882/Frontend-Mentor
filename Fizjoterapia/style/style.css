@@ -38,6 +38,7 @@ img {
   border-radius: 15px;
   object-fit: cover;
 }
+
 h1,
 h2,
 h3 {
@@ -819,4 +820,8 @@ ul {
   .footer__heading {
     font-size: 1rem;
   }
+}
+a {
+  text-decoration: none;
+  color: var(--body-color);
 }
