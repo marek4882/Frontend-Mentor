@@ -327,6 +327,11 @@ ul {
   background: #02cdf1;
 }
 
+.btn i.ph {
+  color: white; /* Ustawia kolor ikony na biały */
+  margin-right: 8px; /* Dodaje odstęp między ikoną a tekstem */
+  font-size: 1.2em; /* Dopasuj rozmiar ikony do swoich potrzeb */
+}
 /* Plans */
 .plan {
   transition: transform 0.2s ease-out;
