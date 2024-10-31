@@ -8,8 +8,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
     />
-
     <link rel="stylesheet" href="./style/style.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <main>
@@ -34,7 +35,7 @@
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <div class="card">
+                <div class="card card--gap">
                   <header class="card card__header">
                     <img src="./images/women.jpg" alt="women" />
                     <h3 class="plan__name plan__name__women">
@@ -47,13 +48,14 @@
                       class="btn btn--block btn--women--packages"
                       onclick="showPackages('women', 'Opieka dla Kobiet')"
                     >
+                      <i class="ph ph-magnifying-glass icon"></i>
                       Zobacz Pakiety
                     </button>
                   </header>
                 </div>
               </li>
               <li class="splide__slide">
-                <div class="card">
+                <div class="card card--gap">
                   <header class="card card__header">
                     <img src="./images/men.jpg" alt="men" />
                     <h3 class="plan__name plan__name__men">
@@ -66,13 +68,14 @@
                       class="btn btn--block btn--men--packages"
                       onclick="showPackages('men', 'Opieka dla Mężczyzn')"
                     >
+                      <i class="ph ph-magnifying-glass icon"></i>
                       Zobacz Pakiety
                     </button>
                   </header>
                 </div>
               </li>
               <li class="splide__slide">
-                <div class="card">
+                <div class="card card--gap">
                   <header class="card card__header">
                     <img src="./images/family.jpg" alt="family" />
                     <h3 class="plan__name plan__name__family">
@@ -85,6 +88,7 @@
                       class="btn btn--block btn--family--packages"
                       onclick="showPackages('family', 'Opieka dla Rodzin')"
                     >
+                      <i class="ph ph-magnifying-glass icon"></i>
                       Zobacz Pakiety
                     </button>
                   </header>
@@ -94,130 +98,9 @@
           </div>
         </div>
       </section>
-      <section class="block">
-        <header class="block__header">
-          <h2 class="block__heading">
-            Opieka dla <span class="header--color">Kobiet</span>
-          </h2>
-        </header>
-        <div class="container grid grid--1x3">
-          <div class="plan package">
-            <picture class="grid grid__center">
-              <img
-                src="./images/covid_icon_40x40.svg"
-                class="icon"
-                alt="${pkg.name}"
-              />
-            </picture>
-            <h3 class="plan__name">Pakiet Covid</h3>
-            <button class="btn btn--block btn--covid--package" href="#">
-              Zobacz Szczegóły
-            </button>
-          </div>
-          <div class="plan package">
-            <picture class="grid grid__center">
-              <img
-                src="./images/cardiologic_icon_40x40.svg"
-                class="icon"
-                alt="${pkg.name}"
-              />
-            </picture>
-            <h3 class="plan__name">Pakiet Kardiologiczny</h3>
-            <button class="btn btn--block btn--cardiologic--package" href="#">
-              Zobacz Szczegóły
-            </button>
-          </div>
-          <div class="plan package">
-            <picture class="grid grid__center">
-              <img
-                src="./images/strefa_kobiet_icon_40x40.svg"
-                class="icon"
-                alt="${pkg.name}"
-              />
-            </picture>
-            <h3 class="plan__name">Strefa Kobiet</h3>
-            <button class="btn btn--block btn--women--packages" href="#">
-              Zobacz Szczegóły
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="block">
-        <header class="block__header">
-          <h2 class="block__heading">Pakiet Endokrynolgiczny</h2>
-        </header>
-
-        <div class="grid grid--1x3 container">
-          <div class="plan">
-            <div class="card card--secondary">
-              <header>
-                <h3 class="plan__name">Pakiet Endokrynologiczny</h3>
-              </header>
-              <div class="card__body">
-                <ul class="list list--tick">
-                  <li class="list__item">Konsultacja Kardiologiczna</li>
-                  <li class="list__item">Echo Serca</li>
-                  <li class="list__item">EKG Wysiłkowe</li>
-                  <li class="list__item">EKG Spoczynkowe</li>
-                  <li class="list__item">Holter EKG</li>
-                  <li class="list__item">Holter ABPM</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="plan">
-            <div class="card card--secondary">
-              <header>
-                <h3 class="plan__name">Pakiet Endokrynologiczny</h3>
-              </header>
-              <div class="card__body">
-                <ul class="list list--tick">
-                  <li class="list__item">Konsultacja Kardiologiczna</li>
-                  <li class="list__item">Echo Serca</li>
-                  <li class="list__item">EKG Wysiłkowe</li>
-                  <li class="list__item">EKG Spoczynkowe</li>
-                  <li class="list__item">Holter EKG</li>
-                  <li class="list__item">Holter ABPM</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="plan">
-            <div class="card card--secondary">
-              <header>
-                <h3 class="plan__name">Pakiet Endokrynologiczny</h3>
-              </header>
-              <div class="card__body">
-                <ul class="list list--tick">
-                  <li class="list__item">Konsultacja Kardiologiczna</li>
-                  <li class="list__item">Echo Serca</li>
-                  <li class="list__item">EKG Wysiłkowe</li>
-                  <li class="list__item">EKG Spoczynkowe</li>
-                  <li class="list__item">Holter EKG</li>
-                  <li class="list__item">Holter ABPM</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="block container">
-        <header class="block__header">
-          <h2 class="block__heading block__reminder">
-            Nie znalazłeś Pakietu dla Siebie.<br />
-            <span class="header--color">Stworzymy</span> go dla Ciebie
-          </h2>
-          <a class="btn btn--primary btn--stretched">Zadzwoń do nas</a>
-        </header>
-      </section>
-
       <section id="packages" class="block container"></section>
 
-      <section
-        id="package-details"
-        class="block container block-plans"
-      ></section>
+      <section id="package-details" class="block container"></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
     <script src="./js/main.js"></script>
