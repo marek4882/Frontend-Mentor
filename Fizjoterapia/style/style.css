@@ -297,9 +297,11 @@ ul {
 }
 .card__header img {
   width: 100%;
-  height: 500px;
+  height: 470px;
   object-fit: cover;
+  object-position: 0% 10%;
 }
+
 .card__body {
   padding: 1.25rem 1.875rem;
 }
