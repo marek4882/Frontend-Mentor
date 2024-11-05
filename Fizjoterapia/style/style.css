@@ -313,7 +313,7 @@ a {
 /* Blocks */
 .block {
   --padding-vertical: 1rem;
-  padding: var(--padding-vertical) 1.25rem;
+  padding: var(--padding-vertical) 0.4rem;
 }
 .block__header {
   text-align: center;
