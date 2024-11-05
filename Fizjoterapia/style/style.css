@@ -31,14 +31,12 @@ body {
   line-height: 1.4;
   color: var(--body-color);
 }
-img {
-  height: auto;
-  width: 100%;
-}
+
 .block__image {
   border-radius: 15px;
   object-fit: cover;
-  max-width: 1000px;
+  height: auto;
+  width: 100%;
 }
 
 h1,
