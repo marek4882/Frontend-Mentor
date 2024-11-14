@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -25,11 +31,25 @@
           Fizjoterapia Przed i Po Operacyjna - Kompleksowa Opieka dla Ciebie w
           trosce o szybki powrót do Zdrowia.
         </p>
-        <img
-          class="block__image"
-          src="https://uniestetica.pl/wp-content/uploads/2024/11/woman-having-physiotherapy-session-clinic.webp"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(max-width: 449px)"
+            srcset="
+              https://uniestetica.pl/wp-content/uploads/2024/11/woman-having-physiotherapy-session-clinic.webp
+            "
+          />
+          <source
+            media="(max-width: 450px)"
+            srcset="
+              https://uniestetica.pl/wp-content/uploads/2024/11/woman-having-physiotherapy-session-clinic_f.webpp
+            "
+          />
+          <img
+            class="block__image"
+            src="https://uniestetica.pl/wp-content/uploads/2024/11/woman-having-physiotherapy-session-clinic_f.webp"
+            alt=""
+          />
+        </picture>
       </header>
     </section>
 
@@ -41,17 +61,17 @@
         <p>
           Poznaj Naszych Doświadczonych Fizjoterapeutów, którzy z pasją pomagają
           Pacjentom wrócić do pełnej sprawności. Każdy z Nich posiada szeroką
-          wiedze i umiejętności, które pozwalają na indywidualne podejście do
+          wiedzę i umiejętności, które pozwalają na indywidualne podejście do
           kaźdego Pacjenta.
         </p>
       </header>
-      <div class="grid">
+      <div class="grid grid--1x2">
         <div class="plan" title="Poznaj Specjalistę">
           <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
             <div class="card">
               <header class="card__header">
                 <img
-                  src="images\dr-Ewa-Kopycinska_new-e1669805618230-683x1024.webp"
+                  src="https://uniestetica.pl/wp-content/uploads/2024/11/Mgr-Roxana-Wojtas-Tabiś-800x1024-kopia.webp"
                   alt=""
                 />
               </header>
@@ -69,15 +89,40 @@
             </div>
           </a>
         </div>
+
+        <div class="plan">
+          <a href="https://uniestetica.pl/lekarze/mgr-agnieszka-mirowska/">
+            <div class="card" title="Poznaj Specjalistę">
+              <header class="card__header">
+                <img
+                  id="mirowska"
+                  src="https://uniestetica.pl/wp-content/uploads/2024/11/Mgr-Agnieszka-Mirowska-Fizjoterapeutka-768x1024-kopia.webp"
+                  alt=""
+                />
+              </header>
+              <div class="card__body">
+                <p class="card__title">Mgr Agnieszka Mirowska</p>
+                <p class="card__subtitle">
+                  Fizjoterapeutka,<br />Opieka Przed i Po Zabiegowa
+                </p>
+                <a href="tel:48606565000">
+                  <button class="btn btn--primary btn--block">
+                    <i class="ph ph-phone"></i> Umów Wizytę
+                  </button>
+                </a>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
     <section class="block container block-contacts">
       <header class="block__header block__header__gap">
-        <h2 class="block__title">
+        <h3 class="block__title">
           Chcąc skonsultować się ze Specjalistą skorzystaj z dogodnej formy
           kontaktu
-        </h2>
+        </h3>
       </header>
       <div class="grid grid--1x3">
         <div class="card contact__card plan">
@@ -87,7 +132,7 @@
           <p class="contact__heading">Telefon</p>
           <a href="tel:48606565000">
             <button class="btn btn--block btn--secondary">
-              <i class="ph ph-phone"></i>
+              <i class="ph ph-phone icon-pulse"></i>
               Zadzwoń do Nas
             </button></a
           >
@@ -121,6 +166,94 @@
       </div>
     </section>
 
+    <section class="block container block-frame">
+      <header class="block__header block__header__gap">
+        <h3 class="block__title">
+          Poznaj Nas <span class="decorations">Bliżej</span>
+        </h3>
+        <p class="block-frame__subtitle">
+          Wyrusz z Nami w Podróż Po Zdrowie i Piękno...
+        </p>
+      </header>
+      <p class="social--description">
+        <i class="ph ph-youtube-logo"></i> YouTube
+      </p>
+      <div class="grid grid--1x2">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <iframe
+              width="300px"
+              height="500px"
+              src="https://www.youtube.com/embed/vJmcFhjOtxc?si=pMe1wn6iw1HAebTQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <iframe
+              width="300px"
+              height="500px"
+              src="https://www.youtube.com/embed/M5Wc2pe2c94?si=-oAt2ym0fPhYi-Uy"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <p class="social--description social--description__tiktok">
+        <i class="ph ph-tiktok-logo"></i> TikTok
+      </p>
+      <div class="grid grid--1x3">
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@unicardia_unimedica/video/7396923881195326752&autoplay=1"
+          data-video-id="7396923881195326752"
+          style="
+            max-width: 450px;
+            min-width: 300px;
+            height: 450px;
+            border-radius: 15px;
+          "
+        >
+          <section></section>
+        </blockquote>
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@unicardia_unimedica/video/7388032666433621281?autoplay=1"
+          data-video-id="7388032666433621281"
+          style="
+            max-width: 450px;
+            min-width: 300px;
+            height: 450px;
+            border-radius: 15px;
+          "
+        >
+          <section></section>
+        </blockquote>
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@unicardia_unimedica/video/7394372267293134113"
+          data-video-id="7394372267293134113"
+          style="
+            max-width: 450px;
+            min-width: 300px;
+            height: 450px;
+            border-radius: 15px;
+          "
+        >
+          <section></section>
+        </blockquote>
+      </div>
+    </section>
+    <script async src="https://www.tiktok.com/embed.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
