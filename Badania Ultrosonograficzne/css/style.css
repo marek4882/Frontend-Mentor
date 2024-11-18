@@ -43,7 +43,7 @@ h3 {
   line-height: 1.1;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -176,27 +176,32 @@ a {
 }
 /* Cards */
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
   height: auto;
-  padding: 0.3rem;
+  padding: 0.8rem;
 }
 /* Text styles */
 
 .card__header img {
   width: 100%;
-  height: 370px;
+  height: 30px;
+  border-radius: 100%;
   object-fit: cover;
   object-position: 0% 10%;
 }
 
 .card__body {
-  padding: 1.25rem 1.875rem 0.3rem;
+  padding: 0.3rem;
 }
 .card__title {
   color: #3d3d3d;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
@@ -292,8 +297,8 @@ a {
 } /* Grids */
 .grid {
   display: grid;
-  grid-auto-rows: 1fr;
   justify-items: center;
+  gap: 1rem;
 }
 @media screen and (min-width: 768px) {
   .grid--1x2 {
@@ -360,15 +365,63 @@ a {
 }
 
 /* aa */
-article {
+.content--groups {
   text-align: center;
   font-weight: 700;
   padding: 1rem;
 }
 
-.aa {
+.content--groups__image {
   max-width: 200px;
   height: auto;
   object-fit: cover;
+  border-radius: 100%;
+}
+
+/*  */
+.card--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #979797;
+  padding: 0.8rem 1.3rem;
+}
+.card--content__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+  margin: 0.4rem 0;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.ph-asclepius {
+  font-size: 3rem;
+  color: white;
+  padding: 0.5rem;
+  background: rgb(102, 215, 216);
   border-radius: 100%;
 }
