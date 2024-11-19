@@ -88,6 +88,13 @@ function renderUSGByGroup(groupKey) {
                   `
                 )
                 .join("")}
+                 <button class="btn btn--secondary btn--block collapsible__button">
+                Zalecenia
+                
+              </button>
+              <div class="collapsible__preparation" style="display: none">
+                <p>${category.preparation}</p>
+              </div>
                 </div>
              
             </div>

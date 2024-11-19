@@ -383,7 +383,7 @@ a {
 .card--content {
   background-color: rgb(255, 255, 255);
   border: 3px solid #979797;
-  padding: 0.8rem 1.3rem;
+  padding: 0.8rem;
 }
 .flex {
   display: flex;
@@ -455,11 +455,4 @@ ul {
 
 .collapsible__chevron {
   flex-shrink: 0; /* Chevron nie powinien się zmniejszać */
-}
-
-.flex,
-.card--content,
-.card--content__title,
-.collapsible__chevron {
-  border: 1px solid red;
 }
