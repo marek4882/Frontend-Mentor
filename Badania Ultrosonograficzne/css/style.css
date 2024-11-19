@@ -444,7 +444,6 @@ ul {
 
 .card--content {
   max-width: 100%; /* Dopasowanie do kontenera nadrzędnego */
-  box-sizing: border-box; /* Ustawienie dla lepszego zarządzania paddingiem */
 }
 
 .card--content__title {

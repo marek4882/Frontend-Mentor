@@ -89,12 +89,7 @@ function renderUSGByGroup(groupKey) {
                 )
                 .join("")}
                 </div>
-              <button class="btn btn--secondary btn--block collapsible__button">
-                Jak przygotować się do badania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
+             
             </div>
           `;
 
