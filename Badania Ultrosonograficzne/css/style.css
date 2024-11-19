@@ -40,7 +40,7 @@ h1,
 h2,
 h3 {
   color: var(--headings-color);
-  margin-bottom: 0.625rem;
+  margin: 0.8rem 0 0.625rem 0;
   line-height: 1.1;
 }
 h1 {
@@ -398,8 +398,16 @@ a {
 }
 
 .collapsible__chevron {
-  transform: rotate(-90deg);
-  transition: transform 0.3s;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: #3d3d3d;
+  border-radius: 100%; /* Dopasuj rozmiar do wymagań */
+  color: rgb(255, 255, 255); /* Kolor ikony */
+  transform: rotate(0deg); /* Początkowa rotacja */
+  transition: transform 0.3s; /* Płynne obracanie */
+}
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(90deg); /* Obrót w trybie rozwiniętym */
 }
 .collapsible__content {
   max-height: 0;
@@ -408,13 +416,16 @@ a {
   transition: all 0.3s;
 }
 .collapsible--expanded .collapsible__chevron {
-  transform: rotate(0);
+  transform: rotate(90deg);
 }
 
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
   margin: 0.4rem 0;
+}
+.collapsible__preparation {
+  transition: all 0.3s;
 }
 ul {
   padding: 0;
@@ -432,6 +443,7 @@ ul {
 .collapsible__preparation {
   padding: 0.3rem 1.3rem;
   font-weight: 600;
+  transition: all 0.3s ease-out;
 }
 
 .flex {

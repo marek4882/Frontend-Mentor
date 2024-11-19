@@ -59,49 +59,49 @@ function renderUSGByGroup(groupKey) {
         .filter(Boolean);
 
       categorySection.innerHTML = `
-            <div class="card--content flex">
-              <p class="card--content__title">${category.title}</p>
-              <svg class="icon icon--white collapsible__chevron">
-                <use xlink:href="images/sprite.svg#chevron"></use>
-              </svg>
-            </div>
-            <div class="collapsible__content">
-             <div class="card--content">
-              ${doctorsForCategory
-                .map(
-                  (doctor) => `
-                 
-                    <div class="plan" title="Poznaj Specjalistę">
-                      <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
-                        <div class="card">
-                          <header class="card__header">
-                            <i class="ph ph-asclepius"></i>
-                          </header>
-                          <div class="card__body">
-                            <p class="card__title">${doctor.name}</p>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="tel:${doctor.phone}">
-                        <button class="btn btn--primary btn--block">
-                          <i class="ph ph-phone"></i> Umów Wizytę
-                        </button>
-                      </a>
-                    </div>
-                  `
-                )
-                .join("")}
-                 <button class="btn btn--secondary btn--block collapsible__button">
-                Zalecenia
-                
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
+              <div class="card--content flex">
+                <p class="card--content__title">${category.title}</p>
+                <svg class="icon icon--white collapsible__chevron">
+                  <use xlink:href="images/sprite.svg#chevron"></use>
+                </svg>
               </div>
+              <div class="collapsible__content">
+               <div class="card--content">
+                ${doctorsForCategory
+                  .map(
+                    (doctor) => `
+                   
+                      <div class="plan" title="Poznaj Specjalistę">
+                        <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
+                          <div class="card">
+                            <header class="card__header">
+                              <i class="ph ph-asclepius"></i>
+                            </header>
+                            <div class="card__body">
+                              <p class="card__title">${doctor.name}</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="tel:${doctor.phone}">
+                          <button class="btn btn--primary btn--block">
+                            <i class="ph ph-phone"></i> Umów Wizytę
+                          </button>
+                        </a>
+                      </div>
+                    `
+                  )
+                  .join("")}
+                   <button class="btn btn--secondary btn--block collapsible__button">
+                  Zalecenia
+                  
+                </button>
+                <div class="collapsible__preparation" style="display: none">
+                  <p>${category.preparation}</p>
                 </div>
-             
-            </div>
-          `;
+                  </div>
+               
+              </div>
+            `;
 
       container.appendChild(categorySection);
     }
