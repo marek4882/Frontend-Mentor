@@ -3,6 +3,7 @@ const doctors = [
   {
     id: 1,
     name: "Mgr Roxana Wojtas - Tabiś",
+    link: "https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/",
     phone: "606565000",
     groups: ["dzieci_mlodziez", "osoby_dorosle"], // Lekarz obsługuje obie grupy
   },
@@ -71,14 +72,16 @@ function renderUSGByGroup(groupKey) {
                   (doctor) => `
                  
                     <div class="plan" title="Poznaj Specjalistę">
-                      <div class="card">
-                        <header class="card__header">
-                          <i class="ph ph-asclepius"></i>
-                        </header>
-                        <div class="card__body">
-                          <p class="card__title">${doctor.name}</p>
+                      <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
+                        <div class="card">
+                          <header class="card__header">
+                            <i class="ph ph-asclepius"></i>
+                          </header>
+                          <div class="card__body">
+                            <p class="card__title">${doctor.name}</p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                       <a href="tel:${doctor.phone}">
                         <button class="btn btn--primary btn--block">
                           <i class="ph ph-phone"></i> Umów Wizytę
