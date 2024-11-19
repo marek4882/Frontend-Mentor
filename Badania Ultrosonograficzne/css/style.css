@@ -179,7 +179,7 @@ a {
 .card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 1rem;
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -427,4 +427,9 @@ ul {
   padding: 0.5rem;
   background: rgb(102, 215, 216);
   border-radius: 100%;
+}
+
+.collapsible__preparation {
+  padding: 0.3rem 1.3rem;
+  font-weight: 600;
 }
