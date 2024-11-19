@@ -376,3 +376,10 @@ a {
 .grid .contact__card {
   align-content: center;
 }
+.block__video {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  max-width: 450px;
+  min-width: 300px;
+}

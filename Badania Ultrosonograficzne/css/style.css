@@ -433,3 +433,34 @@ ul {
   padding: 0.3rem 1.3rem;
   font-weight: 600;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between; /* Równomierne rozmieszczenie */
+  align-items: center; /* Wyrównanie pionowe */
+  flex-wrap: wrap; /* Zwijanie wierszy, jeśli zabraknie miejsca */
+  overflow: hidden; /* Ukrycie elementów wychodzących poza układ */
+}
+
+.card--content {
+  max-width: 100%; /* Dopasowanie do kontenera nadrzędnego */
+  box-sizing: border-box; /* Ustawienie dla lepszego zarządzania paddingiem */
+}
+
+.card--content__title {
+  flex-grow: 1; /* Rozciąganie na dostępne miejsce */
+  white-space: nowrap; /* Zapobieganie zawijaniu tekstu */
+  overflow: hidden; /* Ukrycie nadmiaru tekstu */
+  text-overflow: ellipsis; /* Dodanie wielokropka dla długiego tekstu */
+}
+
+.collapsible__chevron {
+  flex-shrink: 0; /* Chevron nie powinien się zmniejszać */
+}
+
+.flex,
+.card--content,
+.card--content__title,
+.collapsible__chevron {
+  border: 1px solid red;
+}
