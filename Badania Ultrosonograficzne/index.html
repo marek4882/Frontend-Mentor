@@ -26,7 +26,9 @@
             alt=""
           />
           <p class="content--groups--title">Dzieci i Młodzież</p>
-          <a class="decorations">Zobacz Specjalizacje</a>
+          <a class="decorations" href="#dzieci_mlodziez"
+            >Zobacz Specjalizacje</a
+          >
         </article>
         <article class="content--groups">
           <img
@@ -35,18 +37,432 @@
             alt=""
           />
           <p class="content--groups--title">Osoby Dorosłe</p>
-          <a class="decorations">Zobacz Specjalizacje</a>
+          <a class="decorations" href="#osoby_dorosle">Zobacz Specjalizacje</a>
         </article>
       </div>
     </section>
 
     <section class="block container">
       <h2>Dzieci i Młodzież</h2>
-      <section class="grid grid--1x2 grid--1x3 dzieci_mlodziez"></section>
+      <section
+        class="grid grid--1x2 grid--1x3 dzieci_mlodziez"
+        id="dzieci_mlodziez"
+      ></section>
       <h2>Osoby Dorosłe</h2>
-      <section class="grid grid--1x2 grid--1x3 osoby_dorosle"></section>
+      <section
+        class="grid grid--1x2 grid--1x3 osoby_dorosle"
+        id="osoby_dorosle"
+      ></section>
     </section>
 
-    <script src="./js/main.js"></script>
+    <script>
+      const receptionPhone = "606565000";
+      // Dane lekarzy
+      const doctors = [
+        {
+          id: 1,
+          name: "Dr n. med. Marcin Misztal",
+          link: "https://unicardia.pl/lekarze/dr-n-med-marcin-misztal/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 2,
+          name: "Dr Maciej Mąkowski",
+          link: "https://unimedica.com.pl/lekarze/dr-maciej-makowski/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 3,
+          name: "Dr n. med. Jakub Zasada",
+          link: "https://unicardia.pl/lekarze/dr-n-med-jakub-zasada/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 4,
+          name: "Dr Józefina Chrustowicz",
+          link: "https://unimedica.com.pl/lekarze/dr-maria-josefina-chrustowicz/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 5,
+          name: "Dr Tomasz Blachura",
+          link: "https://unimedica.com.pl/lekarze/dr-tomasz-blachura/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 6,
+          name: "Dr Wanda Cyrul",
+          link: "https://unimedica.com.pl/lekarze/dr-wanda-cyrul/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 7,
+          name: "Dr n. med. Laura Maryńczak",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-laura-marynczak/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 8,
+          name: "Dr n. med. Maria Krystyna Walas",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-maria-krystyna-walas/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 9,
+          name: "Dr Bogumił Koncewicz-Żyłka",
+          link: "https://unimedica.com.pl/lekarze/dr-bogumil-koncewicz-zylka/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 10,
+          name: "Dr n. med. Wojciech Rudnicki",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-wojciech-rudnicki/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 11,
+          name: "Dr Małgorzata Mielnik",
+          link: "https://unimedica.com.pl/lekarze/dr-malgorzata-mielnik/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 12,
+          name: "Dr Paweł Kamiński",
+          link: "https://unimedica.com.pl/lekarze/dr-pawel-kaminski/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 13,
+          name: "Dr n. med. Tomasz Banaś",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-tomasz-banas/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 14,
+          name: "Dr Łukasz Laskowicz",
+          link: "https://unimedica.com.pl/lekarze/dr-lukasz-laskowicz/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 15,
+          name: "Dr Michał Mleko",
+          link: "https://unimedica.com.pl/lekarze/dr-michal-mleko/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 16,
+          name: "Dr n. med. Krzysztof Mawlichanów",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-krzysztof-mawlichanow/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 17,
+          name: "Dr Magdalena Duda-Wiewiórka",
+          link: "https://unimedica.com.pl/lekarze/dr-magdalena-duda-wiewiorka/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 18,
+          name: "Prof. dr hab. n. med. Anna Kabłak-Ziembicka",
+          link: "https://unicardia.pl/lekarze/prof-uj-dr-hab-n-med-anna-kablak-ziembicka/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 19,
+          name: "Dr Rafał Badacz",
+          link: "https://unicardia.pl/lekarze/dr-rafal-badacz/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+        {
+          id: 20,
+          name: "Dr n. med. Magdalena Wójcik-Pędziwiatr",
+          link: "https://unimedica.com.pl/lekarze/dr-n-med-magdalena-wojcik-pedziwiatr/",
+          groups: ["dzieci_mlodziez", "osoby_dorosle"],
+        },
+
+        {
+          id: 2,
+          name: "Dr Jan Kowalski",
+          groups: ["osoby_dorosle"],
+        },
+      ];
+
+      // Kategorie USG
+      const usgCategories = [
+        // Aorta i narządy jamy brzusznej
+        {
+          id: 1,
+          title: "USG aorty brzusznej",
+          doctors: [1, 2, 3], // Id lekarzy wykonujących badanie
+          preparation:
+            "Przed badaniem USG moszny należy upewnić się, że obszar jest czysty. Zaleca się założenie wygodnej, luźnej odzieży. Nie wymaga specjalnego przygotowania.",
+        },
+        {
+          id: 2,
+          title: "USG jamy brzusznej",
+          doctors: [4, 5, 6, 7, 8, 9, 10, 11],
+          preparation:
+            "Należy być na czczo przez co najmniej 6 godzin przed badaniem. Pij wodę, aby pęcherz był pełny.",
+        },
+        {
+          id: 3,
+          title: "USG jamy brzusznej<br/> z układem moczowym",
+          doctors: [4, 5],
+          preparation: "",
+        },
+        {
+          id: 4,
+          title: "USG narządów ruchu",
+          doctors: [12],
+          preparation: "",
+        },
+        // Narządy płciowe
+        {
+          id: 5,
+          title: "USG ginekologiczne",
+          doctors: [13, 14, 15, 16, 17],
+          preparation: "",
+        },
+        {
+          id: 6,
+          title: "USG jąder/moszny",
+          doctors: [6, 7],
+          preparation: "",
+        },
+        {
+          id: 7,
+          title: "USG układu rozrodczego<br/> (jama brzuszna + jajniki/jądra)",
+          doctors: [6],
+          preparation: "",
+        },
+        // Serce i naczynia krwionośne
+        {
+          id: 8,
+          title: "USG płodu",
+          doctors: [],
+          preparation: "",
+        },
+        {
+          id: 9,
+          title: "USG kończyn (żył i/lub tętnic)",
+          doctors: [18, 2, 3],
+          preparation: "",
+        },
+        {
+          id: 10,
+          title: "USG tętnic szyjnych",
+          doctors: [11, 9, 20, 18, 19],
+          preparation: "",
+        },
+        {
+          id: 11,
+          title: "USG tętnic szyjnych rotacyjne",
+          doctors: [0],
+          preparation: "",
+        },
+        {
+          id: 12,
+          title: "USG TT biodrowych",
+          doctors: [2, 18],
+          preparation: "",
+        },
+        {
+          id: 13,
+          title: "USG żyły wrotnej wątroby",
+          doctors: [3],
+          preparation: "",
+        },
+        // Narzady wewnętrzne
+        {
+          id: 14,
+          title: "USG tarczycy",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 15,
+          title: "USG ślinianek",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 16,
+          title: "USG piersi",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 17,
+          title: "USG węzłów chłonnych",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 18,
+          title: "USG tkanek miękkich",
+          doctors: [1],
+          preparation: "",
+        },
+        // Inne
+        {
+          id: 19,
+          title: "USG gardła",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 20,
+          title: "USG głowy i szwów",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 21,
+          title: "USG kanału kręgowego",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 22,
+          title: "USG płuc",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 23,
+          title: "USG przez-ciemieniowe",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 24,
+          title: "USG szwów czaskowych",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 25,
+          title: "USG szyi", //(tarczyca, ślinianki, węzły chłonne)
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 26,
+          title: "USG stawów biodrowych dzieci",
+          doctors: [1],
+          preparation: "",
+        },
+        {
+          id: 27,
+          title: "USG stawów",
+          doctors: [1],
+          preparation: "",
+        },
+      ];
+
+      // Grupy pacjentów
+      const groups = {
+        dzieci_mlodziez: [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          21, 22, 23, 24, 25, 26, 27,
+        ], // Kategorie USG przypisane dzieciom i młodzieży
+        osoby_dorosle: [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          21, 22, 23, 24, 25, 26, 27,
+        ], // Kategorie USG przypisane osobom dorosłym
+      };
+
+      function renderUSGByGroup(groupKey) {
+        const groupCategories = groups[groupKey];
+        const container = document.querySelector(`.${groupKey}`);
+
+        groupCategories.forEach((categoryId) => {
+          const category = usgCategories.find((cat) => cat.id === categoryId);
+
+          if (category) {
+            const categorySection = document.createElement("section");
+            categorySection.classList.add("collapsible");
+
+            const doctorsForCategory = category.doctors
+              .map((doctorId) =>
+                doctors.find(
+                  (doc) => doc.id === doctorId && doc.groups.includes(groupKey)
+                )
+              )
+              .filter(Boolean);
+
+            categorySection.innerHTML = `
+                  <div class="card--content flex">
+                    <p class="card--content__title">${category.title}</p>
+                    <i class="ph ph-arrow-right collapsible__chevron"></i>
+                  </div>
+                  <div class="collapsible__content">
+                   <div class="card--content">
+                    ${doctorsForCategory
+                      .map(
+                        (doctor) => `
+
+                          <div class="plan" title="Poznaj Specjalistę">
+                            <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
+                              <div class="card">
+                                <header class="card__header">
+                                  <i class="ph ph-asclepius"></i>
+                                </header>
+                                <div class="card__body">
+                                  <p class="card__title">${doctor.name}</p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="tel:"${receptionPhone}">
+                              <button class="btn btn--primary btn--block">
+                                <i class="ph ph-phone"></i> Umów Wizytę
+                              </button>
+                            </a>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                       <button class="btn btn--secondary btn--block collapsible__button">
+                      Zalecenia
+
+                    </button>
+                    <div class="collapsible__preparation" style="display: none">
+                      <p>${category.preparation}</p>
+                    </div>
+                      </div>
+
+                  </div>
+                `;
+
+            container.appendChild(categorySection);
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderUSGByGroup("dzieci_mlodziez");
+        renderUSGByGroup("osoby_dorosle");
+
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach((item) =>
+          item.addEventListener("click", function () {
+            this.classList.toggle("collapsible--expanded");
+          })
+        );
+
+        const buttons = document.querySelectorAll(".collapsible__button");
+        buttons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const preparationContent = button.nextElementSibling;
+            preparationContent.style.display =
+              preparationContent.style.display === "none" ||
+              !preparationContent.style.display
+                ? "block"
+                : "none";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
