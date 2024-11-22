@@ -396,6 +396,9 @@ a {
   font-weight: 600;
   margin: 0;
 }
+.collapsible {
+  width: 100%;
+}
 
 .collapsible__chevron {
   font-size: 1.5rem;
