@@ -239,6 +239,39 @@
           ></video>
         </div>
       </div>
+
+      <div class="card--content flex">
+        <p class="card--content__title">${category.title}</p>
+        <i class="ph ph-arrow-right collapsible__chevron"></i>
+      </div>
+      <div class="collapsible__content">
+        <div class="card--content">
+          <button class="btn btn--secondary btn--block collapsible__button">
+            <i class="ph ph-clipboard-text"></i>Przygotowania
+          </button>
+          <div class="collapsible__preparation" style="display: none">
+            <p>${category.preparation}</p>
+          </div>
+
+          <div class="plan" title="Poznaj Specjalistę">
+            <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
+              <div class="card">
+                <header class="card__header">
+                  <i class="ph ph-asclepius"></i>
+                </header>
+                <div class="card__body">
+                  <p class="card__title">${doctor.name}</p>
+                </div>
+              </div>
+            </a>
+            <a href="tel:" ${receptionPhone}>
+              <button class="btn btn--primary btn--block">
+                <i class="ph ph-phone"></i> Umów Wizytę
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
     <script async src="https://www.tiktok.com/embed.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
