@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
@@ -80,15 +80,16 @@
                 <p class="card__subtitle">
                   Fizjoterapeutka,<br />Opieka Przed i Po Zabiegowa
                 </p>
-                <a href="tel:48606565000">
+                <a href="tel:606565000">
                   <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
+                    <i class="ph ph-phone icon-pulse"></i> Umów Wizytę
                   </button>
                 </a>
               </div>
             </div>
           </a>
         </div>
+
         <div class="plan">
           <a href="https://uniestetica.pl/lekarze/mgr-agnieszka-mirowska/">
             <div class="card" title="Poznaj Specjalistę">
@@ -104,9 +105,9 @@
                 <p class="card__subtitle">
                   Fizjoterapeutka,<br />Opieka Przed i Po Zabiegowa
                 </p>
-                <a href="tel:48606565000">
+                <a href="tel:606565000">
                   <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
+                    <i class="ph ph-phone icon-pulse"></i> Umów Wizytę
                   </button>
                 </a>
               </div>
@@ -129,9 +130,9 @@
             <i class="ph ph-phone icon--large"></i>
           </div>
           <p class="contact__heading">Telefon</p>
-          <a href="tel:48606565000">
+          <a href="tel:606565000">
             <button class="btn btn--block btn--secondary">
-              <i class="ph ph-phone icon-pulse"></i>
+              <i class="ph ph-phone"></i>
               Zadzwoń do Nas
             </button></a
           >
@@ -178,7 +179,7 @@
         <i class="ph ph-youtube-logo"></i> YouTube
       </p>
       <div class="grid grid--1x2">
-        <div class="phone-frame">
+        <div class="phone-frame phone-frame-yt">
           <div class="phone-screen">
             <iframe
               width="300px"
@@ -192,7 +193,7 @@
             ></iframe>
           </div>
         </div>
-        <div class="phone-frame">
+        <div class="phone-frame phone-frame-yt">
           <div class="phone-screen">
             <iframe
               width="300px"
@@ -211,51 +212,49 @@
         <i class="ph ph-tiktok-logo"></i> TikTok
       </p>
       <div class="grid grid--1x3">
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@unicardia_unimedica/video/7396923881195326752&autoplay=1"
-          data-video-id="7396923881195326752"
-          style="
-            max-width: 450px;
-            min-width: 300px;
-            height: 450px;
-            border-radius: 15px;
-          "
-        >
-          <section></section>
-        </blockquote>
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@unicardia_unimedica/video/7388032666433621281?autoplay=1"
-          data-video-id="7388032666433621281"
-          style="
-            max-width: 450px;
-            min-width: 300px;
-            height: 450px;
-            border-radius: 15px;
-          "
-        >
-          <section></section>
-        </blockquote>
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@unicardia_unimedica/video/7394372267293134113"
-          data-video-id="7394372267293134113"
-          style="
-            max-width: 450px;
-            min-width: 300px;
-            height: 450px;
-            border-radius: 15px;
-          "
-        >
-          <section></section>
-        </blockquote>
+        <div class="phone-frame grid">
+          <video
+            class="block__video"
+            src="https://uniestetica.pl/wp-content/uploads/2024/11/072c25299f1db434b8c27d08459436ec.mp4"
+            controls
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="phone-frame grid">
+          <video
+            id="video1"
+            class="block__video"
+            src="https://uniestetica.pl/wp-content/uploads/2024/11/5da97949e8ecb3208918189a00ee3362.mp4"
+            controls
+            loop
+          ></video>
+        </div>
+        <div class="phone-frame grid">
+          <video
+            id="video2"
+            class="block__video"
+            src="https://uniestetica.pl/wp-content/uploads/2024/11/bef780666c1645b0b03bfaac3fe95dd9.mp4"
+            controls
+            loop
+          ></video>
+        </div>
       </div>
     </section>
     <script async src="https://www.tiktok.com/embed.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      const setVideoStartTime = (videoId, startTime) => {
+        const video = document.getElementById(videoId);
+        video.addEventListener("loadedmetadata", () => {
+          video.currentTime = startTime;
+        });
+      };
+
+      setVideoStartTime("video1", 10);
+      setVideoStartTime("video2", 20);
     </script>
   </body>
 </html>
