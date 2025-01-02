@@ -10,6 +10,9 @@
   --women-zone-color: #e88f8b;
   --endocrinology-color: #be6b98;
   --gynecology-color: #f2bab8;
+  --superman-color: #f3c600;
+  --ironman-color: #a50318;
+  --zdrowe-serce: #b40219;
 }
 
 *,
@@ -28,6 +31,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.4;
   color: var(--body-color);
+  height: 500vh;
 }
 h1,
 h2,
@@ -37,7 +41,7 @@ h3 {
   line-height: 1.1;
 }
 h1 {
-  font-size: 3.375rem;
+  font-size: 2.8rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -54,7 +58,7 @@ p {
     font-size: 1.125rem;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -174,6 +178,30 @@ a {
   background: #c29492;
   color: #e8e8e8;
 }
+.btn--superman--package {
+  background-color: var(--superman-color);
+  color: #fff;
+}
+.btn--superman--package:hover {
+  background-color: #a18400;
+  color: #e8e8e8;
+}
+.btn--ironman--package {
+  background-color: var(--ironman-color);
+  color: #fff;
+}
+.btn--ironman--package:hover {
+  background-color: #810415;
+  color: #e8e8e8;
+}
+.btn--zdrowe--serce {
+  background-color: var(--zdrowe-serce);
+  color: #fff;
+}
+.btn--zdrowe--serce:hover {
+  background-color: #a70319;
+  color: #e8e8e8;
+}
 
 .btn--outline {
   background: #fff;
@@ -242,7 +270,7 @@ a {
 }
 .block__header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 2.5rem 0 1rem;
 }
 .block__heading {
   margin-top: 0;
@@ -250,6 +278,7 @@ a {
 .block__reminder {
   margin-bottom: 2rem;
 }
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
@@ -392,13 +421,14 @@ ul {
 .list--tick .list__item {
   margin-bottom: 0.625rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #3b3b3b;
 }
 
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -450,38 +480,81 @@ ul {
   border-top: 1px solid #ccc;
   padding-top: 20px;
 }
+.single-package-detail .splide__list {
+  display: flex !important;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto !important;
+}
+
+.single-package-detail .splide__slide {
+  width: 100%;
+}
 
 /* SplideJS */
 /* Arrows */
 .splide__arrow {
-  background-color: #b42d28;
-  border: 2px solid #b42d28;
-  padding: 3px;
-  width: 35px;
-  height: 35px;
+  background-color: #2a54b2 !important;
+  border: 2px solid #2a54b2 !important;
+  padding: 3px !important;
+  width: 35px !important;
+  height: 35px !important;
 }
 .splide__arrow svg {
-  fill: #fff;
+  fill: #fff !important;
 }
 .splide__arrow:hover {
-  fill: #c70039;
+  fill: #1c3e8b !important;
 }
 
 /* Bullets */
 .splide__pagination__page {
-  background: #b42d28;
+  background: #2a54b2 !important;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px !important;
+  margin: 3px;
+  opacity: 0.7;
+  padding: 0;
+  transition: transform 0.2s linear;
+  width: 10px !important;
 }
 
 .splide__pagination__page.is-active {
-  background: #831d1d;
+  background: #1c3e8b !important;
 }
 .is-visible.is-active {
   transition: transform 0.2s ease-out;
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .splide__list {
-  align-items: center;
+  align-items: center !important;
 }
 .icon {
   border-radius: 0;
+}
+
+.cz_post_content ul {
+  margin: 0 !important;
+}
+.splide__pagination {
+  bottom: revert-layer !important;
+}
+
+.splide__arrow--prev {
+  left: 0 !important;
+}
+
+.splide__arrow--next {
+  right: 0 !important;
+}
+.block__gap {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .block__gap {
+    margin-top: 9rem;
+  }
 }
