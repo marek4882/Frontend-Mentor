@@ -14,9 +14,11 @@
           Badania <span class="decorations">Ultrosonograficzne</span>
         </h1>
         <p>
-          UniCardia & UniMedica & UniEstetica wykonasz na miejscu Diagnostykę
-          Obrazową - Diagnostykę Ultrosonograficzna (USG), dla Dzieci i
-          Dorosłych.
+          W UniCardia & UniMedica & UniEstetica Małopolskie Kliniki
+          Specjalistyczne w Krakowie wykonasz na miejscu Diagnostykę Obrazową -
+          Diagnostykę Ultrosonograficzną (USG) zarówno u Dziecka jak i u Osoby
+          Dorosłej.<br />
+          Jakiego badania szukasz?
         </p>
       </header>
       <div class="grid grid--1x2 grid--1x3">
@@ -27,9 +29,7 @@
             alt=""
           />
           <p class="content--groups--title">Dzieci i Młodzież</p>
-          <a class="decorations" href="#dzieci_mlodziez_"
-            >Zobacz Specjalizacje</a
-          >
+          <a class="decorations" href="#dzieci_mlodziez_">Badania USG</a>
         </article>
         <article class="content--groups">
           <img
@@ -38,12 +38,12 @@
             alt=""
           />
           <p class="content--groups--title">Osoby Dorosłe</p>
-          <a class="decorations" href="#osoby_dorosle_">Zobacz Specjalizacje</a>
+          <a class="decorations" href="#osoby_dorosle_">Badania USG</a>
         </article>
         <article class="content--groups">
           <img
             class="content--groups__image"
-            src="./images/qustionmark.png"
+            src="https://unimedica.com.pl/wp-content/uploads/2024/11/qustionmark.jpg"
             alt=""
           />
           <p class="content--groups--title">Potrzebujesz pomocy?</p>
@@ -93,264 +93,34 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="block container">
-      <h2>USG obszaru jamy brzusznej i klatki piersiowej</h2>
-      <div class="grid grid--1x2 grid--1x3">
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-      </div>
-      <h2>Narządy płciowe</h2>
-      <div class="grid grid--1x2 grid--1x3">
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-      </div>
-    </section> -->
-
     <section class="block container">
-      <h2>dzieci i mlodziez</h2>
-      <h3>${usgGroups.title}</h3>
-      <section class="grid grid-1x3 osoby_dorosle" id="osoby_dorosle_">
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">
-              ${category.title}${category.title}
-              ${category.title}${category.title}
-            </p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">${category.title}</p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">${category.title}</p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <h3>Narządy płciowe</h3>
-      <section
-        class="grid grid--1x2 grid-1x3 osoby_dorosle"
-        id="osoby_dorosle_"
-      >
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">${category.title}</p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">${category.title}</p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="collapsible">
-          <div class="card--content flex">
-            <p class="card--content__title">${category.title}</p>
-            <i class="ph ph-arrow-right collapsible__chevron"></i>
-          </div>
-          <div class="collapsible__content">
-            <div class="card--content">
-              <button class="btn btn--secondary btn--block collapsible__button">
-                <i class="ph ph-clipboard-text"></i>Przygotowania
-              </button>
-              <div class="collapsible__preparation" style="display: none">
-                <p>${category.preparation}</p>
-              </div>
-              <div class="plan" title="Poznaj Specjalistę">
-                <a
-                  href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/"
-                >
-                  <div class="card">
-                    <header class="card__header">
-                      <i class="ph ph-asclepius"></i>
-                    </header>
-                    <div class="card__body">
-                      <p class="card__title">${doctor.name}</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="tel:" ${receptionPhone}>
-                  <button class="btn btn--primary btn--block">
-                    <i class="ph ph-phone"></i> Umów Wizytę
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
+      <h2 class="block__header">
+        Jeśli zalecenie Specjalisty wymaga wykonania pogłębionej Diagnostyki
+        Obrazowej jest to np.:
+      </h2>
+      <div class="grid contact--container">
+        <div class="card--contact card--contact__small">
+          <a href="tel:">
+            <button class="btn btn--primary btn--block">
+              <i class="ph ph-clipboard-text"></i> Tomografia Komputerowa
+            </button>
+          </a>
+          <button class="btn btn--primary btn--block">
+            <i class="ph ph-clipboard-text"></i>Rezonans Magnetyczny
+          </button>
+          <button class="btn btn--primary btn--block">
+            <i class="ph ph-clipboard-text"></i> RTG
+          </button>
+        </div>
+      </div>
+      <h3 class="block__header contact--container">
+        Serdecznie Zapraszamy do wykonania badań u
+        <a href="https://imed24.pl/"
+          ><span class="decorations"
+            ><i class="ph ph-link"></i>Naszego Partnera</span
+          ></a
+        >
+      </h3>
     </section>
 
     <script>
@@ -485,7 +255,7 @@
         },
         {
           id: 22,
-          name: "Dr med. Aleksander Gut",
+          name: "Dr. med. Aleksander Gut",
           link: "https://unimedica.com.pl/lekarze/dr-med-aleksander-gut/",
           groups: ["dzieci_mlodziez", "osoby_dorosle"],
         },
@@ -497,7 +267,7 @@
         },
         {
           id: 24,
-          name: "Dr Marcin Jarząbek",
+          name: "Dr. Marcin Jarząbek",
           link: "https://unimedica.com.pl/lekarze/lek-marcin-jarzabek/",
           groups: ["osoby_dorosle"],
         },
@@ -537,7 +307,7 @@
         {
           id: 1,
           title: "USG obszaru jamy brzusznej i klatki piersiowej",
-          id_usg: [1, 2, 3, 4, 22],
+          id_usg: [1, 2, 3, 4, 22], //id usg dla danej grupy
         },
         {
           id: 2,
@@ -551,13 +321,13 @@
         },
         {
           id: 4,
-          title: "Narządy wewnętrzne",
+          title: "Narządy wewnętrzne",
           id_usg: [14, 15, 16, 17, 18],
         },
         {
           id: 4,
           title: "USG obszaru Głowy i Szyi",
-          id_usg: [19, 20, 21, 23, 24, 25, 27],
+          id_usg: [19, 20, 21, 23, 24, 25, 26, 27],
         },
       ];
       // Kategorie USG
@@ -735,56 +505,15 @@
 
       // Grupy pacjentów
       const groups = {
-        dzieci_mlodziez: [1], // Kategorie USG przypisane dzieciom i młodzieży
+        dzieci_mlodziez: [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          21, 22, 23, 24, 25, 26, 27,
+        ], // Kategorie USG przypisane dzieciom i młodzieży
         osoby_dorosle: [
           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
           21, 22, 23, 24, 25, 26, 27,
         ], // Kategorie USG przypisane osobom dorosłym
       };
-
-      function renderCategory(category, doctorsForCategory) {
-        return `
-      <section class="collapsible">
-        <div class="card--content flex">
-          <p class="card--content__title">${category.title}</p>
-          <i class="ph ph-arrow-right collapsible__chevron"></i>
-        </div>
-        <div class="collapsible__content">
-          <div class="card--content">
-            <button class="btn btn--secondary btn--block collapsible__button">
-              <i class="ph ph-clipboard-text"></i>Przygotowania
-            </button>
-            <div class="collapsible__preparation" style="display: none">
-              <p>${category.preparation}</p>
-            </div>
-            ${doctorsForCategory
-              .map(
-                (doctor) => `
-                  <div class="plan" title="Poznaj Specjalistę">
-                    <a href="${doctor.link}">
-                      <div class="card">
-                        <header class="card__header">
-                          <i class="ph ph-asclepius"></i>
-                        </header>
-                        <div class="card__body">
-                          <p class="card__title">${doctor.name}</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="tel:${receptionPhone}">
-                      <button class="btn btn--primary btn--block">
-                        <i class="ph ph-phone"></i> Umów Wizytę
-                      </button>
-                    </a>
-                  </div>
-                `
-              )
-              .join("")}
-          </div>
-        </div>
-      </section>
-    `;
-      }
 
       function renderUSGByGroup(groupKey) {
         const groupCategories = groups[groupKey];
@@ -792,7 +521,11 @@
 
         groupCategories.forEach((categoryId) => {
           const category = usgCategories.find((cat) => cat.id === categoryId);
+
           if (category) {
+            const categorySection = document.createElement("section");
+            categorySection.classList.add("collapsible");
+
             const doctorsForCategory = category.doctors
               .map((doctorId) =>
                 doctors.find(
@@ -801,8 +534,51 @@
               )
               .filter(Boolean);
 
-            const categoryHTML = renderCategory(category, doctorsForCategory);
-            container.insertAdjacentHTML("beforeend", categoryHTML);
+            categorySection.innerHTML = `
+                      <div class="card--content flex">
+                     <p class="card--content__title">${category.title}</p>
+                     <i class="ph ph-arrow-right collapsible__chevron"></i>
+                   </div>
+                   <div class="collapsible__content">
+                    <div class="card--content">
+                      <button class="btn btn--secondary btn--block collapsible__button">
+                       <i class="ph ph-clipboard-text"></i>Przygotowania
+
+                     </button>
+                     <div class="collapsible__preparation" style="display: none">
+                       <p>${category.preparation}</p>
+                     </div>
+                     ${doctorsForCategory
+                       .map(
+                         (doctor) => `
+
+                           <div class="plan" title="Poznaj Specjalistę">
+                             <a href="https://uniestetica.pl/lekarze/mgr-roxana-wojtas-tabis/">
+                               <div class="card">
+                                 <header class="card__header">
+                                   <i class="ph ph-asclepius"></i>
+                                 </header>
+                                 <div class="card__body">
+                                   <p class="card__title">${doctor.name}</p>
+                                 </div>
+                               </div>
+                             </a>
+                             <a href="tel:"${receptionPhone}">
+                               <button class="btn btn--primary btn--block">
+                                 <i class="ph ph-phone"></i> Umów Wizytę
+                               </button>
+                             </a>
+                           </div>
+                         `
+                       )
+                       .join("")}
+
+                       </div>
+
+                   </div>
+                 `;
+
+            container.appendChild(categorySection);
           }
         });
       }
@@ -811,19 +587,24 @@
         renderUSGByGroup("dzieci_mlodziez");
         renderUSGByGroup("osoby_dorosle");
 
-        // Initialize collapsibles
-        document.body.addEventListener("click", (event) => {
-          const collapsible = event.target.closest(".collapsible");
-          if (collapsible) {
-            collapsible.classList.toggle("collapsible--expanded");
-          }
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach((item) =>
+          item.addEventListener("click", function () {
+            this.classList.toggle("collapsible--expanded");
+          })
+        );
 
-          const button = event.target.closest(".collapsible__button");
-          if (button) {
+        const buttons = document.querySelectorAll(".collapsible__button");
+        buttons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
             const preparationContent = button.nextElementSibling;
             preparationContent.style.display =
-              preparationContent.style.display === "none" ? "block" : "none";
-          }
+              preparationContent.style.display === "none" ||
+              !preparationContent.style.display
+                ? "block"
+                : "none";
+          });
         });
       });
     </script>
