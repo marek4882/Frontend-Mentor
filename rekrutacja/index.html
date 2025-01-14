@@ -1,86 +1,867 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        height: 100vh;
-      }
-      .container {
-        border: 2px solid red;
-        display: flex;
-        align-items: stretch;
-      }
-      .block {
-        max-width: 300px;
-      }
-      .block1 {
-        background-color: red;
-      }
-      .block2 {
-        background-color: green;
-      }
-      .block3 {
-        background-color: purple;
-      }
-      .tak {
-        flex: 1;
-      }
-    </style>
+    <title>Pakiety</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="container">
-        <div class="block block1">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
-            ipsam illum sed autem odit! Similique, nulla dicta tempora ex
-            tenetur obcaecati excepturi adipisci accusamus quod possimus ratione
-            blanditiis. Tenetur, numquam!
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
-            ipsam illum sed autem odit! Similique, nulla dicta tempora ex
-            tenetur obcaecati excepturi adipisci accusamus quod possimus ratione
-            blanditiis. Tenetur, numquam! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Deserunt ipsam illum sed autem odit!
-            Similique, nulla dicta tempora ex tenetur obcaecati excepturi
-            adipisci accusamus quod possimus ratione blanditiis. Tenetur,
-            numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Deserunt ipsam illum sed autem odit! Similique, nulla dicta tempora
-            ex tenetur obcaecati excepturi adipisci accusamus quod possimus
-            ratione blanditiis. Tenetur, numquam! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Deserunt ipsam illum sed autem odit!
-            Similique, nulla dicta tempora ex tenetur obcaecati excepturi
-            adipisci accusamus quod possimus ratione blanditiis. Tenetur,
-            numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Deserunt ipsam illum sed autem odit! Similique, nulla dicta tempora
-            ex tenetur obcaecati excepturi adipisci accusamus quod possimus
-            ratione blanditiis. Tenetur, numquam! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Deserunt ipsam illum sed autem odit!
-            Similique, nulla dicta tempora ex tenetur obcaecati excepturi
-            adipisci accusamus quod possimus ratione blanditiis. Tenetur,
-            numquam!
-          </p>
-        </div>
-        <div class="tak">
-          <div class="block block2">
+    <main>
+      <section class="block">
+        <div class="container grid">
+          <header class="block block__header_">
+            <h1>
+              Znajdź swój
+              <span class="header--color">Pakiet Badań</span>!
+            </h1>
             <p>
-              display: flex; flex-direction: column; /* Wymusza pionowe
-              rozmieszczenie elementów */ justify-content: space-between; /*
-              Górne i dolne elementy są rozciągnięte */ height: 100%;
+              Sprawdź dostępne pakiety badań diagnostycznych i wizyt lekarskich,
+              które Kompleksowo pomogą Ci zadbać o Twoje Zdrowie lub o Twoich
+              najbliższych.
+              <br />
+              Jeśli nie znalazłaś/znalazłeś tego, czego szukasz, skontaktuj się
+              z Nami, a stworzymy, specjalnie dla Ciebie,<strong
+                ><a href="https://unimedica.com.pl/kompleksowy-audyt-zdrowia/">
+                  Dedykowany Plan Analizy Stanu Zdrowia
+                </a></strong
+              >.
             </p>
+          </header>
+        </div>
+      </section>
+      <section class="block container block-plans">
+        <div id="splide" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card_ card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
+                      class="img--header"
+                      alt="women"
+                    />
+                    <h3 class="plan__name plan__name__women">
+                      Opieka dla Kobiet
+                    </h3>
+                    <p class="plan__description">
+                      Poczuj się świetnie każdego dnia. Wybierz swój pakiet!
+                    </p>
+                    <button
+                      class="btn btn--block btn--women--packages"
+                      onclick="showPackages('women', 'Opieka dla Kobiet')"
+                    >
+                      <i class="ph ph-magnifying-glass icon"></i>
+                      Zobacz Pakiety
+                    </button>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card_ card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/men.jpg"
+                      class="img--header"
+                      alt="men"
+                    />
+                    <h3 class="plan__name plan__name__men">
+                      Opieka dla Mężczyzn
+                    </h3>
+
+                    <p class="plan__description">
+                      Poczuj się świetnie każdego dnia. Wybierz swój pakiet!
+                    </p>
+                    <button
+                      class="btn btn--block btn--men--packages"
+                      onclick="showPackages('men', 'Opieka dla Mężczyzn')"
+                    >
+                      <i class="ph ph-magnifying-glass icon"></i>
+                      Zobacz Pakiety
+                    </button>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card_ card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/family.jpg"
+                      class="img--header"
+                      alt="family"
+                    />
+                    <h3 class="plan__name plan__name__family">
+                      Opieka dla Rodzin
+                    </h3>
+                    <p class="plan__description">
+                      Zadabaj o całą Rodziną razem z Nami. Wbierz swój pakiet!
+                    </p>
+                    <button
+                      class="btn btn--block btn--family--packages"
+                      onclick="showPackages('family', 'Opieka dla Rodzin')"
+                    >
+                      <i class="ph ph-magnifying-glass icon"></i>
+                      Zobacz Pakiety
+                    </button>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="card--gap">
+                  <header class="card_ card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/06/happy-family-edited.jpg"
+                      class="img--header"
+                      alt="men"
+                    />
+                    <h3 class="plan__name plan__audyt">
+                      Kompleksowy Audyt Zdrowia
+                    </h3>
+
+                    <p class="plan__description">
+                      Personalizowany Plan Zdrowia Dla Ciebie lub Twoich
+                      Bliskich!
+                    </p>
+                    <a
+                      href="https://unimedica.com.pl/kompleksowy-audyt-zdrowia/"
+                    >
+                      <button class="btn btn--block btn--audyt">
+                        <i class="ph ph-magnifying-glass icon"></i>
+                        Zobacz Szczegóły
+                      </button>
+                    </a>
+                  </header>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="block block3">
-          <p>
-            display: flex; flex-direction: column; /* Wymusza pionowe
-            rozmieszczenie eleme
-          </p>
-        </div>
+      </section>
+      <section id="packages" class="block container"></section>
+
+      <section id="package-details" class="block container"></section>
+      <!-- Formularze -->
+      <div class="hidden-form" data-form-id="dfda331">
+        [contact-form-7 id="dfda331" title="pakiet-kardiologiczny"]
+      </div>
+      <div class="hidden-form" data-form-id="e9417e7">
+        [contact-form-7 id="e9417e7" title="pakiet-kardiologiczny-premium"]
+      </div>
+      <div class="hidden-form" data-form-id="0c78dce">
+        [contact-form-7 id="0c78dce" title="pakiet-zdrowe-serce"]
+      </div>
+
+      <!-- Do zmiany id -->
+      <div class="hidden-form" data-form-id="a394ae5">
+        [contact-form-7 id="a394ae5" title="pakiet-covid-i"]
+      </div>
+      <div class="hidden-form" data-form-id="210446d">
+        [contact-form-7 id="210446d" title="pakiet-covid-ii"]
+      </div>
+      <div class="hidden-form" data-form-id="f52f22e">
+        [contact-form-7 id="f52f22e" title="pakiet-covid-iii"]
+      </div>
+      <div class="hidden-form" data-form-id="658e835">
+        [contact-form-7 id="658e835" title="pakiet-iron-man"]
+      </div>
+      <div class="hidden-form" data-form-id="a5a19b9">
+        [contact-form-7 id="a5a19b9" title="pakiet-superman"]
+      </div>
+      <div class="hidden-form" data-form-id="877a0ed">
+        [contact-form-7 id="877a0ed" title="pakiet-piekno"]
+      </div>
+      <div class="hidden-form" data-form-id="531322d">
+        [contact-form-7 id="531322d" title="pakiet-mloda-kobieta"]
+      </div>
+      <div class="hidden-form" data-form-id="dcfcd9c">
+        [contact-form-7 id="dcfcd9c" title="pakiet-dorosla-kobieta"]
+      </div>
+      <div class="hidden-form" data-form-id="106ca5d">
+        [contact-form-7 id="106ca5d" title="pakiet-ginekologiczny"]
+      </div>
+      <div class="hidden-form" data-form-id="a55c8a1">
+        [contact-form-7 id="a55c8a1" title="pakiet-ginekologiczny-premium"]
+      </div>
+      <div class="hidden-form" data-form-id="e1acedc">
+        [contact-form-7 id="e1acedc"
+        title="pakiet-endokrynogloiczny-podstawowy"]
+      </div>
+      <div class="hidden-form" data-form-id="acddc32">
+        [contact-form-7 id="acddc32"
+        title="pakiet-endokrynologiczny-rozszerzony"]
+      </div>
+      <div class="hidden-form" data-form-id="bbc79e3">
+        [contact-form-7 id="bbc79e3" title="pakiet-endokrynologiczny-premium"]
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script>
+      const allPackages = [
+        {
+          id: 1,
+          name: "Strefa Kobiet",
+          description:
+            "Zbadaj o Swoją Kobiecość i ciesz się dobrym samopoczuciem.",
+          btn: "btn--women--zone--package",
+          color: "#e88f8b",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2024/09/gynegolocy_icon_40x40.png",
+          packageDetails: [
+            {
+              header: "Pakiet Dorosła Kobieta",
+              // subheader: "Dorosła Kobieta",
+              price: 579,
+              currency: "zł",
+              services: [
+                "Konsultacja Specjalisty Ginekologa",
+                "Badanie Ginekologiczne",
+                "USG Ginekologiczne",
+                "Cytologia",
+                "Fizjoterapia Uroginekologiczna",
+              ],
+              formId: "dcfcd9c",
+            },
+            {
+              header: "Pakiet Młoda Kobieta",
+              // subheader: "Młoda Kobieta",
+              specificInfo: "Do 25 roku życia",
+              price: 529,
+              currency: "zł",
+              services: [
+                "Konsultacja Specjalisty Ginekologa",
+                "USG Ginekologiczne",
+                "USG Piersi",
+                "Cytologia",
+              ],
+              formId: "531322d",
+            },
+          ],
+        },
+        // {
+        //   id: 2,
+        //   name: "Pakiet Endokrynologiczny",
+        //   description:
+        //     "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+        //   btn: "btn--endocrinology--package",
+        //   color: "#BE6B98",
+        //   picture:
+        //     "https://unimedica.com.pl/wp-content/uploads/2024/09/strefa_kobiet_icon_40x40.png",
+        //   packageDetails: [
+        //     {
+        //       header: "Pakiet Podstawowy",
+        //       price: 659,
+        //       currency: "zł",
+        //       services: [
+        //         "USG Tarczycy",
+        //         "Badanie Hormonów (TSH, FT3, FT4)",
+        //         "Konsultacja Endokrynologiczna",
+        //       ],
+        //     },
+        //     {
+        //       header: "Pakiet rozszerzony",
+        //       price: 1009,
+        //       currency: "zł",
+        //       services: [
+        //         "USG Tarczycy",
+        //         "Badanie Hormonów (TSH, FT3, FT4)",
+        //         "Konsultacja Endokrynologiczna",
+        //         "Biopsja Tarczycy",
+        //       ],
+        //     },
+        //     {
+        //       header: "Pakiet Premium   ",
+        //       price: 1509,
+        //       currency: "zł",
+        //       services: [
+        //         "USG Tarczycy",
+        //         "Badanie Hormonów (TSH, FT3, FT4)",
+        //         "Konsultacja Endokrynologiczna",
+        //         "Biopsja Tarczycy",
+        //         "Konsultacja Chirurga Endokrynologicznego",
+        //       ],
+        //     },
+        //   ],
+        // },
+        {
+          id: 3,
+          name: "Zdrowe Serce",
+          description: "Zadbaj o Swoje Serce i ciesz się długim Życiem.",
+          btn: "btn--cardiologic--package",
+          color: "#DF1D28",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2024/09/cardiologic_icon_40x40.png",
+          packageDetails: [
+            {
+              header: "Pakiet Kardiologiczny",
+              price: 1309,
+              currency: "zł",
+              services: [
+                "Konsultacja Kardiologiczna",
+                "Echo Serca",
+                "EKG Wysiłkowe",
+                "EKG Spoczynkowe",
+                "Holter EKG",
+                "Holter ABPM",
+              ],
+              formId: "dfda331",
+            },
+            {
+              header: "Pakiet Kardiologiczny Premium",
+              price: 1609,
+              currency: "zł",
+              services: [
+                "Konsultacja Kardiologiczna",
+                "Echo Serca",
+                "EKG Wysiłkowe",
+                "EKG Spoczynkowe",
+                "Holter Premium Life",
+                "Holter ABPM",
+                "USG Tętnic Szyjnych",
+              ],
+              formId: "e9417e7",
+            },
+            {
+              header: "Pakiet Zdrowe Serce",
+              price: 429,
+              currency: "zł",
+              services: ["Konsultacja Kardiologiczna", "Echo Serca", "EKG"],
+              formId: "0c78dce",
+            },
+          ],
+        },
+        {
+          id: 4,
+          name: "Zdrowa Kobieta",
+          description: "Zadbaj o Swoje Zdrowie i dobre samopoczucie. ",
+          btn: "btn--gynecology--package",
+          color: "#F2BAB8",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2024/09/strefa_kobiet_icon_40x40.png",
+          packageDetails: [
+            {
+              header: "Pakiet Ginekologiczny",
+              price: 759,
+              currency: "zł",
+              services: [
+                "Konsultacja Ginekologiczna",
+                "Badanie Ginekologiczne",
+                "USG Ginekologiczne",
+                "USG Piersi",
+                "Cytologia",
+              ],
+              formId: "106ca5d",
+            },
+            {
+              header: "Pakiet Ginekologiczny Premium",
+              price: 809,
+              currency: "zł",
+              services: [
+                "Konsultacja Ginekologiczna",
+                "Badanie Ginekologiczne",
+                "USG Ginekologiczne",
+                "USG Piersi",
+                "Cytologia LBC",
+              ],
+              formId: "a55c8a1",
+            },
+            {
+              header: "Pakiet Endokrynologiczny Podstawowy",
+              price: 659,
+              currency: "zł",
+              services: [
+                "USG Tarczycy",
+                "Badanie Hormonów (TSH, FT3, FT4)",
+                "Konsultacja Endokrynologiczna",
+              ],
+              formId: "e1acedc",
+            },
+            {
+              header: "Pakiet Ednokrynologiczny Rozszerzony",
+              price: 1009,
+              currency: "zł",
+              services: [
+                "USG Tarczycy",
+                "Badanie Hormonów (TSH, FT3, FT4)",
+                "Konsultacja Endokrynologiczna",
+                "Biopsja Tarczycy",
+              ],
+              formId: "acddc32",
+            },
+            {
+              header: "Pakiet Endokrynologiczny Premium",
+              price: 1509,
+              currency: "zł",
+              services: [
+                "USG Tarczycy",
+                "Badanie Hormonów (TSH, FT3, FT4)",
+                "Konsultacja Endokrynologiczna",
+                "Biopsja Tarczycy",
+                "Konsultacja Chirurga Endokrynologicznego",
+              ],
+              formId: "bbc79e3",
+            },
+            {
+              header: "Pakiet Piękno",
+              specificInfo: "Piękna i Zdrowa Twarz",
+              price: 350,
+              currency: "zł",
+              services: [
+                "Konsultacja Dermatologiczna",
+                "Konsultacja Trychologiczna",
+                "Stworzenia Planu Zabiegowego",
+              ],
+              formId: "877a0ed",
+            },
+            {
+              header: "Pakiet Dorosła Kobieta",
+              // subheader: "Dorosła Kobieta",
+              price: 579,
+              currency: "zł",
+              services: [
+                "Konsultacja Specjalisty Ginekologa",
+                "Badanie Ginekologiczne",
+                "USG Ginekologiczne",
+                "Cytologia",
+                "Fizjoterapia Uroginekologiczna",
+              ],
+              formId: "dcfcd9c",
+            },
+            {
+              header: "Pakiet Młoda Kobieta",
+              // subheader: "Młoda Kobieta",
+              specificInfo: "Do 25 roku życia",
+              price: 529,
+              currency: "zł",
+              services: [
+                "Konsultacja Specjalisty Ginekologa",
+                "USG Ginekologiczne",
+                "USG Piersi",
+                "Cytologia",
+              ],
+              formId: "531322d",
+            },
+          ],
+        },
+        {
+          id: 5,
+          name: "Zdrowe Płuca",
+          description:
+            "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+          btn: "btn--covid--package",
+          color: "#97D1CE",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2025/01/logo-zdrowych-pluc-kopia.png",
+          packageDetails: [
+            {
+              header: "Pakiet Covid II",
+              price: 1309,
+              currency: "zł",
+              services: [
+                "Konsultacja Pulmonologiczna",
+                "Konsultacja Kardiologiczna",
+                "Echo Serca",
+                "EKG",
+                "Próba Wysiłkowa",
+                "USG Brzucha",
+              ],
+              formId: "210446d",
+            },
+            {
+              header: "Pakiet Covid III",
+              price: 1509,
+              currency: "zł",
+              services: [
+                "Konsultacja Pulmonologiczna",
+                "Konsultacja Kardiologiczna",
+                "Echo Serca",
+                "EKG",
+                "Próba Wysiłkowa",
+                "USG Brzucha",
+                "Przeciwciała",
+              ],
+              formId: "f52f22e",
+            },
+            {
+              header: "Pakiet Covid I",
+              price: 809,
+              currency: "zł",
+              services: [
+                "Konsultacja Pulmonologiczna",
+                "Konsultacja Kardiologiczna",
+                "Echo Serca",
+                "EKG",
+              ],
+              formId: "a394ae5",
+            },
+          ],
+        },
+        {
+          id: 6,
+          name: "Zdrowy Mężczyzna",
+          description:
+            "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+          btn: "btn--superman--package",
+          color: "#f3c600",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2025/01/superman-ironman.png",
+          packageDetails: [
+            {
+              header: "Pakiet Superman",
+              price: 300,
+              currency: "zł",
+              services: ["Konsultacja Urologiczna", "PSA"],
+              formId: "a5a19b9",
+            },
+            {
+              header: "Pakiet Iron Man",
+              price: 309,
+              currency: "zł",
+              services: ["Konsultacja Kardiologiczna", "Echo Serca", "EKG"],
+              formId: "658e835",
+            },
+            {
+              header: "Pakiet Piękno",
+              specificInfo: "Piękna i Zdrowa Twarz",
+              price: 350,
+              currency: "zł",
+              services: [
+                "Konsultacja Dermatologiczna",
+                "Konsultacja Trychologiczna",
+                "Stworzenia Planu Zabiegowego",
+              ],
+              formId: "877a0ed",
+            },
+          ],
+        },
+        // {
+        //   id: 7,
+        //   name: "Pakiet Iron Man",
+        //   description:
+        //     "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+        //   btn: "btn--ironman--package",
+        //   color: "#a50318",
+        //   picture:
+        //     "https://unimedica.com.pl/wp-content/uploads/2024/12/iron_man.webp",
+        //   packageDetails: [
+        //     {
+        //       header: "Pakiet Iron Man",
+        //       price: 309,
+        //       currency: "zł",
+        //       services: ["Konsultacja Kardiologiczna", "Echo Serca", "EKG"],
+        //     },
+        //   ],
+        // },
+        // {
+        //   id: 8,
+        //   name: "Pakiet Zdrowe Serce",
+        //   description:
+        //     "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+        //   btn: "btn--zdrowe--serce",
+        //   color: "#b40219",
+        //   picture:
+        //     "https://unimedica.com.pl/wp-content/uploads/2025/01/simple-logo-for-Pakiet-Zdrowe-Serce-kopia.png",
+        //   packageDetails: [
+        //     {
+        //       header: "Pakiet Zdrowe Serce",
+        //       price: 429,
+        //       currency: "zł",
+        //       services: ["Konsultacja Kardiologiczna", "Echo Serca", "EKG"],
+        //     },
+        //   ],
+        // },
+        {
+          id: 9,
+          name: "Personalizowany Audyt Zdrowia",
+          description:
+            "Zadbaj o Siebie i Bliskich - Poznaj Nasze Pakiety Badań.",
+          btn: "btn--audyt",
+          color: "#0aa5b7",
+          picture:
+            "https://unimedica.com.pl/wp-content/uploads/2025/01/personalizowany-audyt-logo-kopia.png",
+          packageDetails: [
+            {
+              header: "Pakiet Zdrowe Serce",
+              price: 429,
+              currency: "zł",
+              services: ["Konsultacja Kardiologiczna", "Echo Serca", "EKG"],
+            },
+          ],
+        },
+      ];
+
+      const categories = {
+        women: [2, 3, 4, 5, 9],
+        men: [3, 5, 6, 7, 9],
+        family: [2, 3, 5, 7, 8, 9, 4, 6],
+      };
+
+      function showPackages(category, planName) {
+        const packagesDetailsContainer =
+          document.getElementById("package-details");
+
+        packagesDetailsContainer.style.display = "none";
+
+        document.querySelectorAll(".hidden-form").forEach((form) => {
+          form.style.display = "none";
+        });
+
+        const packagesContainer = document.getElementById("packages");
+        packagesContainer.innerHTML = "";
+
+        if (!categories[category]) {
+          console.error(`Category "${category}" not found.`);
+          return;
+        }
+
+        const selectedPackages = allPackages.filter((pkg) =>
+          categories[category].includes(pkg.id)
+        );
+
+        packagesContainer.innerHTML = `
+                <header class="block__header">
+                  <h2 class="block__heading block__gap" >${planName}</h2>
+                </header>
+
+                <div id="splide-packages" class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      ${selectedPackages
+                        .map(
+                          (pkg) => `
+                            <li class="splide__slide splide__slide_pa">
+                              <div class="plan package">
+                                <picture class="grid grid__center" data-package-id="${
+                                  pkg.id
+                                }">
+                                  <img src="${pkg.picture}" class="icon" alt="${
+                            pkg.name
+                          }" />
+                                  <h3 class="plan__name" style="color: ${
+                                    pkg.color
+                                  };">${pkg.name}</h3>
+                                  ${
+                                    pkg.id === 9
+                                      ? `<a href="https://unimedica.com.pl/kompleksowy-audyt-zdrowia/" class="btn btn--block ${pkg.btn}" >
+                                          <i class="ph ph-magnifying-glass icon"></i>Zobacz Szczegóły
+                                        </a>`
+                                      : `<button class="btn btn--block ${pkg.btn}" data-package-id="${pkg.id}">
+                                          <i class="ph ph-magnifying-glass icon"></i>Zobacz Szczegóły
+                                        </button>`
+                                  }
+                                </picture>
+                              </div>
+                            </li>
+                          `
+                        )
+                        .join("")}
+                    </ul>
+                  </div>
+                </div>
+              `;
+
+        // Initialize Splide.js for the packages
+        new Splide("#splide-packages", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          focus: "center",
+          autoplay: true,
+          interval: 3000,
+          breakpoints: {
+            768: {
+              perPage: 1,
+            },
+            1024: {
+              perPage: 2,
+            },
+          },
+        }).mount();
+
+        packagesContainer.scrollIntoView({ behavior: "smooth" });
+
+        const buttons = packagesContainer.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const packageId = parseInt(this.getAttribute("data-package-id"));
+            const selectedPackage = allPackages.find(
+              (pkg) => pkg.id === packageId
+            );
+            if (selectedPackage) {
+              showPackageDetails(selectedPackage);
+              packagesContainer.scrollTo({
+                top: packagesContainer.querySelector("block__header").offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      }
+
+      function showPackageDetails(pkg) {
+        const packageDetails = document.getElementById("package-details");
+
+        packageDetails.style.display = "block";
+
+        document.querySelectorAll(".hidden-form").forEach((form) => {
+          form.style.display = "none";
+        });
+
+        const isSingleDetail = pkg.packageDetails.length === 1;
+
+        packageDetails.innerHTML = `
+    <header class="block__header">
+      <h2 class="block__heading block__gap" style="color: ${pkg.color};">${
+          pkg.name
+        }</h2>
+      <p>${pkg.description}</p>
+    </header>
+    <div id="splide-package-details" class="splide ${
+      isSingleDetail ? "single-package-detail" : ""
+    }">
+      <div class="splide__track">
+        <ul class="splide__list">
+          ${pkg.packageDetails
+            .map(
+              (detail) => `
+                <li class="splide__slide ">
+                  <div class="plan ">
+                    <div class="card_ card--secondary">
+
+                      <header>
+                        <div class="card__header">
+                        <h3 style="color: ${pkg.color};">${detail.header}</h3>
+  ${
+    detail.specificInfo
+      ? `<p class="plan__specific__info">${detail.specificInfo}</p>`
+      : ""
+  }
+                        <p class="plan__price">${detail.price} ${
+                detail.currency
+              }</p>
+              </div>
+              <div class="card__body">
+                      <ul class="list list--tick">
+                          ${detail.services
+                            .map(
+                              (service) =>
+                                `<li class="list__item">${service}</li>`
+                            )
+                            .join("")}
+                        </ul>
+                        </div>
+                      </header>
+                 
+                      <div class="card__body">
+                       
+                        <button class="btn btn--block ${
+                          pkg.btn
+                        }" data-form-id="${detail.formId}">
+                          <i class="ph ph-basket icon"></i>Zamów Pakiet
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              `
+            )
+            .join("")}
+        </ul>
       </div>
     </div>
+  `;
+
+        const header = packageDetails.querySelector(".block__heading");
+
+        packageDetails.scrollIntoView({ behavior: "smooth" });
+
+        if (header) {
+          header.scrollTo({
+            top: packageDetails.querySelector(".block__header").offsetTop,
+            behavior: "smooth",
+            start: "block",
+          });
+        }
+
+        // Initialize Splide.js for the package details
+        const splide = new Splide("#splide-package-details", {
+          type: isSingleDetail ? "fade" : "loop",
+          perPage: isSingleDetail ? 1 : 3,
+          perMove: 1,
+          focus: "center",
+          autoplay: true,
+          interval: 3000,
+          breakpoints: {
+            768: {
+              perPage: isSingleDetail ? 1 : 1,
+            },
+            1024: {
+              perPage: isSingleDetail ? 1 : 2,
+            },
+          },
+        });
+
+        // Ensure click events are properly set after Splide mounts
+        splide.on("mounted", () => {
+          const buttons = document.querySelectorAll(`.btn[data-form-id]`);
+          buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+              const formId = button.getAttribute("data-form-id");
+              showFormByFormId(formId);
+            });
+          });
+        });
+
+        splide.mount();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splide", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          focus: "center",
+          autoplay: true,
+          interval: 3000,
+          breakpoints: {
+            768: {
+              perPage: 1,
+            },
+            1024: {
+              perPage: 2,
+            },
+          },
+        }).mount();
+      });
+
+      function showFormByFormId(formId) {
+        // Hide all forms
+        document.querySelectorAll(".hidden-form").forEach((form) => {
+          form.style.display = "none";
+        });
+
+        // Find the form with the corresponding id
+        const form = document.querySelector(
+          `.hidden-form[data-form-id="${formId}"]`
+        );
+        if (form) {
+          form.style.display = "block";
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    </script>
   </body>
 </html>

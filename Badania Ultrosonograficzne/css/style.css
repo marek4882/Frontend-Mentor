@@ -21,19 +21,18 @@ html {
   background: var(--primary-color);
   color: white;
 }
+.block__image {
+  border-radius: 15px;
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+}
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif, sans-serif;
   font-size: 1.25rem;
   line-height: 1.4;
   color: var(--body-color);
   margin: 4px;
-}
-
-.block__image {
-  border-radius: 15px;
-  object-fit: cover;
-  height: auto;
-  width: 100%;
 }
 
 h1,
@@ -314,7 +313,7 @@ a {
 }
 /* Blocks */
 .block {
-  --padding-vertical: 1rem;
+  --padding-vertical: 2rem;
   padding: var(--padding-vertical) 0.4rem;
 }
 .block__header {
@@ -491,4 +490,7 @@ ul {
 .ph-question-mark {
   width: 10rem;
   padding: 10rem;
+}
+#osoby_dorosle_ {
+  margin-top: 4rem;
 }

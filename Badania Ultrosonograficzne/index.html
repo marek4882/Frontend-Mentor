@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Badania Ultrosonograficzne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
@@ -73,8 +79,8 @@
     </section>
     <section class="block container">
       <h2 class="block__header" id="pomoc">
-        Nie jesteś pewien? Potrzebujesz pomocy? Skontatkuj się z Nami. Chętnie
-        Ci doradzimy.
+        Nie masz pewności jakie Badanie jest potrzebne przed wizytą u
+        Specjalisty. Potrzebujesz Pomocy?
       </h2>
       <div class="grid grid--1x2 contact--container">
         <div class="card--contact">
@@ -95,10 +101,18 @@
     </section>
     <section class="block container">
       <h2 class="block__header">
-        Jeśli zalecenie Specjalisty wymaga wykonania pogłębionej Diagnostyki
-        Obrazowej jest to np.:
+        Diagnostyka Ultrosonograficzna może być wspierana dodatkową Diagnostyką
+        Obrazową np.: <span class="decorations">Tomografia Komputerowa</span>,
+        <span class="decorations">Rezonans Magnetyczny</span>,
+        <span class="decorations">Badania RTG</span>. Jeśli masz takie zalecenie
+        od Specjalisty Serdecznie Zapraszamy do wykonania badań u
+        <a href="https://imed24.pl/"
+          ><span class="decorations"
+            ><i class="ph ph-link"></i>Naszego Partnera</span
+          ></a
+        >
       </h2>
-      <div class="grid contact--container">
+      <!-- <div class="grid contact--container">
         <div class="card--contact card--contact__small">
           <a href="tel:">
             <button class="btn btn--primary btn--block">
@@ -120,7 +134,7 @@
             ><i class="ph ph-link"></i>Naszego Partnera</span
           ></a
         >
-      </h3>
+      </h3> -->
     </section>
 
     <script>
@@ -301,6 +315,30 @@
           link: "https://unimedica.com.pl/lekarze/dr-n-med-anna-rzucidlo-hymczak/",
           groups: ["dzieci_mlodziez", "osoby_dorosle"],
         },
+        {
+          id: 30,
+          name: "Dr n. med. Piotr Guzik",
+          link: "https://unimedica.com.pl/lekarze/dr-piotr-guzik/",
+          groups: ["osoby_dorosle"],
+        },
+        {
+          id: 31,
+          name: "Dr Krzysztof Sołtys",
+          link: "https://unimedica.com.pl/lekarze/dr-krzysztof-soltys/",
+          groups: ["osoby_dorosle"],
+        },
+        {
+          id: 32,
+          name: "Dr n. med. Joanna Bartlewicz-Wójcik",
+          link: "https://unicardia.pl/lekarze/dr-n-med-joanna-bartkiewicz-wojcik/",
+          groups: ["osoby_dorosle"],
+        },
+        {
+          id: 33,
+          name: "Dr Paweł Iwaszczuk",
+          link: "https://unicardia.pl/lekarze/dr-pawel-iwaszczuk/",
+          groups: ["osoby_dorosle"],
+        },
       ];
 
       const usgGroups = [
@@ -356,20 +394,20 @@
         {
           id: 4,
           title: "USG narządów ruchu",
-          doctors: [12],
+          doctors: [12, 30],
           preparation: "",
         },
         // Narządy płciowe
         {
           id: 5,
           title: "USG ginekologiczne",
-          doctors: [13, 14, 15, 16, 17],
+          doctors: [13, 14, 15, 16, 17, 26],
           preparation: "",
         },
         {
           id: 6,
           title: "USG jąder/moszny",
-          doctors: [6, 7],
+          doctors: [6, 7, 31],
           preparation: "",
         },
         {
@@ -388,25 +426,25 @@
         {
           id: 9,
           title: "USG kończyn (żył i/lub tętnic)",
-          doctors: [18, 2, 3],
+          doctors: [2, 3, 9.11, 18, 32],
           preparation: "",
         },
         {
           id: 10,
           title: "USG tętnic szyjnych",
-          doctors: [11, 9, 20, 18, 19],
+          doctors: [9, 11, 18, 19, 20, 33],
           preparation: "",
         },
-        {
-          id: 11,
-          title: "USG tętnic szyjnych rotacyjne",
-          doctors: [0],
-          preparation: "",
-        },
+        // {
+        //   id: 11,
+        //   title: "USG tętnic szyjnych rotacyjne",
+        //   doctors: [0],
+        //   preparation: "",
+        // },
         {
           id: 12,
           title: "USG TT biodrowych",
-          doctors: [2, 18],
+          doctors: [2, 11, 18],
           preparation: "",
         },
         {
@@ -498,7 +536,7 @@
         {
           id: 27,
           title: "USG stawów",
-          doctors: [12],
+          doctors: [12, 30],
           preparation: "",
         },
       ];
@@ -506,12 +544,12 @@
       // Grupy pacjentów
       const groups = {
         dzieci_mlodziez: [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-          21, 22, 23, 24, 25, 26, 27,
+          1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+          22, 23, 24, 25, 26, 27,
         ], // Kategorie USG przypisane dzieciom i młodzieży
         osoby_dorosle: [
           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-          21, 22, 23, 24, 25, 26, 27,
+          21, 22, 25, 26, 27,
         ], // Kategorie USG przypisane osobom dorosłym
       };
 
