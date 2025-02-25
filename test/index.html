@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <main>
+      <section class="block container block-plans">
+        <div id="splide" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
+                      class="img--header"
+                      alt="women"
+                    />
+                    <div>
+                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
+                      <p class="plan__description">
+                        Chirurgia Plastyczna i Rekonstrukcyjna
+                      </p>
+                    </div>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
+                      class="img--header"
+                      alt="women"
+                    />
+                    <div>
+                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
+                      <p class="plan__description">
+                        Chirurgia Plastyczna i Rekonstrukcyjna
+                      </p>
+                    </div>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
+                      class="img--header"
+                      alt="women"
+                    />
+                    <div>
+                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
+                      <p class="plan__description">
+                        Chirurgia Plastyczna i Rekonstrukcyjna
+                      </p>
+                    </div>
+                  </header>
+                </div>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <header class="card card__header">
+                    <img
+                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
+                      class="img--header"
+                      alt="women"
+                    />
+                    <div>
+                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
+                      <p class="plan__description">
+                        Chirurgia Plastyczna i Rekonstrukcyjna
+                      </p>
+                    </div>
+                  </header>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splide", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          focus: "center",
+          autoplay: true,
+          interval: 3000,
+          breakpoints: {
+            768: {
+              perPage: 1,
+            },
+            1024: {
+              perPage: 2,
+            },
+          },
+        }).mount();
+      });
+    </script>
+  </body>
+</html>
