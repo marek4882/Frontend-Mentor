@@ -25,70 +25,77 @@
             <ul class="splide__list">
               <li class="splide__slide splide__slide_pa">
                 <div class="card--gap">
-                  <header class="card card__header">
-                    <img
-                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
-                      class="img--header"
-                      alt="women"
-                    />
-                    <div>
-                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
-                      <p class="plan__description">
-                        Chirurgia Plastyczna i Rekonstrukcyjna
-                      </p>
-                    </div>
-                  </header>
+                  <a href="https://uniestetica.pl/lekarze/dr-ewa-kopycinska/">
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2022/11/dr-Ewa-Kopycinska_new.jpg"
+                        class="img--header"
+                        alt="Dr Ewa Kopycińska Specjalista medycyny estetycznej, dermatolog, trycholo"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Ewa Kopycińska</h3>
+                        <p class="plan__description">
+                          Dermatolog<br />
+                          Medycyna Estetyczna
+                        </p>
+                      </div>
+                      <span class="btn btn--primary">Poznaj Specjalistę</span>
+                    </header>
+                  </a>
                 </div>
               </li>
               <li class="splide__slide splide__slide_pa">
                 <div class="card--gap">
-                  <header class="card card__header">
-                    <img
-                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
-                      class="img--header"
-                      alt="women"
-                    />
-                    <div>
-                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
-                      <p class="plan__description">
-                        Chirurgia Plastyczna i Rekonstrukcyjna
-                      </p>
-                    </div>
-                  </header>
+                  <a
+                    href="https://uniestetica.pl/lekarze/dr-agnieszka-trynkiewicz/"
+                  >
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2025/02/Projekt-bez-nazwy-4.png"
+                        class="img--header"
+                        alt="Dr Agnieszka Trynkiewicz Specjalista Medycyny Estetycznej, Dermatolog"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Agnieszka Trynkiewicz</h3>
+                        <p class="plan__description">
+                          Dermatolog<br />
+                          Medycyna Estetyczna
+                        </p>
+                      </div>
+                      <span class="btn btn--primary">Poznaj Specjalistę</span>
+                    </header>
+                  </a>
                 </div>
               </li>
               <li class="splide__slide splide__slide_pa">
                 <div class="card--gap">
-                  <header class="card card__header">
-                    <img
-                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
-                      class="img--header"
-                      alt="women"
-                    />
-                    <div>
-                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
-                      <p class="plan__description">
-                        Chirurgia Plastyczna i Rekonstrukcyjna
-                      </p>
-                    </div>
-                  </header>
-                </div>
-              </li>
-              <li class="splide__slide splide__slide_pa">
-                <div class="card--gap">
-                  <header class="card card__header">
-                    <img
-                      src="https://unimedica.com.pl/wp-content/uploads/2024/09/women.jpg"
-                      class="img--header"
-                      alt="women"
-                    />
-                    <div>
-                      <h3 class="plan__name">Dr Klaudia Libondi</h3>
-                      <p class="plan__description">
-                        Chirurgia Plastyczna i Rekonstrukcyjna
-                      </p>
-                    </div>
-                  </header>
+                  <a
+                    href="https://uniestetica.pl/lekarze/dr-aleksandra-kulbat/"
+                  >
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2025/03/Dr-Kulbat-Zdjecie-www-kopia-kopia.webp"
+                        class="img--header"
+                        alt="Dr Aleksandra Kulbat Medycyna Estetyczna"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Aleksandra Kulbat</h3>
+                        <p class="plan__description">
+                          Medycyna Estetyczna<br /><span class="blank">x</span>
+                        </p>
+                      </div>
+                      <span class="btn btn--primary">Poznaj Specjalistę</span>
+                    </header>
+                  </a>
                 </div>
               </li>
             </ul>
@@ -103,12 +110,15 @@
           type: "loop",
           perPage: 3,
           perMove: 1,
-          focus: "center",
           autoplay: true,
+          pauseOnHover: (boolean = true),
+          focus: "left",
           interval: 3000,
+          trimSpace: false,
           breakpoints: {
             768: {
               perPage: 1,
+              start: 0,
             },
             1024: {
               perPage: 2,
