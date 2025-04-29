@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Stymulatory</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <main>
@@ -18,16 +27,12 @@
               Medycyna Estetyczna daje wiele możliwości w zakresie skutecznej
               regeneracji i odmłodzenia skóry. Jedną z nich są Stymulatory
               Tkankowe, które pobudzają naturalne procesy regeneracyjne skóry.
-              <a href=""
+              <a href="#dla-kogo-sa-stymulatory-tkankowe"
                 ><i class="ph ph-link"></i>&nbsp;Dla kogo są stymulatory
                 tkankowe</a
               >
             </p>
-            <a href="#" class="btn btn--primary mobile-video-btn"
-              >Zobacz film</a
-            >
           </header>
-
           <div class="video-container phone-frame-yt">
             <div class="phone-frame phone-frame-yt">
               <div class="phone-screen">
@@ -48,25 +53,43 @@
 
       <!-- II sekcja -->
       <section class="block container">
-        <div class="grid grid--1x2">
-          <img src="./assets/Bez tytułu.png" class="hero__image" />
-
-          <header class="">
-            <h2 class="block__heading">
+        <div class="grid grid--1x2 offer__container">
+          <!-- On mobile: Header first, then image, then list -->
+          <header class="mobile-first">
+            <h2 class="block__heading block__header">
               W UniEstetica oferujemy zabiegi biostymulacji skóry, które:
             </h2>
-            <ul class="list">
+
+            <!-- Image will appear here on mobile -->
+            <div class="mobile-image">
+              <img src="./assets/Bez tytułu.png" class="hero__image" />
+            </div>
+
+            <ul class="list list--check">
               <li>
-                <i class="ph ph-check-circle"></i> Pobudzają jej naturalne
-                procesy regeneracyjne,
+                <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+                Pobudzają jej naturalne procesy regeneracyjne,
               </li>
-              <li><i class="ph ph-check-circle"></i> Poprawiają jędrność,</li>
               <li>
-                <i class="ph ph-check-circle"></i> Plastyczność i nawilżenie.
+                <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+                Poprawiają jędrność,
+              </li>
+              <li>
+                <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+                Plastyczność i nawilżenie.
               </li>
             </ul>
           </header>
+
+          <!-- Desktop-only image (left side) -->
+          <div class="desktop-image">
+            <img src="./assets/Bez tytułu.png" class="hero__image" />
+          </div>
         </div>
+      </section>
+
+      <!-- Sekcja Rodzaje Stymulatorów -->
+      <section class="block container">
         <div class="block-plans">
           <header class="block__header">
             <h2>Poznaj rodzaje stymulatorów tkankowych</h2>
@@ -75,8 +98,11 @@
             <div class="plan">
               <div class="card">
                 <header class="card__header">
-                  <div class="icon-wrapper">
-                    <i class="ph ph-drop"></i>
+                  <div class="icon-wrapper" style="background: none">
+                    <i
+                      class="ph ph-drop"
+                      style="color: var(--primary-color)"
+                    ></i>
                   </div>
                   <h3 class="plan__name">Polinukleotydy</h3>
                   <span class="plan__description"
@@ -118,8 +144,17 @@
             <div class="plan">
               <div class="card">
                 <header class="card__header">
-                  <div class="icon-wrapper">
-                    <i class="ph ph-sparkle"></i>
+                  <div
+                    class="icon-wrapper"
+                    style="
+                      background: #ffffffb8;
+                      box-shadow: 0px 0px 7px 0px #499aa252;
+                    "
+                  >
+                    <i
+                      class="ph ph-fill ph-sparkle"
+                      style="color: var(--primary-color)"
+                    ></i>
                   </div>
                   <h3 class="plan__name">Kwas polimlekowy</h3>
                   <span class="plan__description"
@@ -160,8 +195,11 @@
             <div class="plan">
               <div class="card">
                 <header class="card__header">
-                  <div class="icon-wrapper">
-                    <i class="ph ph-lightning"></i>
+                  <div
+                    class="icon-wrapper"
+                    style="color: white; background: var(--primary-color)"
+                  >
+                    <i class="ph ph-lightning" style="color: white"></i>
                   </div>
                   <h3 class="plan__name">Hydroksyapatyt wapnia</h3>
                   <span class="plan__description"
@@ -206,33 +244,43 @@
       </section>
 
       <!-- III Sekcja -->
-      <section class="block container decoration">
-        <heaader class="block__header">
+      <section
+        class="block container decoration"
+        id="dla-kogo-sa-stymulatory-tkankowe"
+      >
+        <header class="block__header">
           <h2 class="block__heading">Dla kogo są stymulatory tkankowe?</h2>
           <p>
             Stymulatory tkankowe to idealne rozwiązanie dla osób, które
             zauważają:
           </p>
-        </heaader>
+        </header>
         <div class="grid grid--1x2">
           <ul class="list">
             <li>
-              <i class="ph ph-check-circle"></i> utratę jędrności i
-              elastyczności skóry
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i> utratę
+              jędrności i elastyczności skóry
             </li>
-            <li><i class="ph ph-check-circle"></i> zmarszczki i wiotkość</li>
             <li>
-              <i class="ph ph-check-circle"></i> odwodnienie i matowy wygląd
-              skóry
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+              zmarszczki i wiotkość
+            </li>
+            <li>
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+              odwodnienie i matowy wygląd skóry
             </li>
           </ul>
           <ul class="list">
-            <li><i class="ph ph-check-circle"></i> opadanie owalu twarzy</li>
             <li>
-              <i class="ph ph-check-circle"></i> utratę gęstości skóry dłoni
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i> opadanie
+              owalu twarzy
             </li>
             <li>
-              <i class="ph ph-check-circle"></i>
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i> utratę
+              gęstości skóry dłoni
+            </li>
+            <li>
+              <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
               zapadnięte obszary twarzy wymagające odbudowy objętości
             </li>
           </ul>
@@ -241,9 +289,9 @@
 
       <!-- IV Sekcja -->
       <section class="block container">
-        <div class="container grid grid--1x2 grid--center">
-          <header class="">
-            <h2 class="block__heading">Dlaczego warto nas wybrać?</h2>
+        <div class="grid grid--1x2 grid--center">
+          <header class="block__header">
+            <h2>Dlaczego warto nas wybrać?</h2>
             <p>
               W UniEstetica dbamy o najwyższe standardy bezpieczeństwa. Zabiegi
               wykonywane są przez doświadczonych Specjalistów przy użyciu
@@ -252,28 +300,90 @@
 
             <ul class="list">
               <li>
-                <i class="ph ph-clock"></i> Procedura trwa około 30-45 minut
+                <i class="ph ph-fill ph-clock"></i> Procedura trwa około 30-45
+                minut
               </li>
               <li>
-                <i class="ph ph-syringe"></i> Cienkie igły lub kaniula
+                <i class="ph ph-fill ph-syringe"></i> Cienkie igły lub kaniula
                 minimalizujące ryzyko siniaków
               </li>
               <li>
-                <i class="ph ph-person-simple-run"></i> Możliwość powrotu do
-                codziennych aktywnosci natychmiast
+                <i class="ph ph-fill ph-person-simple-run"></i> Możliwość
+                powrotu do codziennych aktywnosci natychmiast
               </li>
             </ul>
           </header>
           <!-- <a href=""></a> przycisk pojawiajacy sie na mobilce-->
-          <img class="hero__image" src="./assets/Logo Uniestetica.png" alt="" />
+          <img
+            src="./assets/Logo Uniestetica.png"
+            alt=""
+            class="brand__image"
+          />
+        </div>
+      </section>
+      <!-- Efekty terapi -->
+      <section class="block container">
+        <div class="">
+          <header class="block__header" data-aos="fade-down">
+            <h2>Efekty terapii w UniEstetica</h2>
+            <p>
+              Poznaj rezultaty, które możesz osiągnąć dzięki naszym innowacyjnym
+              terapiom odmładzającym
+            </p>
+          </header>
+          <div class="grid grid--1x3 grid--gap">
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3>Poprawa gęstości i elastyczności skóry</h3>
+            </div>
+
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fas fa-vector-square"></i>
+              </div>
+              <h3>Naturalny lifting i wygładzenie zmarszczek</h3>
+            </div>
+
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </div>
+              <h3>Stopniowa odbudowa objętości skóry</h3>
+            </div>
+
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fas fa-tint"></i>
+              </div>
+              <h3>Głębokie nawilżenie i zdrowy blask</h3>
+            </div>
+
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <h3>Efekty utrzymujące się nawet do 2 lat</h3>
+            </div>
+
+            <div class="effect-card" data-aos="fade-up">
+              <div class="effect-icon">
+                <i class="fa fa-star"></i>
+              </div>
+              <h3>Subtelne i naturalne odmłodzenie twarzy</h3>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Opinie naszych Klientów   -->
-      <section class="reviews-section">
-        <h2 class="block__header">⭐ Opinie naszych klientów</h2>
+      <section class="reviews-section block">
+        <h2 class="block__header">
+          <i class="ph-fill ph-star"></i> Opinie naszych klientów
+        </h2>
         <div class="grid grid--1x3 review_gap">
-          <div class="review">
+          <div class="review" data-aos="fade-right">
             <img
               src="./assets/Google_Icons-09-512.webp"
               alt="Google"
@@ -282,7 +392,11 @@
             <div class="review-content">
               <div class="review-header">
                 <span class="name">Małgorzata S.</span>
-                <span class="stars">★★★★★</span>
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i
+                ></span>
               </div>
               <div class="comment">
                 Dr Kulbat najpierw zrobila mi długą konsultację, obejrzała mnie,
@@ -298,11 +412,13 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">📍 Google – Luty 2025</div>
+              <div class="date">
+                <i class="ph-fill ph-calendar"></i> Google – Luty 2025
+              </div>
             </div>
           </div>
 
-          <div class="review">
+          <div class="review" data-aos="fade-right">
             <img
               src="./assets/Google_Icons-09-512.webp"
               alt="Google"
@@ -311,7 +427,11 @@
             <div class="review-content">
               <div class="review-header">
                 <span class="name">Dawid</span>
-                <span class="stars">★★★★★</span>
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i
+                ></span>
               </div>
               <div class="comment">
                 Polecam UniEstetica każdemu, kto szuka profesjonalizmu i troski
@@ -322,11 +442,13 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">📍 Google – Grudzień 2024</div>
+              <div class="date">
+                <i class="ph-fill ph-calendar"></i> Google – Grudzień 2024
+              </div>
             </div>
           </div>
 
-          <div class="review">
+          <div class="review" data-aos="fade-right">
             <img
               src="./assets/Google_Icons-09-512.webp"
               alt="Google"
@@ -335,7 +457,11 @@
             <div class="review-content">
               <div class="review-header">
                 <span class="name">Pola W.</span>
-                <span class="stars">★★★★★</span>
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
               </div>
               <div class="comment">
                 Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
@@ -345,7 +471,9 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">📍 Google – Październik 2024</div>
+              <div class="date">
+                <i class="ph-fill ph-calendar"></i> Google – Październik 2024
+              </div>
             </div>
           </div>
         </div>
@@ -367,103 +495,96 @@
           <a class="btn btn--outline" href=""
             ><i class="ph ph-chat-circle-text"></i> Napisz do nas</a
           >
-          <a class="btn btn--outline" href="">
+          <a class="btn btn--outline" href="#faq">
             <i class="ph ph-question"></i> Najczęściej zadawane pytania
           </a>
         </div>
       </section>
 
       <!-- V Sekcja -->
-      <!-- <section class="block container block-plans">
-        <header class="block__header block__header__gap">
-          <h2 class="block__title">
-            Nasz <span class="decorations">Zespół</span>
-          </h2>
-          <p>
-            Poznaj Naszych Doświadczonych Specjalistów Medycyny Estetycznej,
-            którzy z pasją i precyzją pomagają Pacjentom odkryć swoje naturalne
-            Piękno. Każdy z Naszych Ekspertów posiada specjalistyczną wiedzę i
-            zaawansowane umiejętności, które pozwalają na całkowicie
-            indywidualne podejście do każdego Pacjenta.
-          </p>
+      <section class="block container block-plans">
+        <header class="block__header" data-aos="fade-down">
+          <h2>Poznaj Naszych Specjalistów</h2>
         </header>
-        <div class="grid grid--1x3">
-          <div class="plan" title="Poznaj Specjalistę">
-            <a href="https://uniestetica.pl/lekarze/dr-ewa-kopycinska/">
-              <div class="card">
-                <header class="card__header">
-                  <img
-                    src="https://uniestetica.pl/wp-content/uploads/2022/11/dr-Ewa-Kopycinska_new.jpg"
-                    class="img--header"
-                    alt="Dr Ewa Kopycińska Specjalista medycyny estetycznej, dermatolog, trycholo"
-                  />
-                </header>
-                <div class="card__body">
-                  <p class="card__title">Dr Ewa Kopycińska</p>
-                  <p class="card__subtitle">
-                    Dermatolog<br />
-                    Medycyna Estetyczna
-                  </p>
-                  <a href="tel:606565000">
-                    <button class="btn btn--primary btn--block">
-                      <i class="ph ph-phone icon-pulse"></i> Umów Wizytę
-                    </button>
+        <div id="splide" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <a
+                    href="https://uniestetica.pl/lekarze/dr-aleksandra-kulbat/"
+                  >
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2025/03/Dr-Kulbat-Zdjecie-www-kopia-kopia.webp"
+                        class="img--header"
+                        alt="Dr Aleksandra Kulbat Medycyna Estetyczna"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Aleksandra Kulbat</h3>
+                        <p class="plan__description">
+                          Medycyna Estetyczna<br /><span class="blank">x</span>
+                        </p>
+                      </div>
+                    </header>
                   </a>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="plan" title="Poznaj Specjalistę">
-            <a href="https://uniestetica.pl/lekarze/dr-agnieszka-trynkiewicz/">
-              <div class="card">
-                <header class="card__header">
-                  <img
-                    src="https://uniestetica.pl/wp-content/uploads/2025/02/Projekt-bez-nazwy-4.png"
-                    alt=""
-                  />
-                </header>
-                <div class="card__body">
-                  <p class="card__title">Dr Agnieszka Trynkiewicz</p>
-                  <p class="card__subtitle">
-                    Dermatolog<br />
-                    Medycyna Estetyczna
-                  </p>
-                  <a href="tel:606565000">
-                    <button class="btn btn--primary btn--block">
-                      <i class="ph ph-phone icon-pulse"></i> Umów Wizytę
-                    </button>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <a href="https://uniestetica.pl/lekarze/dr-ewa-kopycinska/">
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2022/11/dr-Ewa-Kopycinska_new.jpg"
+                        class="img--header"
+                        alt="Dr Ewa Kopycińska Specjalista medycyny estetycznej, dermatolog, trycholo"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Ewa Kopycińska</h3>
+                        <p class="plan__description">
+                          Dermatolog<br />
+                          Medycyna Estetyczna
+                        </p>
+                      </div>
+                    </header>
                   </a>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="plan">
-            <a href="https://uniestetica.pl/lekarze/dr-aleksandra-kulbat/">
-              <div class="card" title="Poznaj Specjalistę">
-                <header class="card__header">
-                  <img
-                    id="mirowska"
-                    src="https://uniestetica.pl/wp-content/uploads/2025/03/Dr-Kulbat-Zdjecie-www-kopia-kopia.webp"
-                    alt=""
-                  />
-                </header>
-                <div class="card__body">
-                  <p class="card__title">Dr Aleksandra Kulbat</p>
-                  <p class="card__subtitle">
-                    Medycyna Estetyczna<br /><span class="blank">x</span>
-                  </p>
-                  <a href="tel:606565000">
-                    <button class="btn btn--primary btn--block">
-                      <i class="ph ph-phone icon-pulse"></i> Umów Wizytę
-                    </button>
+              </li>
+              <li class="splide__slide splide__slide_pa">
+                <div class="card--gap">
+                  <a
+                    href="https://uniestetica.pl/lekarze/dr-agnieszka-trynkiewicz/"
+                  >
+                    <header
+                      class="card card__header"
+                      title="Poznaj Specjalistę"
+                    >
+                      <img
+                        src="https://uniestetica.pl/wp-content/uploads/2025/02/Projekt-bez-nazwy-4.png"
+                        class="img--header"
+                        alt="Dr Agnieszka Trynkiewicz Specjalista Medycyny Estetycznej, Dermatolog"
+                      />
+                      <div>
+                        <h3 class="plan__name">Dr Agnieszka Trynkiewicz</h3>
+                        <p class="plan__description">
+                          Dermatolog<br />
+                          Medycyna Estetyczna
+                        </p>
+                      </div>
+                    </header>
                   </a>
                 </div>
-              </div>
-            </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section> -->
-
+      </section>
       <!-- VI Sekcja -->
       <!-- <section class="block container">
         <heaader class="block__header">
@@ -653,23 +774,59 @@
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const videoBtn = document.querySelector(".mobile-video-btn");
-        const videoContainer = document.querySelector(".video-container");
+        const slider = document.querySelector("#splide");
 
-        videoBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          videoContainer.classList.toggle("active");
+        // Opcje dla Intersection Observer
+        const options = {
+          root: null, // Obserwacja w obrębie widocznego viewportu
+          rootMargin: "0px",
+        };
 
-          if (videoContainer.classList.contains("active")) {
-            videoBtn.textContent = "Ukryj film";
-          } else {
-            videoBtn.textContent = "Zobacz film";
-          }
-        });
+        // Callback dla Intersection Observer
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              new Splide("#splide", {
+                type: "loop",
+                perPage: 3,
+                perMove: 1,
+                autoplay: true,
+                pauseOnHover: true,
+                start: 2,
+                focus: "center",
+                interval: 3000,
+                breakpoints: {
+                  768: {
+                    perPage: 1,
+                    start: 0,
+                  },
+                  1024: {
+                    perPage: 2,
+                  },
+                },
+              }).mount();
+
+              // Przestań obserwować po uruchomieniu slidera
+              observer.unobserve(slider);
+            }
+          });
+        };
+
+        // Utwórz instancję Intersection Observer
+        const observer = new IntersectionObserver(observerCallback, options);
+
+        // Rozpocznij obserwację slidera
+        observer.observe(slider);
       });
-
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const faqItems = document.querySelectorAll(".faq-item");
 
