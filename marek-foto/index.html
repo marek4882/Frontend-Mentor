@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marek-Foto</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="dec"></div>
+      <header class="container nav collapsible">
+        <nav class="nav__brand">
+          <ul class="list nav__list left">
+            <li class="nav__item"><a href="#">Strona Główna</a></li>
+            <li class="nav__item">
+              <a href="#specializations-section">Specjalizacje</a>
+            </li>
+          </ul>
+          <div class="middle">
+            <a href="" class="logo">
+              <img src="./assets/logo.svg" alt="" />
+            </a>
+          </div>
+          <ul class="list nav__list right">
+            <li class="nav__item">
+              <a href="#realizations-section">Realizacje</a>
+            </li>
+            <li class="nav__item"><a href="#contact-section">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="container" id="home-section">
+        <div class="splide" id="ferrari-gallery">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <figure class="gallery-item">
+                  <div class="gallery-image-container">
+                    <img
+                      src="./assets/DSC05746.jpg"
+                      alt="Ferrari Roma - szczegóły wnętrza"
+                      class="gallery-image"
+                    />
+                  </div>
+                  <figcaption class="photo-caption">
+                    <p class="photo-caption__title">Ferrari Roma</p>
+                    <time datetime="2025-05-10" class="photo-caption__date"
+                      >10.05.2025</time
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <!-- Additional slides for demonstration -->
+              <li class="splide__slide">
+                <figure class="gallery-item">
+                  <div class="gallery-image-container">
+                    <img
+                      src="./assets/DSC06572.jpg"
+                      alt="Ferrari Roma - tylne światła"
+                      class="gallery-image"
+                    />
+                  </div>
+                  <figcaption class="photo-caption">
+                    <p class="photo-caption__title">Ferrari Roma</p>
+                    <time datetime="2025-05-10" class="photo-caption__date"
+                      >10.05.2025</time
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li class="splide__slide">
+                <figure class="gallery-item">
+                  <div class="gallery-image-container">
+                    <img
+                      src="./assets/./DSC00117.jpg"
+                      alt="Ferrari Roma - kokpit"
+                      class="gallery-image"
+                    />
+                  </div>
+                  <figcaption class="photo-caption">
+                    <p class="photo-caption__title">Ferrari Roma</p>
+                    <time datetime="2025-05-10" class="photo-caption__date"
+                      >10.05.2025</time
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specializations-section -->
+      <section class="container" id="specializations-section">
+        <h2 class="section-title">Moje specjalizacje fotograficzne</h2>
+        <div class="categories-grid">
+          <!-- Karta 1: Śluby -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DJI_0118.jpg" alt="Fotografia ślubna" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Śluby</h3>
+              <p class="category-description">
+                Uwieczniam najpiękniejsze momenty z Waszego wyjątkowego dnia w
+                niepowtarzalny sposób.
+              </p>
+              <button class="category-btn" data-category="wedding">
+                Wybierz
+              </button>
+            </div>
+          </div>
+          <!-- Karta 2: Motoryzacja -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DSC05746.jpg" alt="Fotografia motoryzacyjna" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Motoryzacja</h3>
+              <p class="category-description">
+                Profesjonalne sesje zdjęciowe pojazdów podkreślające ich
+                dynamikę i charakter.
+              </p>
+              <button class="category-btn" data-category="automotive">
+                Wybierz
+              </button>
+            </div>
+          </div>
+          <!-- Karta 3: Nieruchomości -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DSC05746.jpg" alt="Fotografia nieruchomości" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Nieruchomości</h3>
+              <p class="category-description">
+                Zdjęcia wnętrz i architektura, które zwiększają atrakcyjność
+                oferty nieruchomości.
+              </p>
+              <button class="category-btn" data-category="realestate">
+                Wybierz
+              </button>
+            </div>
+          </div>
+          <!-- Karta 4: Portrety -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DSC05746.jpg" alt="Fotografia portretowa" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Portrety</h3>
+              <p class="category-description">
+                Piękne portrety oddające osobowość i charakter fotografowanej
+                osoby.
+              </p>
+              <button class="category-btn" data-category="portrait">
+                Wybierz
+              </button>
+            </div>
+          </div>
+          <!-- Karta 5: Natura -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DSC05746.jpg" alt="Fotografia krajobrazowa" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Natura</h3>
+              <p class="category-description">
+                Zachwycające krajobrazy i majestatyczna natura uchwycona w
+                najlepszym świetle.
+              </p>
+              <button class="category-btn" data-category="nature">
+                Wybierz
+              </button>
+            </div>
+          </div>
+          <!-- Karta 6: Wydarzenia -->
+          <div class="category-card">
+            <div class="category-image">
+              <img src="./assets/DSC05746.jpg" alt="Fotografia eventowa" />
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Wydarzenia</h3>
+              <p class="category-description">
+                Profesjonalna obsługa fotograficzna imprez, konferencji i
+                eventów firmowych.
+              </p>
+              <button class="category-btn" data-category="events">
+                Wybierz
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="realizations-section">
+        <h2 class="section-title">Moje realizacje</h2>
+        <p class="section-subtitle">
+          Zobacz wybrane projekty z mojego portfolio. Kliknij w kategorię, aby
+          filtrować projekty.
+        </p>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Wszystkie</button>
+          <button class="filter-btn" data-filter="wedding">Śluby</button>
+          <button class="filter-btn" data-filter="automotive">
+            Motoryzacja
+          </button>
+          <button class="filter-btn" data-filter="realestate">
+            Nieruchomości
+          </button>
+          <button class="filter-btn" data-filter="portrait">Portrety</button>
+          <button class="filter-btn" data-filter="nature">Natura</button>
+          <button class="filter-btn" data-filter="events">Wydarzenia</button>
+        </div>
+        <div class="portfolio-grid">
+          <!-- Projekt 1: Ślub -->
+          <div class="portfolio-item" data-category="wedding">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Ślub Anny i Michała" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Śluby</div>
+              <h3 class="portfolio-title">Ślub Anny i Michała</h3>
+              <p class="portfolio-description">
+                Urzekająca ceremonia w rustykalnym stylu w otoczeniu natury.
+                Piękne momenty, wzruszające gesty i radosne chwile.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Zdjęcia przeszły nasze najśmielsze oczekiwania! Każda emocja i
+                  każdy ważny moment zostały uchwycone w idealny sposób. Te
+                  fotografie to najpiękniejsza pamiątka z najważniejszego dnia w
+                  naszym życiu.
+                </p>
+                <p class="testimonial-author">— Anna i Michał</p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+          <!-- Projekt 2: Motoryzacja -->
+          <div class="portfolio-item" data-category="automotive">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Ferrari LaFerrari" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Motoryzacja</div>
+              <h3 class="portfolio-title">Ferrari LaFerrari</h3>
+              <p class="portfolio-description">
+                Profesjonalna sesja zdjęciowa włoskiego supersamochodu o mocy
+                963 KM. Dynamiczne ujęcia podkreślające linię i charakter
+                pojazdu.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Każde zdjęcie oddaje charakter mojego samochodu lepiej niż
+                  niejedna profesjonalna kampania reklamowa! Doskonałe ujęcia,
+                  idealne światło, pełen profesjonalizm.
+                </p>
+                <p class="testimonial-author">
+                  — Tomasz, właściciel salonu sportowych aut
+                </p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+          <!-- Projekt 3: Nieruchomości -->
+          <div class="portfolio-item" data-category="realestate">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Apartament Central Park" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Nieruchomości</div>
+              <h3 class="portfolio-title">Apartament Central Park</h3>
+              <p class="portfolio-description">
+                Luksusowy apartament w centrum miasta. Sesja zdjęciowa wnętrz z
+                wykorzystaniem naturalnego światła i kompozycji podkreślających
+                przestrzeń.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Po opublikowaniu tych zdjęć na portalu nieruchomości,
+                  apartament sprzedał się w ciągu tygodnia! Fotografie idealnie
+                  podkreśliły wszystkie atuty mieszkania, pokazując jego
+                  przestrzeń i światło.
+                </p>
+                <p class="testimonial-author">
+                  — Marta, pośrednik nieruchomości
+                </p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+          <!-- Projekt 4: Portrety -->
+          <div class="portfolio-item" data-category="portrait">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Sesja portretowa Julii" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Portrety</div>
+              <h3 class="portfolio-title">Sesja portretowa Julii</h3>
+              <p class="portfolio-description">
+                Naturalna sesja portretowa w miejskiej scenerii. Uchwycenie
+                osobowości i naturalnego piękna modelki.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Nigdy nie lubiłam swoich zdjęć, ale te portrety zmieniły moje
+                  podejście. Czułam się komfortowo podczas całej sesji, a efekt
+                  końcowy przeszedł moje oczekiwania. Dziękuję!
+                </p>
+                <p class="testimonial-author">— Julia</p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+          <!-- Projekt 5: Natura -->
+          <div class="portfolio-item" data-category="nature">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Tatry o wschodzie słońca" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Natura</div>
+              <h3 class="portfolio-title">Tatry o wschodzie słońca</h3>
+              <p class="portfolio-description">
+                Projekt fotograficzny przedstawiający najpiękniejsze szczyty
+                Tatr w magicznym świetle poranka. 14 dni wędrówek po górach.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Ogromny panoramiczny wydruk zawisł w naszym salonie i wzbudza
+                  zachwyt każdego gościa. Jedno zdjęcie, a pozwala nam
+                  codziennie przenosić się w góry!
+                </p>
+                <p class="testimonial-author">
+                  — Krzysztof, pasjonat górskich wędrówek
+                </p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+          <!-- Projekt 6: Wydarzenia -->
+          <div class="portfolio-item" data-category="events">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Konferencja Tech Summit" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Wydarzenia</div>
+              <h3 class="portfolio-title">Konferencja Tech Summit</h3>
+              <p class="portfolio-description">
+                Kompleksowa obsługa fotograficzna międzynarodowej konferencji
+                technologicznej. Zdjęcia z prezentacji, networkingu i części
+                warsztatowej.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Profesjonalna obsługa i imponujące efekty! Zdjęcia z naszej
+                  konferencji doskonale oddają jej atmosferę i energię.
+                  Szczególnie doceniam dyskretną obecność fotografa i szybki
+                  czas dostarczenia materiałów.
+                </p>
+                <p class="testimonial-author">
+                  — Agnieszka, dyrektor marketingu Tech Summit
+                </p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container contact-container" id="contact-section">
+        <h2 class="section-title">Opowiedz mi o swojej wizji</h2>
+        <p class="section-subtitle">
+          Każda historia zasługuje na wyjątkowe uchwycenie. Skontaktuj się ze
+          mną i opowiedz o swojej wizji - czy to sesja portretowa, ślubna,
+          rodzinna czy komercyjna. Razem stworzymy zdjęcia, które będą dla
+          Ciebie wyjątkowe.
+        </p>
+        <section class="categories-grid">
+          <div class="contact-card instagram">
+            <div class="icon-wrapper"><i class="ph ph-instagram-logo"></i></div>
+            <h3 class="contact-title">Instagram</h3>
+            <a
+              href="https://www.instagram.com/marek_cwioro/"
+              class="contact-info category-btn"
+              target="_blank"
+              >@marek_cwioro</a
+            >
+          </div>
+          <div class="contact-card facebook">
+            <div class="icon-wrapper"><i class="ph ph-facebook-logo"></i></div>
+            <h3 class="contact-title">Facebook</h3>
+            <a
+              href="https://www.facebook.com/profile.php?id=100087325923279"
+              class="contact-info category-btn"
+              target="_blank"
+              >marek-foto</a
+            >
+          </div>
+          <div class="contact-card email">
+            <div class="icon-wrapper"><i class="ph ph-envelope"></i></div>
+            <h3 class="contact-title">Email</h3>
+            <a href="mailto: cwioro" class="contact-info category-btn"
+              >cwioro200@gmail.com</a
+            >
+          </div>
+        </section>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#ferrari-gallery", {
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          gap: "1rem",
+          arrows: true,
+          pagination: true,
+          breakpoints: {
+            1024: {
+              perPage: 2,
+            },
+            768: {
+              perPage: 1,
+              gap: "0.5rem",
+            },
+          },
+          // Auto-play configuration (optional)
+          autoplay: true,
+          interval: 4000,
+          pauseOnHover: true,
+          pauseOnFocus: true,
+        }).mount();
+      });
+
+      // Obsługa przycisków "Wybierz"
+      document.querySelectorAll(".category-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const category = this.getAttribute("data-category");
+          console.log(`Wybrano kategorię: ${category}`);
+
+          // Przewiń do sekcji realizacji
+          const realizationsSection = document.getElementById(
+            "realizations-section"
+          );
+          if (realizationsSection) {
+            realizationsSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+
+          // Poczekaj na zakończenie przewijania, następnie filtruj portfolio
+          setTimeout(() => {
+            // Usuń aktywną klasę ze wszystkich przycisków filtrów
+            document.querySelectorAll(".filter-btn").forEach((btn) => {
+              btn.classList.remove("active");
+            });
+
+            // Dodaj aktywną klasę do odpowiedniego przycisku kategorii
+            const targetFilterBtn = document.querySelector(
+              `[data-filter="${category}"]`
+            );
+            if (targetFilterBtn) {
+              targetFilterBtn.classList.add("active");
+            }
+
+            // Filtruj elementy portfolio
+            document.querySelectorAll(".portfolio-item").forEach((item) => {
+              const itemCategories = item.getAttribute("data-category");
+              if (category === "all" || itemCategories.includes(category)) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          }, 400);
+
+          // Tutaj możesz dodać kod do przewinięcia do odpowiedniej sekcji
+          // lub załadowania odpowiednich zdjęć w sekcji portfolio
+          // Przykład: wysłanie informacji do innej części strony
+          const event = new CustomEvent("categorySelected", {
+            detail: { category: category },
+          });
+          document.dispatchEvent(event);
+
+          document.querySelectorAll(".category-card").forEach((card) => {
+            card.classList.remove("active");
+          });
+          this.closest(".category-card").classList.add("active");
+        });
+      });
+
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const filter = this.getAttribute("data-filter");
+          // Aktywny przycisk
+          document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          this.classList.add("active");
+          // Filtrowanie projektów
+          document.querySelectorAll(".portfolio-item").forEach((item) => {
+            if (
+              filter === "all" ||
+              item.getAttribute("data-category") === filter
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+      const collapsibles = document.querySelectorAll(".collapsible");
+      collapsibles.forEach((item) =>
+        item.addEventListener("click", function () {
+          this.classList.toggle("collapsible--expanded");
+        })
+      );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  </body>
+</html>
