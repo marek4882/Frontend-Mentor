@@ -255,6 +255,29 @@
               <a href="#" class="portfolio-link">Zobacz więcej →</a>
             </div>
           </div>
+          <div class="portfolio-item" data-category="wedding">
+            <div class="portfolio-image">
+              <img src="./assets/DSC05746.jpg" alt="Ślub Anny i Michała" />
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">Śluby</div>
+              <h3 class="portfolio-title">Ślub Anny i Michała</h3>
+              <p class="portfolio-description">
+                Urzekająca ceremonia w rustykalnym stylu w otoczeniu natury.
+                Piękne momenty, wzruszające gesty i radosne chwile.
+              </p>
+              <div class="testimonial">
+                <p class="testimonial-text">
+                  Zdjęcia przeszły nasze najśmielsze oczekiwania! Każda emocja i
+                  każdy ważny moment zostały uchwycone w idealny sposób. Te
+                  fotografie to najpiękniejsza pamiątka z najważniejszego dnia w
+                  naszym życiu.
+                </p>
+                <p class="testimonial-author">— Anna i Michał</p>
+              </div>
+              <a href="#" class="portfolio-link">Zobacz więcej →</a>
+            </div>
+          </div>
           <!-- Projekt 2: Motoryzacja -->
           <div class="portfolio-item" data-category="automotive">
             <div class="portfolio-image">
@@ -426,6 +449,7 @@
     </main>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Splide init
         new Splide("#ferrari-gallery", {
           type: "loop",
           perPage: 3,
@@ -442,99 +466,122 @@
               gap: "0.5rem",
             },
           },
-          // Auto-play configuration (optional)
           autoplay: true,
           interval: 4000,
           pauseOnHover: true,
           pauseOnFocus: true,
         }).mount();
-      });
 
-      // Obsługa przycisków "Wybierz"
-      document.querySelectorAll(".category-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-          const category = this.getAttribute("data-category");
-          console.log(`Wybrano kategorię: ${category}`);
+        // Obsługa przycisków kategorii (np. "Motoryzacja")
+        document.querySelectorAll(".category-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const category = this.getAttribute("data-category");
 
-          // Przewiń do sekcji realizacji
-          const realizationsSection = document.getElementById(
-            "realizations-section"
-          );
-          if (realizationsSection) {
-            realizationsSection.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+            // Scroll do sekcji realizacji
+            const realizationsSection = document.getElementById(
+              "realizations-section"
+            );
+            if (realizationsSection) {
+              realizationsSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+
+            setTimeout(() => {
+              // Reset aktywnych filtrów
+              document.querySelectorAll(".filter-btn").forEach((btn) => {
+                btn.classList.remove("active");
+              });
+
+              const targetFilterBtn = document.querySelector(
+                `[data-filter="${category}"]`
+              );
+              if (targetFilterBtn) {
+                targetFilterBtn.classList.add("active");
+              }
+
+              // Filtrowanie projektów
+              document.querySelectorAll(".portfolio-item").forEach((item) => {
+                const itemCategories = item.getAttribute("data-category");
+                if (category === "all" || itemCategories.includes(category)) {
+                  item.style.display = "block";
+                } else {
+                  item.style.display = "none";
+                }
+              });
+
+              // Scroll do pierwszego widocznego projektu
+              const firstVisibleItem = document.querySelector(
+                ".portfolio-item[style*='display: block']"
+              );
+              if (firstVisibleItem) {
+                firstVisibleItem.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }, 400);
+
+            // Trigger event (np. do integracji z inną częścią strony)
+            const event = new CustomEvent("categorySelected", {
+              detail: { category: category },
             });
-          }
+            document.dispatchEvent(event);
 
-          // Poczekaj na zakończenie przewijania, następnie filtruj portfolio
-          setTimeout(() => {
-            // Usuń aktywną klasę ze wszystkich przycisków filtrów
+            // Aktywna karta
+            document.querySelectorAll(".category-card").forEach((card) => {
+              card.classList.remove("active");
+            });
+            this.closest(".category-card").classList.add("active");
+          });
+        });
+
+        // Obsługa przycisków filtrujących
+        document.querySelectorAll(".filter-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+
             document.querySelectorAll(".filter-btn").forEach((btn) => {
               btn.classList.remove("active");
             });
+            this.classList.add("active");
 
-            // Dodaj aktywną klasę do odpowiedniego przycisku kategorii
-            const targetFilterBtn = document.querySelector(
-              `[data-filter="${category}"]`
-            );
-            if (targetFilterBtn) {
-              targetFilterBtn.classList.add("active");
-            }
-
-            // Filtruj elementy portfolio
             document.querySelectorAll(".portfolio-item").forEach((item) => {
-              const itemCategories = item.getAttribute("data-category");
-              if (category === "all" || itemCategories.includes(category)) {
+              const itemCategory = item.getAttribute("data-category");
+              if (filter === "all" || itemCategory.includes(filter)) {
                 item.style.display = "block";
               } else {
                 item.style.display = "none";
               }
             });
-          }, 400);
 
-          // Tutaj możesz dodać kod do przewinięcia do odpowiedniej sekcji
-          // lub załadowania odpowiednich zdjęć w sekcji portfolio
-          // Przykład: wysłanie informacji do innej części strony
-          const event = new CustomEvent("categorySelected", {
-            detail: { category: category },
-          });
-          document.dispatchEvent(event);
+            // Scroll do pierwszego widocznego projektu z przesunięciem 20px
+            const firstVisibleItem = document.querySelector(
+              ".portfolio-item[style*='display: block']"
+            );
+            if (firstVisibleItem) {
+              const topOffset = 20;
+              const elementPosition =
+                firstVisibleItem.getBoundingClientRect().top + window.scrollY;
+              const offsetPosition = elementPosition - topOffset;
 
-          document.querySelectorAll(".category-card").forEach((card) => {
-            card.classList.remove("active");
-          });
-          this.closest(".category-card").classList.add("active");
-        });
-      });
-
-      document.querySelectorAll(".filter-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-          const filter = this.getAttribute("data-filter");
-          // Aktywny przycisk
-          document.querySelectorAll(".filter-btn").forEach((btn) => {
-            btn.classList.remove("active");
-          });
-          this.classList.add("active");
-          // Filtrowanie projektów
-          document.querySelectorAll(".portfolio-item").forEach((item) => {
-            if (
-              filter === "all" ||
-              item.getAttribute("data-category") === filter
-            ) {
-              item.style.display = "block";
-            } else {
-              item.style.display = "none";
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
             }
           });
         });
+
+        // Obsługa mobilnego menu (collapsible)
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach((item) =>
+          item.addEventListener("click", function () {
+            this.classList.toggle("collapsible--expanded");
+          })
+        );
       });
-      const collapsibles = document.querySelectorAll(".collapsible");
-      collapsibles.forEach((item) =>
-        item.addEventListener("click", function () {
-          this.classList.toggle("collapsible--expanded");
-        })
-      );
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </body>
