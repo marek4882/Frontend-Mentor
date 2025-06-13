@@ -175,6 +175,8 @@ a {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Dodane */
 }
 
 .portfolio-item:hover {
@@ -200,6 +202,9 @@ a {
 
 .portfolio-content {
   padding: 20px;
+  display: flex; /* Dodane */
+  flex-direction: column; /* Dodane */
+  flex-grow: 1; /* Dodane - zajmuje dostępną przestrzeń */
 }
 
 .portfolio-category {
@@ -229,6 +234,8 @@ a {
   padding: 15px;
   margin-top: 15px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial::before {
@@ -261,8 +268,10 @@ a {
   color: #222;
   font-weight: 500;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 15px;
   transition: color 0.3s ease;
+  align-self: flex-start;
 }
 
 .portfolio-link:hover {
