@@ -17,10 +17,10 @@
 }
 
 body {
+  font-size: 1.1rem;
+  font-family: "Outfit";
   background: var(--color-blue-950);
   color: var(--color-blue-500);
-  font-family: "Outfit";
-  font-size: 1.1rem;
   margin: 0;
 }
 
