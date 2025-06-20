@@ -30,6 +30,9 @@ body {
 img {
   width: 100%;
 }
+a {
+  color: var(--color-bright-blue);
+}
 
 @media screen and (min-width: 767px) {
   body {
@@ -73,15 +76,71 @@ img {
   margin-bottom: 0.8rem;
 }
 
+.order-summary__plan {
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: var(--color-very-pale-blue);
+}
+
 .order-summary__plan,
 .order-summary__plan-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
-  background-color: var(--color-very-pale-blue);
+  gap: 1rem;
 }
+
 .order-summary__plan-icon {
   width: 40px;
   height: 40px;
+}
+
+.order-summary__plan-name {
+  color: var(--color-dark-blue);
+  font-weight: 800;
+}
+
+.order-summary__change-link {
+  font-weight: 700;
+  transition: all 0.3 ease;
+}
+
+.order-summary__change-link:hover {
+  color: hsl(244.51deg 82.61% 68.43%);
+  text-decoration: none;
+}
+
+.order-summary__actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-summary__btn {
+  cursor: pointer;
+  font-weight: 800;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0.4rem 0;
+  padding: 1rem 4vw;
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.order-summary__btn--primary {
+  color: #fff;
+  background: var(--color-bright-blue);
+  box-shadow: 0 5px 30px hsla(245, 75%, 52%, 0.356);
+}
+
+.order-summary__btn--primary:hover {
+  background: hsl(244.51deg 82.61% 68.43%);
+}
+
+.order-summary__btn--secondary {
+  background: none;
+  color: var(--color-desaturated-blue);
+}
+.order-summary__btn--secondary:hover {
+  color: var(--color-dark-blue);
 }
