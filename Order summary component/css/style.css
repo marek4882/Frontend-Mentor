@@ -1,0 +1,87 @@
+:root {
+  /* primary colors */
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+  /* neutral colors */
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+}
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-desaturated-blue);
+  background-color: var(--color-pale-blue);
+  background-image: url(../assets/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    background-image: url(../assets/images/pattern-background-desktop.svg);
+  }
+}
+
+.order-summary {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-summary__card {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.order-summary__illustration {
+  display: block;
+  border-radius: 15px 15px 0 0;
+}
+
+.order-summary__wrapper {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-summary__header {
+  text-align: center;
+}
+
+.order-summary__title {
+  color: var(--color-dark-blue);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+}
+
+.order-summary__plan,
+.order-summary__plan-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--color-very-pale-blue);
+}
+.order-summary__plan-icon {
+  width: 40px;
+  height: 40px;
+}
