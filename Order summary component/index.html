@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order summary</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container order-summary">
+        <article class="order-summary__card">
+          <img
+            src="./assets/images/illustration-hero.svg"
+            alt=""
+            class="order-summary__illustration"
+          />
+          <div class="order-summary__wrapper">
+            <header class="order-summary__header">
+              <h1 class="order-summary__title">Order Summary</h1>
+              <p class="oredr-summary__description">
+                You can now listen to milions of songs, audiobooks, and podcasts
+                on any device anywhere you like!
+              </p>
+            </header>
+            <section class="order-summary__plan">
+              <div class="order-summary__plan-details">
+                <img
+                  src="./assets/images/icon-music.svg"
+                  alt=""
+                  class="order-summary__plan-icon"
+                  aria-hidden="true"
+                />
+                <p class="order-summary__plan-name">Annual Plan</p>
+                <span class="order-summary__plan-price">$59.99/year</span>
+              </div>
+              <a href="#" class="order-summary__change-link">Change</a>
+            </section>
+            <footer class="order-summary__actions">
+              <button class="order-summary__btn order-summary__btn--primary">
+                Proceed to Payment
+              </button>
+              <button class="order-summary__btn order-summary__btn--secondary">
+                Cancel Order
+              </button>
+            </footer>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
