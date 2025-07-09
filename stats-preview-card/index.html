@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats Preview Card</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="insights">
+        <article class="insights__container">
+          <div class="insights__content">
+            <div class="insights__wrapper">
+              <header class="insights__header">
+                <h1 class="insights__title">
+                  Get <span class="insights__highlight">insights</span> that
+                  help your business grow.
+                </h1>
+                <p class="insights__description">
+                  Discover the benefits of data analytics and make better
+                  decisions regarding revenue, customer experience, and overall
+                  efficiency.
+                </p>
+              </header>
+              <ul class="insights__stats">
+                <li class="insights__stat">
+                  <p class="insights__stat-number">10k+</p>
+                  <span class="insights__stat-label">companies</span>
+                </li>
+                <li class="insights__stat">
+                  <p class="insights__stat-number">314</p>
+                  <span class="insights__stat-label">templates</span>
+                </li>
+                <li class="insights__stat">
+                  <p class="insights__stat-number">12M+</p>
+                  <span class="insights__stat-label">queries</span>
+                </li>
+              </ul>
+            </div>
+            <picture class="insights__image">
+              <source
+                media="(max-width: 700px)"
+                srcset="./assets/images/image-header-mobile.jpg"
+              />
+              <source
+                media="(min-width: 701px)"
+                srcset="./assets/images/image-header-desktop.jpg"
+              />
+              <img
+                src="./assets/images/image-header-desktop.jpg"
+                alt="Team collaborating at the meeting table"
+                class="insights__img"
+              />
+              <div class="insights__img-overlay"></div>
+            </picture>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
