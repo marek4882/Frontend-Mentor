@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
     <title>Stymulatory</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -15,34 +14,62 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
     />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
       <!-- I Sekcja  -->
-      <section class="block">
-        <div class="container grid grid--1x2">
-          <header class="hero__content">
-            <h1 class="block__heading">Stymulatory</h1>
-            <p>
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-badge">✨ Profesjonalna medycyna estetyczna</div>
+            <div class="hero-badge">✨ Bezpieczeńśtwo i komfort</div>
+
+            <h1 class="hero-title">
+              Stymulatory
+              <span style="color: #52a2a9">Tkankowe</span>
+            </h1>
+
+            <p class="hero-subtitle">
               Medycyna Estetyczna daje wiele możliwości w zakresie skutecznej
               regeneracji i odmłodzenia skóry. Jedną z nich są Stymulatory
               Tkankowe, które pobudzają naturalne procesy regeneracyjne skóry.
-              <a href="#dla-kogo-sa-stymulatory-tkankowe"
-                ><i class="ph ph-link"></i>&nbsp;Dla kogo są stymulatory
-                tkankowe</a
-              >
+              Dla kogo są stymulatory tkankowe
             </p>
-          </header>
-          <div class="video-container phone-frame-yt">
-            <div class="phone-frame phone-frame-yt">
-              <div class="phone-screen">
+
+            <div class="hero-buttons">
+              <a href="#konsultacja" class="btn-primary"
+                ><i class="ph ph-phone"></i>Umów konsultację</a
+              >
+              <a href="#dla-kogo-sa-stymulatory-tkankowe" class="btn-secondary">
+                Dla kogo są stymulatory tkankowe?</a
+              >
+            </div>
+
+            <div class="hero-features">
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <span>Doświadczeni specjaliści</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <span>Personalizowana opieka</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <span>Troska o Ciebie</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-video">
+            <div class="video-container">
+              <div class="video-placeholder">
                 <iframe
-                  class="phone-video"
-                  src="https://www.youtube.com/embed/vJmcFhjOtxc?si=pMe1wn6iw1HAebTQ"
+                  src="https://www.youtube.com/embed/wVfZaRgJzis"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
@@ -52,20 +79,35 @@
       </section>
 
       <!-- II sekcja -->
-      <section class="block container">
-        <div class="grid grid--1x2 offer__container">
+      <section class="block offer-section">
+        <div
+          class="grid grid--1x2 offer__container container"
+          data-aos="fade-left"
+        >
           <!-- On mobile: Header first, then image, then list -->
           <header class="mobile-first">
-            <h2 class="block__heading block__header">
-              W UniEstetica oferujemy zabiegi biostymulacji skóry, które:
+            <h2 class="block__header offer__header">
+              Stymulatory tkankowe w Uniestetica - pozwolą Ci skutecznie z
+              regeneracja i odmłodzeniem skóry
             </h2>
+            <p class="offer__description">
+              Stymulatory tkankowe działają na poziomie komórkowym, stymulując
+              fibroblasty do produkcji kolagenu i elastyny, co przekłada się na
+              długotrwały i naturalny efekt odmłodzenia. Dzięki temu:
+            </p>
 
             <!-- Image will appear here on mobile -->
             <div class="mobile-image">
-              <img src="./assets/Bez tytułu.png" class="hero__image" />
+              <img
+                src="https://uniestetica.pl/wp-content/uploads/2025/04/biostymulacja.webp"
+                class="hero__image"
+              />
             </div>
 
-            <ul class="list list--check">
+            <ul
+              class="list list--check offer-check"
+              style="margin-top: 1rem !important"
+            >
               <li>
                 <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
                 Pobudzają jej naturalne procesy regeneracyjne,
@@ -79,174 +121,93 @@
                 Plastyczność i nawilżenie.
               </li>
             </ul>
+            <a href="#efekty-terapii" class="offer__button">Poznaj Efekty</a>
           </header>
 
           <!-- Desktop-only image (left side) -->
           <div class="desktop-image">
-            <img src="./assets/Bez tytułu.png" class="hero__image" />
+            <img
+              src="https://uniestetica.pl/wp-content/uploads/2025/04/biostymulacja.webp"
+              class="hero__image"
+            />
           </div>
         </div>
       </section>
 
-      <!-- Sekcja Rodzaje Stymulatorów -->
-      <section class="block container">
-        <div class="block-plans">
-          <header class="block__header">
-            <h2>Poznaj rodzaje stymulatorów tkankowych</h2>
+      <!-- Efekty terapi -->
+      <section class="block container" id="efekty-terapii">
+        <div class="">
+          <header class="block__header" data-aos="fade-down">
+            <h2>Efekty terapii w UniEstetica</h2>
+            <p>
+              Poznaj rezultaty, które możesz osiągnąć dzięki naszym innowacyjnym
+              terapiom odmładzającym
+            </p>
           </header>
-          <div class="grid grid--1x3">
-            <div class="plan">
-              <div class="card">
-                <header class="card__header">
-                  <div class="icon-wrapper" style="background: none">
-                    <i
-                      class="ph ph-drop"
-                      style="color: var(--primary-color)"
-                    ></i>
-                  </div>
-                  <h3 class="plan__name">Polinukleotydy</h3>
-                  <span class="plan__description"
-                    >intensywna regeneracja i&nbsp;nawilżenie</span
-                  >
-                  <button
-                    class="btn btn--primary"
-                    data-info="polinukleotydy-info"
-                  >
-                    Dowiedz się więcej
-                  </button>
-                </header>
+          <div class="grid grid--1x3 grid--gap" data-aos="fade-up">
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fas fa-layer-group"></i>
               </div>
-              <article
-                class="stymulatory-container-info"
-                id="polinukleotydy-info"
-              >
-                <p>
-                  Polinukleotydy to biologicznie aktywne cząsteczki o silnym
-                  działaniu nawilżającym, antyoksydacyjnym i regenerującym. Są
-                  biozgodne z ludzkimi nukleotydami, naturalnego pochodzenia i
-                  są w pełni wchłanialne, co sprawia, że nie powodują
-                  powstawania grudek czy ziarniniaków. Stosowane są w celu
-                  odbudowy skóry, poprawy jej struktury oraz stymulacji
-                  produkcji kolagenu.
-                </p>
-                <p>
-                  Polinukleotydy szczególnie polecane są do rewitalizacji
-                  okolicy oczu, ponieważ mogą być bezpiecznie stosowane w
-                  iniekcjach w skórę powiek, w tym górnych. Zabieg wykonywany
-                  jest metodą mezoterapii, a jedna aplikacja pozwala na poprawę
-                  wyglądu w kilku obszarach zabiegowych. Najlepsze jednak
-                  rezultaty dają po zastosowaniu serii zabiegów. Efekty obejmują
-                  poprawę nawilżenia, redukcję zmarszczek i zwiększenie
-                  elastyczności skóry.
-                </p>
-              </article>
-            </div>
-            <div class="plan">
-              <div class="card">
-                <header class="card__header">
-                  <div
-                    class="icon-wrapper"
-                    style="
-                      background: #ffffffb8;
-                      box-shadow: 0px 0px 7px 0px #499aa252;
-                    "
-                  >
-                    <i
-                      class="ph ph-fill ph-sparkle"
-                      style="color: var(--primary-color)"
-                    ></i>
-                  </div>
-                  <h3 class="plan__name">Kwas polimlekowy</h3>
-                  <span class="plan__description"
-                    >stopniowe odmłodzenie i&nbsp;poprawa jędrności</span
-                  >
-                  <button
-                    class="btn btn--primary"
-                    data-info="kwas-polimlekowy-info"
-                  >
-                    Dowiedz się więcej
-                  </button>
-                </header>
-              </div>
-              <article
-                class="stymulatory-container-info"
-                id="kwas-polimlekowy-info"
-              >
-                <p>
-                  Kwas polimlekowy to skuteczny biostymulator pobudzający skórę
-                  do produkcji kolagenu. Z wiekiem jego ilość w organizmie
-                  maleje, co prowadzi do utraty objętości i sprężystości skóry.
-                  Preparat ten tworzy pod skórą naturalne rusztowanie, stopniowo
-                  odbudowując jej strukturę i poprawiając elastyczność.
-                </p>
-                <p>
-                  Efekty pojawiają się stopniowo, a pełny rezultat widoczny jest
-                  po około 3 miesiącach od zabiegu. Skóra odzyskuje jędrność i
-                  młodzieńczy wygląd, a efekt utrzymuje się nawet do 25
-                  miesięcy. Najczęściej stosuje się 2–3 sesje w odstępach 8
-                  tygodni, a dla podtrzymania rezultatów zaleca się zabiegi co 2
-                  lata. Zabieg ten jest szczególnie polecany osobom, które chcą
-                  naturalnie poprawić wygląd twarzy bez konieczności stosowania
-                  wypełniaczy.
-                </p>
-              </article>
+              <h3>Poprawa gęstości i elastyczności skóry</h3>
             </div>
 
-            <div class="plan">
-              <div class="card">
-                <header class="card__header">
-                  <div
-                    class="icon-wrapper"
-                    style="color: white; background: var(--primary-color)"
-                  >
-                    <i class="ph ph-lightning" style="color: white"></i>
-                  </div>
-                  <h3 class="plan__name">Hydroksyapatyt wapnia</h3>
-                  <span class="plan__description"
-                    >natychmiastowy efekt liftingu i&nbsp;biostymulacji</span
-                  >
-                  <button
-                    class="btn btn--primary"
-                    data-info="hydroksyapatyt-wapnia-info"
-                  >
-                    Dowiedz się więcej
-                  </button>
-                </header>
-                <!-- <a href=""></a> przycisk po kliknięciu wyświetla się tekst o rodzaju stymulatora rozszerzony-->
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fas fa-vector-square"></i>
               </div>
-              <article
-                class="stymulatory-container-info"
-                id="hydroksyapatyt-wapnia-info"
-              >
-                <p>
-                  Hydroksyapatyt wapnia to związek naturalnie występujący w
-                  organizmie, stosowany w medycynie od lat. Pobudza fibroblasty
-                  do produkcji nowego kolagenu, poprawiając elastyczność i
-                  gęstość skóry. Dodatkowo działa jak delikatny wypełniacz,
-                  dzięki czemu poprawia owal twarzy, wygładza zmarszczki i
-                  zwiększa objętość w miejscach wymagających regeneracji.
-                </p>
-                <p>
-                  Zabieg trwa około 30–60 minut, jest bezpieczny i mało
-                  inwazyjny. Dzięki zastosowaniu nośnika żelowego efekty
-                  widoczne są niemal natychmiast, a po kilku miesiącach skóra
-                  staje się jeszcze bardziej napięta i wygładzona. Preparat
-                  znajduje zastosowanie w modelowaniu konturów twarzy, redukcji
-                  bruzd nosowo-wargowych oraz odmłodzeniu dłoni. Jest także
-                  wykorzystywany do poprawy owalu twarzy i wypełnienia
-                  zapadniętych obszarów.
-                </p>
-              </article>
+              <h3>Naturalny lifting i wygładzenie zmarszczek</h3>
+            </div>
+
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </div>
+              <h3>Stopniowa odbudowa objętości skóry</h3>
+            </div>
+
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fas fa-tint"></i>
+              </div>
+              <h3>Głębokie nawilżenie i zdrowy blask</h3>
+            </div>
+
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <h3>Efekty utrzymujące się nawet do 2 lat</h3>
+            </div>
+
+            <div class="effect-card">
+              <div class="effect-icon">
+                <i class="fa fa-star"></i>
+              </div>
+              <h3>Subtelne i naturalne odmłodzenie twarzy</h3>
             </div>
           </div>
         </div>
-        <!-- <a href=""></a> Przycisk umów wizytę-->
       </section>
 
-      <!-- III Sekcja -->
+      <!-- Przerywnik -->
+      <section class="block container question-container" data-aos="zoom-in">
+        <div class="grid grid--1x2 grid--button">
+          <a class="btn btn--secondary" href="tel: 606565000"
+            ><i class="ph ph-phone"></i> Zadzwoń teraz</a
+          >
+          <a class="btn btn--outline" href="mailto: konsultacje@uniestetica.pl"
+            ><i class="ph ph-chat-circle-text"></i> Napisz do nas</a
+          >
+          <!-- <a class="btn btn--outline" href="#faq">
+            <i class="ph ph-question"></i> Najczęściej zadawane pytania
+          </a> -->
+        </div>
+      </section>
       <section
         class="block container decoration"
         id="dla-kogo-sa-stymulatory-tkankowe"
+        data-aos="fade-down"
       >
         <header class="block__header">
           <h2 class="block__heading">Dla kogo są stymulatory tkankowe?</h2>
@@ -287,92 +248,68 @@
         </div>
       </section>
 
-      <!-- IV Sekcja -->
-      <section class="block container">
-        <div class="grid grid--1x2 grid--center">
-          <header class="block__header">
-            <h2>Dlaczego warto nas wybrać?</h2>
-            <p>
-              W UniEstetica dbamy o najwyższe standardy bezpieczeństwa. Zabiegi
-              wykonywane są przez doświadczonych Specjalistów przy użyciu
-              certyfikowanych preparatów.
-            </p>
+      <section class="block">
+        <header class="block__header">
+          <h2 class="poz__title">Dlaczego warto nas wybrać?</h2>
+        </header>
 
-            <ul class="list">
-              <li>
-                <i class="ph ph-fill ph-clock"></i> Procedura trwa około 30-45
-                minut
+        <div class="splide" id="benefits-splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-shield-checkered benefits-icon"></i>
+
+                  <div class="benefits-text">
+                    W UniEstetica dbamy o najwyższe standardy bezpieczeństwa
+                  </div>
+                </div>
               </li>
-              <li>
-                <i class="ph ph-fill ph-syringe"></i> Cienkie igły lub kaniula
-                minimalizujące ryzyko siniaków
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-asclepius benefits-icon"></i>
+                  <div class="benefits-text">
+                    Zabiegi wykonywane są przez doświadczonych Specjalistów
+                  </div>
+                </div>
               </li>
-              <li>
-                <i class="ph ph-fill ph-person-simple-run"></i> Możliwość
-                powrotu do codziennych aktywnosci natychmiast
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-certificate benefits-icon"></i>
+                  <div class="benefits-text">
+                    Stosujemy wyłącznie certyfikowane preparaty
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-clock benefits-icon"></i>
+                  <div class="benefits-text">
+                    Procedura trwa około 30–45 minut
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-drop benefits-icon"></i>
+                  <div class="benefits-text">
+                    Cienkie igły lub kaniula minimalizujące ryzyko siniaków
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-person-simple-run benefits-icon"></i>
+                  <div class="benefits-text">
+                    Możliwość powrotu do codziennych aktywności natychmiast
+                  </div>
+                </div>
               </li>
             </ul>
-          </header>
-          <!-- <a href=""></a> przycisk pojawiajacy sie na mobilce-->
-          <img
-            src="./assets/Logo Uniestetica.png"
-            alt=""
-            class="brand__image"
-          />
-        </div>
-      </section>
-      <!-- Efekty terapi -->
-      <section class="block container">
-        <div class="">
-          <header class="block__header" data-aos="fade-down">
-            <h2>Efekty terapii w UniEstetica</h2>
-            <p>
-              Poznaj rezultaty, które możesz osiągnąć dzięki naszym innowacyjnym
-              terapiom odmładzającym
-            </p>
-          </header>
-          <div class="grid grid--1x3 grid--gap">
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fas fa-layer-group"></i>
-              </div>
-              <h3>Poprawa gęstości i elastyczności skóry</h3>
-            </div>
-
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fas fa-vector-square"></i>
-              </div>
-              <h3>Naturalny lifting i wygładzenie zmarszczek</h3>
-            </div>
-
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fas fa-expand-arrows-alt"></i>
-              </div>
-              <h3>Stopniowa odbudowa objętości skóry</h3>
-            </div>
-
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fas fa-tint"></i>
-              </div>
-              <h3>Głębokie nawilżenie i zdrowy blask</h3>
-            </div>
-
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fas fa-hourglass-half"></i>
-              </div>
-              <h3>Efekty utrzymujące się nawet do 2 lat</h3>
-            </div>
-
-            <div class="effect-card" data-aos="fade-up">
-              <div class="effect-icon">
-                <i class="fa fa-star"></i>
-              </div>
-              <h3>Subtelne i naturalne odmłodzenie twarzy</h3>
-            </div>
           </div>
         </div>
       </section>
@@ -380,12 +317,12 @@
       <!-- Opinie naszych Klientów   -->
       <section class="reviews-section block">
         <h2 class="block__header">
-          <i class="ph-fill ph-star"></i> Opinie naszych klientów
+          <i class="ph-fill ph-star"></i> Opinie naszych Pacjentów
         </h2>
         <div class="grid grid--1x3 review_gap">
           <div class="review" data-aos="fade-right">
             <img
-              src="./assets/Google_Icons-09-512.webp"
+              src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
               alt="Google"
               class="icon"
             />
@@ -412,15 +349,12 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">
-                <i class="ph-fill ph-calendar"></i> Google – Luty 2025
-              </div>
             </div>
           </div>
 
           <div class="review" data-aos="fade-right">
             <img
-              src="./assets/Google_Icons-09-512.webp"
+              src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
               alt="Google"
               class="icon"
             />
@@ -442,15 +376,12 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">
-                <i class="ph-fill ph-calendar"></i> Google – Grudzień 2024
-              </div>
             </div>
           </div>
 
           <div class="review" data-aos="fade-right">
             <img
-              src="./assets/Google_Icons-09-512.webp"
+              src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
               alt="Google"
               class="icon"
             />
@@ -471,51 +402,176 @@
               <button class="show-more" onclick="toggleComment(this)">
                 Pokaż więcej
               </button>
-              <div class="date">
-                <i class="ph-fill ph-calendar"></i> Google – Październik 2024
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Przerywnik -->
-      <section class="block container question-container">
-        <header class="info__header">
-          <h2 class="info__heading">Masz dodatkowe pytania?</h2>
-          <p>
-            Nasz Zespół jest gotowy, aby odpowiedzieć na wszystkie Twoje pytania
-            i wątpliwości.
-          </p>
-        </header>
-        <div class="grid grid--1x3 grid--button">
-          <a class="btn btn--secondary" href=""
-            ><i class="ph ph-phone"></i> Zadzwoń teraz</a
-          >
-          <a class="btn btn--outline" href=""
-            ><i class="ph ph-chat-circle-text"></i> Napisz do nas</a
-          >
-          <a class="btn btn--outline" href="#faq">
-            <i class="ph ph-question"></i> Najczęściej zadawane pytania
-          </a>
+      <!-- Sekcja Rodzaje Stymulatorów -->
+      <section class="block container">
+        <div class="block-plans">
+          <header class="block__header">
+            <h2>
+              Poznaj rodzaje stymulatorów i wybierz rozwiązanie dla siebie
+            </h2>
+          </header>
+          <div class="stymulator-container">
+            <div class="plan stymulator-wrapper" data-aos="fade-right">
+              <div class="card stymulator-card">
+                <header class="card__header">
+                  <div class="icon-wrapper" style="background: none">
+                    <i
+                      class="ph ph-drop"
+                      style="color: var(--primary-color)"
+                    ></i>
+                  </div>
+                  <h3 class="plan__name">Polinukleotydy</h3>
+                  <span class="plan__description"
+                    >intensywna regeneracja<br />
+                    i nawilżenie</span
+                  >
+                  <button
+                    class="btn btn--primary btn--stymulatory"
+                    data-info="polinukleotydy-info"
+                  >
+                    Dowiedz się więcej
+                  </button>
+                </header>
+              </div>
+              <article
+                class="stymulatory-container-info"
+                id="polinukleotydy-info"
+              >
+                <p class="stymulator__description">
+                  Polinukleotydy to biologicznie aktywne cząsteczki o silnym
+                  działaniu nawilżającym, antyoksydacyjnym i regenerującym. Są
+                  biozgodne z ludzkimi nukleotydami, naturalnego pochodzenia i
+                  są w pełni wchłanialne, co sprawia, że nie powodują
+                  powstawania grudek czy ziarniniaków. Stosowane są w celu
+                  odbudowy skóry, poprawy jej struktury oraz stymulacji
+                  produkcji kolagenu. Polinukleotydy szczególnie polecane są do
+                  rewitalizacji okolicy oczu, ponieważ mogą być bezpiecznie
+                  stosowane w iniekcjach w skórę powiek, w tym górnych. Zabieg
+                  wykonywany jest metodą mezoterapii, a jedna aplikacja pozwala
+                  na poprawę wyglądu w kilku obszarach zabiegowych. Najlepsze
+                  jednak rezultaty dają po zastosowaniu serii zabiegów. Efekty
+                  obejmują poprawę nawilżenia, redukcję zmarszczek i zwiększenie
+                  elastyczności skóry.
+                </p>
+              </article>
+            </div>
+            <div class="plan stymulator-wrapper" data-aos="fade-right">
+              <div class="card stymulator-card">
+                <header class="card__header">
+                  <div
+                    class="icon-wrapper"
+                    style="
+                      background: #ffffffb8;
+                      box-shadow: 0px 0px 7px 0px #499aa252;
+                    "
+                  >
+                    <i
+                      class="ph ph-fill ph-sparkle"
+                      style="color: var(--primary-color)"
+                    ></i>
+                  </div>
+                  <h3 class="plan__name">Kwas polimlekowy</h3>
+                  <span class="plan__description"
+                    >stopniowe odmłodzenie i&nbsp;poprawa jędrności</span
+                  >
+                  <button
+                    class="btn btn--primary btn--stymulatory"
+                    data-info="kwas-polimlekowy-info"
+                  >
+                    Dowiedz się więcej
+                  </button>
+                </header>
+              </div>
+              <article
+                class="stymulatory-container-info"
+                id="kwas-polimlekowy-info"
+              >
+                <p class="stymulator__description">
+                  Kwas polimlekowy to skuteczny biostymulator pobudzający skórę
+                  do produkcji kolagenu. Z wiekiem jego ilość w organizmie
+                  maleje, co prowadzi do utraty objętości i sprężystości skóry.
+                  Preparat ten tworzy pod skórą naturalne rusztowanie, stopniowo
+                  odbudowując jej strukturę i poprawiając elastyczność. Efekty
+                  pojawiają się stopniowo, a pełny rezultat widoczny jest po
+                  około 3 miesiącach od zabiegu. Skóra odzyskuje jędrność i
+                  młodzieńczy wygląd, a efekt utrzymuje się nawet do 25
+                  miesięcy. Najczęściej stosuje się 2–3 sesje w odstępach 8
+                  tygodni, a dla podtrzymania rezultatów zaleca się zabiegi co 2
+                  lata. Zabieg ten jest szczególnie polecany osobom, które chcą
+                  naturalnie poprawić wygląd twarzy bez konieczności stosowania
+                  wypełniaczy.
+                </p>
+              </article>
+            </div>
+
+            <div class="plan stymulator-wrapper" data-aos="fade-right">
+              <div class="card stymulator-card">
+                <header class="card__header">
+                  <div
+                    class="icon-wrapper"
+                    style="color: white; background: var(--primary-color)"
+                  >
+                    <i class="ph ph-lightning" style="color: white"></i>
+                  </div>
+                  <h3 class="plan__name">Hydroksyapatyt wapnia</h3>
+                  <span class="plan__description"
+                    >natychmiastowy efekt liftingu i&nbsp;biostymulacji</span
+                  >
+                  <button
+                    class="btn btn--primary btn--stymulatory"
+                    data-info="hydroksyapatyt-wapnia-info"
+                  >
+                    Dowiedz się więcej
+                  </button>
+                </header>
+              </div>
+              <article
+                class="stymulatory-container-info"
+                id="hydroksyapatyt-wapnia-info"
+              >
+                <p class="stymulator__description">
+                  Hydroksyapatyt wapnia to związek naturalnie występujący w
+                  organizmie, stosowany w medycynie od lat. Pobudza fibroblasty
+                  do produkcji nowego kolagenu, poprawiając elastyczność i
+                  gęstość skóry. Dodatkowo działa jak delikatny wypełniacz,
+                  dzięki czemu poprawia owal twarzy, wygładza zmarszczki i
+                  zwiększa objętość w miejscach wymagających regeneracji. Zabieg
+                  trwa około 30-60 minut, jest bezpieczny i mało inwazyjny.
+                  Dzięki zastosowaniu nośnika żelowego efekty widoczne są niemal
+                  natychmiast, a po kilku miesiącach skóra staje się jeszcze
+                  bardziej napięta i wygładzona. Preparat znajduje zastosowanie
+                  w modelowaniu konturów twarzy, redukcji bruzd nosowo-wargowych
+                  oraz odmłodzeniu dłoni. Jest także wykorzystywany do poprawy
+                  owalu twarzy i wypełnienia zapadniętych obszarów.
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
+        <!-- <a href=""></a> Przycisk umów wizytę-->
       </section>
 
       <!-- V Sekcja -->
-      <section class="block container block-plans">
-        <header class="block__header" data-aos="fade-down">
+      <section class="block container block-plans" data-aos="fade-down">
+        <header class="block__header">
           <h2>Poznaj Naszych Specjalistów</h2>
         </header>
-        <div id="splide" class="splide">
+
+        <div class="splide" id="doctors-splide">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide splide__slide_pa">
+              <li class="splide__slide">
                 <div class="card--gap">
                   <a
                     href="https://uniestetica.pl/lekarze/dr-aleksandra-kulbat/"
                   >
                     <header
-                      class="card card__header"
+                      class="card__header doctor-card"
                       title="Poznaj Specjalistę"
                     >
                       <img
@@ -524,20 +580,25 @@
                         alt="Dr Aleksandra Kulbat Medycyna Estetyczna"
                       />
                       <div>
-                        <h3 class="plan__name">Dr Aleksandra Kulbat</h3>
-                        <p class="plan__description">
-                          Medycyna Estetyczna<br /><span class="blank">x</span>
-                        </p>
+                        <h3 class="doctor-title">Dr Aleksandra Kulbat</h3>
+                        <div class="specialization">
+                          <span class="specialization__item"
+                            >Medycyna Estetyczna</span
+                          >
+                        </div>
                       </div>
+                      <a class="btn-primary btn-third" href="tel: 606565000"
+                        ><i class="ph ph-phone"></i> Zadzwoń teraz</a
+                      >
                     </header>
                   </a>
                 </div>
               </li>
-              <li class="splide__slide splide__slide_pa">
+              <li class="splide__slide">
                 <div class="card--gap">
                   <a href="https://uniestetica.pl/lekarze/dr-ewa-kopycinska/">
                     <header
-                      class="card card__header"
+                      class="card__header doctor-card"
                       title="Poznaj Specjalistę"
                     >
                       <img
@@ -546,23 +607,28 @@
                         alt="Dr Ewa Kopycińska Specjalista medycyny estetycznej, dermatolog, trycholo"
                       />
                       <div>
-                        <h3 class="plan__name">Dr Ewa Kopycińska</h3>
-                        <p class="plan__description">
-                          Dermatolog<br />
-                          Medycyna Estetyczna
-                        </p>
+                        <h3 class="doctor-title">Dr Ewa Kopycińska</h3>
+                        <div class="specialization">
+                          <span class="specialization__item">Dermatolog</span>
+                          <span class="specialization__item"
+                            >Medycyna Estetyczna</span
+                          >
+                        </div>
                       </div>
+                      <a class="btn-primary btn-third" href="tel: 606565000"
+                        ><i class="ph ph-phone"></i> Zadzwoń teraz</a
+                      >
                     </header>
                   </a>
                 </div>
               </li>
-              <li class="splide__slide splide__slide_pa">
+              <li class="splide__slide">
                 <div class="card--gap">
                   <a
                     href="https://uniestetica.pl/lekarze/dr-agnieszka-trynkiewicz/"
                   >
                     <header
-                      class="card card__header"
+                      class="card__header doctor-card"
                       title="Poznaj Specjalistę"
                     >
                       <img
@@ -571,12 +637,17 @@
                         alt="Dr Agnieszka Trynkiewicz Specjalista Medycyny Estetycznej, Dermatolog"
                       />
                       <div>
-                        <h3 class="plan__name">Dr Agnieszka Trynkiewicz</h3>
-                        <p class="plan__description">
-                          Dermatolog<br />
-                          Medycyna Estetyczna
-                        </p>
+                        <h3 class="doctor-title">Dr Agnieszka Trynkiewicz</h3>
+                        <div class="specialization">
+                          <span class="specialization__item">Dermatolog</span>
+                          <span class="specialization__item"
+                            >Medycyna Estetyczna</span
+                          >
+                        </div>
                       </div>
+                      <a class="btn-primary btn-third" href="tel: 606565000"
+                        ><i class="ph ph-phone"></i> Zadzwoń teraz</a
+                      >
                     </header>
                   </a>
                 </div>
@@ -585,339 +656,290 @@
           </div>
         </div>
       </section>
-      <!-- VI Sekcja -->
-      <!-- <section class="block container">
-        <heaader class="block__header">
-          <h2 class="block__heading">Efekty terapii?</h2>
-        </heaader>
-        <div class="grid grid--1x2">
-          <ul class="list">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <ul class="list">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      </section> -->
-
-      <!-- VII Sekcja -->
-      <section id="faq" class="section faq-section">
-        <div class="block">
-          <div class="container block__header section-title">
-            <h2>Często Zadawane Pytania</h2>
-            <p>Odpowiedzi na pytania, które najczęściej zadają nasi klienci</p>
-          </div>
-
-          <div class="faq-container">
-            <div class="faq-item active">
-              <div class="faq-question">
-                <span>Ile czasu trwa zabieg stymulatorami tkankowymi?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Standardowy zabieg trwa około 30-45 minut. Podczas pierwszej
-                  wizyty należy dodatkowo uwzględnić czas na konsultację i
-                  wypełnienie dokumentacji medycznej.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Czy zabiegi są bolesne?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Komfort podczas zabiegu jest dla nas priorytetem. Większość
-                  pacjentów określa zabiegi jako bezbolesne lub minimalnie
-                  dyskomfortowe. Stosujemy miejscowe znieczulenie w kremie, co
-                  znacząco zmniejsza jakiekolwiek odczucia bólowe. Po zabiegu
-                  mogą wystąpić niewielkie zaczerwienienia lub obrzęki, które
-                  zazwyczaj ustępują w ciągu 24-48 godzin.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Kiedy zobaczę efekty zabiegu?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Pierwsze efekty są widoczne już po 2-3 tygodniach od zabiegu,
-                  gdy skóra zaczyna intensywnie produkować nowy kolagen. Pełne
-                  rezultaty rozwijają się stopniowo i są najlepiej widoczne po
-                  2-3 miesiącach. Warto pamiętać, że nasze terapie działają
-                  naturalnie, stymulując własne procesy regeneracyjne organizmu,
-                  dlatego efekty pojawiają się stopniowo i wyglądają bardzo
-                  naturalnie.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Jak długo utrzymują się efekty zabiegu?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Efekty naszych terapii utrzymują się zazwyczaj od 12 do 24
-                  miesięcy, w zależności od rodzaju zabiegu oraz indywidualnych
-                  cech pacjenta, takich jak wiek, tryb życia czy pielęgnacja
-                  domowa. Aby utrzymać optymalne rezultaty, zalecamy wykonywanie
-                  zabiegów przypominających co 12-18 miesięcy. Regularna
-                  pielęgnacja domowa specjalistycznymi kosmetykami, które
-                  rekomendujemy po zabiegu, również znacząco wydłuża trwałość
-                  efektów.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Jakie są przeciwwskazania do zabiegu?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Główne przeciwwskazania do zabiegów obejmują: ciążę i okres
-                  karmienia piersią, aktywne infekcje skórne w miejscu zabiegu,
-                  choroby autoimmunologiczne w aktywnej fazie, przyjmowanie
-                  leków rozrzedzających krew, skłonność do bliznowców, aktywną
-                  chorobę nowotworową oraz ostre alergie. Podczas konsultacji
-                  przeprowadzamy dokładny wywiad medyczny, aby upewnić się, że
-                  zabieg jest dla Ciebie całkowicie bezpieczny.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Czy potrzebuję okresu rekonwalescencji po zabiegu?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Większość naszych zabiegów nie wymaga specjalnego okresu
-                  rekonwalescencji, co pozwala na szybki powrót do codziennych
-                  aktywności. Przez 24-48 godzin po zabiegu może występować
-                  lekkie zaczerwienienie lub obrzęk, które łatwo zamaskować
-                  delikatnym makijażem mineralnym. Zalecamy unikanie
-                  intensywnego wysiłku fizycznego, sauny, solarium i pełnego
-                  nasłonecznienia przez 3-5 dni po zabiegu.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Czy zabiegi są bezpieczne?</span>
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Tak, wszystkie stosowane przez nas terapie posiadają
-                  certyfikaty bezpieczeństwa i są wykonywane przez doświadczony
-                  personel medyczny. Używamy produktów najwyższej jakości od
-                  renomowanych producentów. Przed każdym zabiegiem
-                  przeprowadzamy dokładną konsultację, aby dobrać
-                  najbezpieczniejszą i najskuteczniejszą metodę dla Twojej
-                  skóry.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span
-                  >Ile zabiegów potrzebuję, aby uzyskać widoczne efekty?</span
-                >
-                <span class="icon"><i class="ph ph-plus-circle"></i></span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Liczba zalecanych zabiegów zależy od indywidualnych potrzeb,
-                  wieku pacjenta oraz stanu skóry. Zazwyczaj rekomendujemy serię
-                  2-4 zabiegów wykonywanych w odstępach 3-4 tygodni, aby uzyskać
-                  optymalne rezultaty. Dla podtrzymania efektów zalecamy zabieg
-                  przypominający co 12-18 miesięcy. Dokładny plan terapii
-                  ustalimy podczas konsultacji, biorąc pod uwagę Twoje
-                  indywidualne potrzeby i oczekiwania.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Przerywnik -->
-      <section class="block container question-container">
+      <section class="block container question-container" data-aos="zoom-in">
         <header class="info__header">
-          <h2 class="info__heading">Zapraszamy na konsultację!</h2>
+          <h2 class="info__heading">Masz dodatkowe pytania?</h2>
           <p>
-            Pomożemy dobrać rodzaj zabiegu do twoich potrzeb i zadbamy o twój
-            komfort!
+            Nasz Zespół jest gotowy, aby odpowiedzieć na wszystkie Twoje pytania
+            i wątpliwości.
           </p>
         </header>
-        <div class="grid">
-          <a class="btn btn--secondary btn--center" href="">
-            <i class="ph ph-phone"></i> Umów wizytę i poczuj różnicę!</a
+        <div class="grid grid--1x2 grid--button">
+          <a class="btn btn--secondary" href="tel: 606565000"
+            ><i class="ph ph-phone"></i> Zadzwoń teraz</a
           >
+          <a class="btn btn--outline" href="mailto: konsultacje@uniestetica.pl"
+            ><i class="ph ph-chat-circle-text"></i> Napisz do nas</a
+          >
+          <!-- <a class="btn btn--outline" href="#faq">
+            <i class="ph ph-question"></i> Najczęściej zadawane pytania
+          </a> -->
         </div>
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const slider = document.querySelector("#splide");
-
-        // Opcje dla Intersection Observer
-        const options = {
-          root: null, // Obserwacja w obrębie widocznego viewportu
-          rootMargin: "0px",
-        };
-
-        // Callback dla Intersection Observer
-        const observerCallback = (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              new Splide("#splide", {
-                type: "loop",
-                perPage: 3,
-                perMove: 1,
-                autoplay: true,
-                pauseOnHover: true,
-                start: 2,
-                focus: "center",
-                interval: 3000,
-                breakpoints: {
-                  768: {
-                    perPage: 1,
-                    start: 0,
-                  },
-                  1024: {
-                    perPage: 2,
-                  },
-                },
-              }).mount();
-
-              // Przestań obserwować po uruchomieniu slidera
-              observer.unobserve(slider);
-            }
-          });
-        };
-
-        // Utwórz instancję Intersection Observer
-        const observer = new IntersectionObserver(observerCallback, options);
-
-        // Rozpocznij obserwację slidera
-        observer.observe(slider);
-      });
-    </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", () => {
+        initToggleComment();
+        initStymulatoryButtons();
+        initFAQToggle();
+        observeMainSplideOnScroll();
+        initYouTubeIframeCheck();
+        initOtherSplideSliders();
+      });
+
+      function initToggleComment() {
+        window.toggleComment = function (button) {
+          const reviewDiv = button.closest(".review");
+          const comment = reviewDiv.querySelector(".comment");
+
+          comment.classList.toggle("expanded");
+          button.textContent = comment.classList.contains("expanded")
+            ? "Pokaż mniej"
+            : "Pokaż więcej";
+        };
+      }
+      function initStymulatoryButtons() {
+        const buttons = document.querySelectorAll(".btn--stymulatory");
+        console.log("Found buttons:", buttons.length);
+
+        // Remove old listeners by cloning
+        buttons.forEach((button) => {
+          const newButton = button.cloneNode(true);
+          button.parentNode.replaceChild(newButton, button);
+        });
+
+        const refreshedButtons = document.querySelectorAll(".btn--stymulatory");
+
+        // Funkcja do automatycznego zarządzania widocznością na podstawie rozmiaru ekranu
+        function handleScreenSize() {
+          const allInfos = document.querySelectorAll(
+            ".stymulatory-container-info"
+          );
+
+          if (window.innerWidth >= 700) {
+            // Duże ekrany - automatycznie pokazuj wszystkie
+            console.log(
+              "Duży ekran - pokazuję wszystkie elementy automatycznie"
+            );
+            allInfos.forEach((info) => {
+              if (!info.classList.contains("active")) {
+                info.classList.add("active");
+              }
+            });
+            // Opcjonalnie: ukryj przyciski na dużych ekranach
+            refreshedButtons.forEach((btn) => {
+              btn.style.display = "none"; // lub btn.style.visibility = "hidden";
+            });
+          } else {
+            // Małe ekrany - ukryj domyślnie, ale pozwól na klikanie
+            console.log(
+              "Mały ekran - ukrywam domyślnie, ale pozwalam na klikanie"
+            );
+            allInfos.forEach((info) => {
+              info.classList.remove("active");
+            });
+            refreshedButtons.forEach((btn) => {
+              btn.style.display = ""; // pokaż przyciski
+              btn.textContent = "Dowiedz się więcej";
+            });
+          }
+        }
+
+        // Sprawdź stan przy inicjalizacji
+        handleScreenSize();
+
+        // Dodaj listener na zmianę rozmiaru okna
+        window.addEventListener("resize", handleScreenSize);
+
+        refreshedButtons.forEach((button) => {
+          button.addEventListener("click", function (event) {
+            // Usuń ograniczenie - teraz działa na wszystkich rozmiarach ekranu
+            event.preventDefault();
+            event.stopPropagation();
+
+            const infoId = this.getAttribute("data-info");
+            const infoElement = document.getElementById(infoId);
+
+            console.log("Clicked button for element:", infoId);
+            console.log("Found element:", infoElement);
+
+            if (!infoElement) {
+              console.error("Element with ID not found:", infoId);
+              return;
+            }
+
+            const isAlreadyActive = infoElement.classList.contains("active");
+
+            if (isAlreadyActive) {
+              infoElement.classList.remove("active");
+              this.textContent = "Dowiedz się więcej";
+              console.log("Removed active class from:", infoId);
+            } else {
+              // Na małych ekranach: pokaż tylko jeden na raz
+              if (window.innerWidth < 700) {
+                const allInfos = document.querySelectorAll(
+                  ".stymulatory-container-info"
+                );
+                allInfos.forEach((info) => info.classList.remove("active"));
+                refreshedButtons.forEach(
+                  (btn) => (btn.textContent = "Dowiedz się więcej")
+                );
+              }
+
+              infoElement.classList.add("active");
+              this.textContent = "Pokaż mniej";
+              console.log("Added active class to:", infoId);
+            }
+          });
+        });
+      }
+      function initFAQToggle() {
         const faqItems = document.querySelectorAll(".faq-item");
 
         faqItems.forEach((item) => {
           const question = item.querySelector(".faq-question");
           const icon = question.querySelector(".icon i");
 
-          // Inicjalizacja ikon na starcie
-          if (item.classList.contains("active")) {
-            icon.className = "ph ph-x-circle";
-          } else {
-            icon.className = "ph ph-plus-circle";
-          }
+          icon.className = item.classList.contains("active")
+            ? "ph ph-x-circle"
+            : "ph ph-plus-circle";
 
-          // Obsługa kliknięcia
           question.addEventListener("click", () => {
             faqItems.forEach((otherItem) => {
-              const otherIcon = otherItem.querySelector(".icon i");
               if (
                 otherItem !== item &&
                 otherItem.classList.contains("active")
               ) {
                 otherItem.classList.remove("active");
-                if (otherIcon) {
-                  otherIcon.className = "ph ph-plus-circle";
-                }
+                const otherIcon = otherItem.querySelector(".icon i");
+                if (otherIcon) otherIcon.className = "ph ph-plus-circle";
               }
             });
 
             item.classList.toggle("active");
-
-            if (item.classList.contains("active")) {
-              icon.className = "ph ph-x-circle";
-            } else {
-              icon.className = "ph ph-plus-circle";
-            }
+            icon.className = item.classList.contains("active")
+              ? "ph ph-x-circle"
+              : "ph ph-plus-circle";
           });
         });
-      });
-      function toggleComment(button) {
-        // Find the parent review div
-        const reviewDiv = button.closest(".review");
-
-        // Find the comment div within this review
-        const comment = reviewDiv.querySelector(".comment");
-
-        // Toggle the expanded class
-        comment.classList.toggle("expanded");
-
-        // Update button text
-        button.textContent = comment.classList.contains("expanded")
-          ? "Pokaż mniej"
-          : "Pokaż więcej";
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // Znajdź wszystkie przyciski "Dowiedz się więcej"
-        const buttons = document.querySelectorAll(".btn--primary");
+      function observeMainSplideOnScroll() {
+        const slider = document.querySelector("#splide");
 
-        // Dodaj obsługę kliknięcia dla każdego przycisku
-        buttons.forEach((button) => {
-          button.addEventListener("click", function () {
-            // Pobierz ID elementu do wyświetlenia
-            const infoId = this.getAttribute("data-info");
-            const infoElement = document.getElementById(infoId);
+        if (!slider) return;
 
-            // Sprawdź, czy kliknięto ten sam przycisk, co ostatnio
-            const wasActive = infoElement.classList.contains("active");
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                new Splide("#splide", {
+                  type: "loop",
+                  perPage: 3,
+                  perMove: 1,
+                  autoplay: true,
+                  pauseOnHover: true,
+                  start: 2,
+                  focus: "center",
+                  interval: 3000,
+                  breakpoints: {
+                    768: { perPage: 1, start: 0 },
+                    1024: { perPage: 2 },
+                  },
+                }).mount();
 
-            // Najpierw ukryj wszystkie opisy i zresetuj wszystkie przyciski
-            const allInfos = document.querySelectorAll(
-              ".stymulatory-container-info"
-            );
-            allInfos.forEach((info) => {
-              info.classList.remove("active");
+                observer.unobserve(slider);
+              }
             });
+          },
+          {
+            root: null,
+            rootMargin: "0px",
+          }
+        );
 
-            // Zresetuj wszystkie przyciski do "Dowiedz się więcej"
-            buttons.forEach((btn) => {
-              btn.textContent = "Dowiedz się więcej";
-            });
+        observer.observe(slider);
+      }
 
-            // Jeśli kliknięto na już otwarty element - po prostu go zamykamy
-            // Jeśli kliknięto na zamknięty element - otwieramy go
-            if (!wasActive) {
-              infoElement.classList.add("active");
-              this.textContent = "Zwiń tekst";
-            }
-          });
+      function initYouTubeIframeCheck() {
+        const iframe = document.querySelector(
+          'iframe[src*="youtube.com/embed"]'
+        );
+
+        if (!iframe) {
+          console.error("YouTube iframe not found in the DOM.");
+          return;
+        }
+
+        const style = getComputedStyle(iframe);
+        if (
+          style.display === "none" ||
+          style.visibility === "hidden" ||
+          style.width === "0px" ||
+          style.height === "0px"
+        ) {
+          console.warn("YouTube iframe is present but not visible.");
+        } else {
+          console.log("YouTube iframe is present and visible.");
+        }
+
+        iframe.addEventListener("load", () => {
+          console.log("YouTube iframe loaded successfully.");
         });
-      });
+
+        setTimeout(() => {
+          console.warn(
+            "YouTube iframe load event did not fire within 5 seconds."
+          );
+        }, 5000);
+      }
+
+      function initOtherSplideSliders() {
+        const sliders = [
+          {
+            selector: "#benefits-splide",
+            options: {
+              type: "loop",
+              perPage: 5,
+              perMove: 1,
+              focus: "center",
+              autoplay: false,
+              interval: 3000,
+              breakpoints: {
+                768: { perPage: 1 },
+                1024: { perPage: 2 },
+              },
+            },
+          },
+          {
+            selector: "#doctors-splide",
+            options: {
+              type: "loop",
+              perPage: 3,
+              perMove: 1,
+              focus: "center",
+              autoplay: false,
+              interval: 3000,
+              breakpoints: {
+                768: { perPage: 1 },
+                1024: { perPage: 2 },
+              },
+            },
+          },
+        ];
+
+        sliders.forEach(({ selector, options }) => {
+          const el = document.querySelector(selector);
+          if (el) new Splide(el, options).mount();
+        });
+      }
     </script>
   </body>
 </html>
