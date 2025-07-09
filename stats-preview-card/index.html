@@ -49,22 +49,24 @@
                 </li>
               </ul>
             </div>
-            <picture class="insights__image">
-              <source
-                media="(max-width: 700px)"
-                srcset="./assets/images/image-header-mobile.jpg"
-              />
-              <source
-                media="(min-width: 701px)"
-                srcset="./assets/images/image-header-desktop.jpg"
-              />
-              <img
-                src="./assets/images/image-header-desktop.jpg"
-                alt="Team collaborating at the meeting table"
-                class="insights__img"
-              />
+            <div class="insights__image">
+              <picture>
+                <source
+                  media="(max-width: 700px)"
+                  srcset="./assets/images/image-header-mobile.jpg"
+                />
+                <source
+                  media="(min-width: 701px)"
+                  srcset="./assets/images/image-header-desktop.jpg"
+                />
+                <img
+                  src="./assets/images/image-header-desktop.jpg"
+                  alt="Team collaborating at the meeting table"
+                  class="insights__img"
+                />
+              </picture>
               <div class="insights__img-overlay"></div>
-            </picture>
+            </div>
           </div>
         </article>
       </section>
