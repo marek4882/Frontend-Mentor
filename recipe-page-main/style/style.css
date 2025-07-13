@@ -1,0 +1,79 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+
+  --color-brown-800: hsl(14, 45%, 36%);
+
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--color-stone-600);
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+}
+li{
+    margin-bottom: 0.7rem;
+}
+.recipe__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.recipe-content__heading {
+  color: var(--color-brown-800);
+}
+.recipe__title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-stone-900);
+}
+
+.recipe__prep-time {
+  padding: 40px 30px;
+  background-color: var(--color-rose-50);
+}
+
+.recipe__prep-time-heading {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-rose-800);
+}
+.dec {
+  border: 1px solid grey;
+}
