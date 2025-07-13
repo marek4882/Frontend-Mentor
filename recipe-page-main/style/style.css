@@ -44,8 +44,8 @@ h2 {
 img {
   width: 100%;
 }
-li{
-    margin-bottom: 0.7rem;
+li {
+  margin-bottom: 0.7rem;
 }
 .recipe__wrapper {
   display: flex;
@@ -76,4 +76,8 @@ li{
 }
 .dec {
   border: 1px solid grey;
+}
+.recipe-content__list,
+.prep-time__list {
+  padding-left: 20px; /* Minimalne wcięcie */
 }
