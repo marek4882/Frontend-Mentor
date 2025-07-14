@@ -177,6 +177,7 @@ ul li.prep-time__item::before {
     padding: 32px;
     max-width: 710px;
     margin: 0 auto;
+    border-radius: 30px;
     background-color: var(--color-white);
   }
   .recipe__wrapper {
