@@ -79,5 +79,24 @@ li {
 }
 .recipe-content__list,
 .prep-time__list {
-  padding-left: 20px; /* Minimalne wcięcie */
+  padding-left: 15px;
+}
+li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid red;
+}
+
+li::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: grey;
+  margin-right: 0.5rem;
+}
+ul li,
+ol li {
+  padding-left: 1rem;
 }
