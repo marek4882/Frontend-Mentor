@@ -29,7 +29,7 @@ ul {
 }
 
 main {
-  display: flex;
+  display: grid;
   align-items: center;
   min-height: 100vh;
   padding: 24px;
