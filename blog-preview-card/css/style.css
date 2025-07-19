@@ -50,8 +50,10 @@ main {
 .card:hover {
   box-shadow: 16px 16px #000;
 }
-
-.card__link:hover .card__title {
+.card__link {
+  transition: all 0.3s ease;
+}
+.card__link:hover {
   color: var(--yellow-color);
 }
 
