@@ -84,25 +84,25 @@ main {
   font-weight: 600;
   text-align: center;
 }
-.social-card__link {
+.social-card__links-item {
   border-radius: 5px;
   padding: 16px 0;
   transition: all 0.3s ease;
   background-color: var(--grey-700);
 }
 
-.social-card__link:hover {
+.social-card__links-item:hover {
   cursor: pointer;
   background-color: var(--green-color);
 }
 
-.social-card__link:hover a {
+.social-card__links-item:hover a {
   color: var(--grey-800);
 }
 
 .social-card__location,
 .social-card__bio,
-.social-card__links {
+.social-card__links-items {
   font-size: 0.875rem;
 }
 
