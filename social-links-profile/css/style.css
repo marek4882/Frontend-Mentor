@@ -21,6 +21,7 @@ a {
   color: var(--white-color);
   text-decoration: none;
 }
+
 img {
   width: 100%;
 }
@@ -43,6 +44,7 @@ main {
   padding: 24px;
   background-color: var(--grey-800);
   border-radius: 10px;
+  max-width: 22.5rem;
 }
 
 .social-card__img {
@@ -85,9 +87,17 @@ main {
 .social-card__link {
   border-radius: 5px;
   padding: 16px 0;
-}
-.social-card__links .social-card__link {
+  transition: all 0.3s ease;
   background-color: var(--grey-700);
+}
+
+.social-card__link:hover {
+  cursor: pointer;
+  background-color: var(--green-color);
+}
+
+.social-card__link:hover a {
+  color: var(--grey-800);
 }
 
 .social-card__location,
@@ -102,6 +112,5 @@ main {
   }
   .social-card {
     padding: 36px;
-    max-width: 22.5rem;
   }
 }
