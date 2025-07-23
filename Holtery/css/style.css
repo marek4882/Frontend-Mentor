@@ -1,0 +1,272 @@
+:root {
+  --primary-color: #0c0e7c;
+  --body-color: #111111;
+  --headings-color: #1a1a1a;
+  --accent-color: #cd1a2d;
+  --border-radius: 30px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif, sans-serif;
+  color: var(--body-color);
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: var(--headings-color);
+  line-height: 1.1;
+  font-size: clamp(1.875rem, 1rem + 2.188vw, 2.75rem);
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem;
+}
+/* Highlights */
+.highlights {
+  color: var(--accent-color);
+}
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Badges */
+.hero-badge__wrapper {
+  margin-bottom: 10px;
+}
+
+.hero-badge {
+  display: inline-block;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #28358b 0%, #28358b 100%);
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  margin-bottom: 0.6rem;
+  animation: fadeInUp 1s ease-out 0.2s both;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+.hero-subtitle {
+  max-width: 540px;
+}
+
+@media screen and (max-width: 520px) {
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  .hero-badge__wrapper {
+    text-align: center;
+  }
+  .hero-title,
+  .hero-subtitle {
+    text-align: center;
+  }
+}
+/* Lists */
+/* Icons */
+/* Buttons */
+.btn {
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: var(--border-radius);
+  margin: 0.625rem 0;
+  padding: 1.25rem 3vw;
+  border: 0;
+  outline: 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn .icon {
+  vertical-align: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+}
+.btn--accent {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.btn--accent:hover {
+  background-color: #9c1826;
+}
+.btn--accent--outline {
+  background-color: #fff;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.btn--accent--outline:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn--outline {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn--outline:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn--stretched {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+.btn--flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-buttons {
+  margin-top: 3rem;
+}
+@media screen and (max-width: 520px) {
+  .btn--flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .hero-buttons {
+    margin-top: 0rem;
+  }
+}
+/* Blocks */
+.block {
+  --padding-vertical: 3.75rem;
+  padding: var(--padding-vertical) 1.25rem;
+}
+.block__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.block__heading {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Video */
+.hero-video {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.video-container {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive video wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+/* Hero Section */
+.hero-content {
+  align-items: center;
+}
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-video {
+  animation: slideInRight 1s ease-out;
+}
