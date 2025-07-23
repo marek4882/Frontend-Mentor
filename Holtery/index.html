@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stymulatory Tkankowe - Poprawiona wersja</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="block">
+        <div class="container">
+          <section class="grid grid--1x2">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                Zadbaj o swoje serce z -
+                <span class="highlights">holterem EKG</span>
+              </h1>
+              <p class="hero-subtitle">
+                Badanie Holter EKG to całodobowe monitorowanie pracy serca,
+                które pozwala na wykrycie zaburzeń rytmu niewidocznych w
+                standardowym EKG. To nieinwazyjne badanie dostarcza cennych
+                informacji o funkcjonowaniu układu sercowo-naczyniowego w
+                naturalnych warunkach życia codziennego.
+              </p>
+              <div class="hero-buttons btn--flex">
+                <a href="#konsultacja" class="btn btn--accent">
+                  ✨ Umów konsultację
+                </a>
+                <a
+                  href="#dla-kogo-sa-stymulatory-tkankowe"
+                  class="btn btn--accent btn--accent--outline"
+                >
+                  ✨ Wybierz swój Holter
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div class="hero-badge__wrapper">
+                <div class="hero-badge">
+                  ✨ Profesjonalna medycyna estetyczna
+                </div>
+                <div class="hero-badge">✨ Bezpieczeństwo i&nbsp;komfort</div>
+                <div class="hero-badge">✨ Doświadczeni specjaliści</div>
+                <div class="hero-badge">✨ Personalizowana opieka</div>
+                <div class="hero-badge">✨ Troska o Ciebie</div>
+              </div>
+
+              <div class="hero-video">
+                <div class="video-container">
+                  <div class="video-wrapper">
+                    <iframe
+                      src="https://www.youtube.com/embed/YropN793jUI?si=9MPI3AiS47KclZ_t"
+                      title="Jak dbać o swoją skórę - poradnik"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    >
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        initYouTubeIframeCheck();
+      });
+
+      function initYouTubeIframeCheck() {
+        const iframe = document.querySelector(
+          'iframe[src*="youtube.com/embed"]'
+        );
+
+        if (!iframe) {
+          console.error("YouTube iframe not found in the DOM.");
+          return;
+        }
+
+        // Check if iframe is properly visible
+        const checkVisibility = () => {
+          const rect = iframe.getBoundingClientRect();
+          const style = getComputedStyle(iframe);
+
+          if (
+            style.display === "none" ||
+            style.visibility === "hidden" ||
+            rect.width === 0 ||
+            rect.height === 0
+          ) {
+            console.warn("YouTube iframe is present but not visible.");
+            return false;
+          } else {
+            console.log("YouTube iframe is present and visible.");
+            return true;
+          }
+        };
+
+        // Initial check
+        setTimeout(checkVisibility, 100);
+
+        // Listen for iframe load
+        iframe.addEventListener("load", () => {
+          console.log("YouTube iframe loaded successfully.");
+          checkVisibility();
+        });
+
+        // Timeout warning
+        setTimeout(() => {
+          if (!iframe.complete) {
+            console.warn(
+              "YouTube iframe load event did not fire within 5 seconds."
+            );
+          }
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
