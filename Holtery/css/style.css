@@ -479,3 +479,136 @@ a {
     font-size: 2rem;
   }
 }
+
+/* PODSTAWOWY GRID - Desktop */
+.holter--grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.holter--grid .btn {
+  padding: 1.25rem 1rem;
+  flex: 1; /* Przyciski wypełniają dostępną przestrzeń */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DESKTOP - Oryginalny układ */
+.div1 {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+}
+
+.div2 {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+  grid-column-start: 4;
+}
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-row-start: 4;
+}
+
+.div4 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+.div5 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 4;
+}
+.div1 .holter__description,
+.div2 .holter__description,
+.div5 .holter__description {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* TABLET - 768px i mniej */
+@media (max-width: 768px) {
+  .holter--grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    min-height: 800px;
+  }
+
+  .div1 {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+  }
+
+  .div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    grid-column-start: auto;
+    grid-row-start: 3;
+  }
+
+  .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+
+  .div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 5;
+  }
+
+  .div5 {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 7;
+  }
+  .div1 .holter__description,
+  .div2 .holter__description,
+  .div5 .holter__description {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE - 480px i mniej */
+@media (max-width: 480px) {
+  .holter--grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    grid-column: 1;
+    grid-row: auto;
+    grid-column-start: auto;
+    grid-row-start: auto;
+  }
+}
+
+.holter__btn-container {
+  display: grid;
+  gap: 0;
+}
+
+.holter__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
