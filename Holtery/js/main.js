@@ -13,6 +13,27 @@ const holters = [
       "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
     ailments: ["Kołotanie Serca"],
   },
+  {
+    id: 3,
+    name: "Holter Premium Life",
+    description:
+      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
+    ailments: ["Kołotanie Serca"],
+  },
+  {
+    id: 4,
+    name: "Holter EKG",
+    description:
+      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
+    ailments: ["Kołotanie Serca"],
+  },
+  {
+    id: 5,
+    name: "Holter Ciśnieniowy",
+    description:
+      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
+    ailments: ["Kołotanie Serca"],
+  },
 ];
 
 const allAilments = [
@@ -36,25 +57,23 @@ const preparations = [
 
 const holterList = document.getElementById("holterList");
 
-holters.forEach((holter) => {
+holters.forEach((holter, index) => {
+  const divClass = `div${index + 1}`; // np. div1, div2, ...
   const holterHtml = `
-     
-        <div>
-            <div class="holter__header">
-              <img src="" alt="" />
-              <h3 class="holter__title">${holter.name}</h3>
-              <p class="holter__description">${holter.description}</p>
-            </div>
-            <div class="grid grid--1x2 cla__btn-container">
-              <button class="btn btn--accent">✨ Umów się na badanie</button>
-              <button onclick="showPreparations()" class="btn btn--accent btn--accent--outline">
-                ✨ Zobacz Przygotowanie
-              </button>
-            </div>
-        </div>
-
+    <div class="${divClass} card_">
+      <div class="holter__header">
+        <img src="" alt="" />
+        <h3 class="holter__title">${holter.name}</h3>
+        <p class="holter__description">${holter.description}</p>
+      </div>
+      <div class="holter__btn-container">
+        <button class="btn btn--accent">✨ Umów się na badanie</button>
+        <button onclick="showPreparations()" class="btn btn--accent btn--accent--outline">
+          ✨ Zobacz Przygotowanie
+        </button>
+      </div>
+    </div>
   `;
-
   holterList.innerHTML += holterHtml;
 });
 
