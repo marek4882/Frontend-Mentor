@@ -4,35 +4,35 @@ const holters = [
     name: "Holter 12-Odprowadzeniowy",
     description:
       "Całodobowe monitorowanie ciśnienia tętniczego. Idealne dla osób z podejrzeniem nadciśnienia lub w celu oceny skuteczności leczenia.",
-    ailments: ["Zawroty Głowy"],
+    ailments: ["Zawroty głowy"],
   },
   {
     id: 2,
     name: "Holter 2 w 1 (EKG + ABPM)",
     description:
       "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Kołotanie Serca"],
+    ailments: ["Kołatanie serca"],
   },
   {
     id: 3,
     name: "Holter Premium Life",
     description:
       "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Kołotanie Serca"],
+    ailments: ["Ból w klatce piersowiej"],
   },
   {
     id: 4,
     name: "Holter EKG",
     description:
       "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Kołotanie Serca"],
+    ailments: ["Duszność bez wyraźnej przyczyny"],
   },
   {
     id: 5,
     name: "Holter Ciśnieniowy",
     description:
       "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Kołotanie Serca"],
+    ailments: ["Duszność bez wyraźnej przyczyny", "Zawroty głowy"],
   },
 ];
 
@@ -68,7 +68,7 @@ holters.forEach((holter, index) => {
       </div>
       <div class="holter__btn-container">
         <button class="btn btn--accent">✨ Umów się na badanie</button>
-        <button onclick="showPreparations()" class="btn btn--accent btn--accent--outline">
+        <button onclick="showPreparationsForHolter('${holter.name}')" class="btn btn--accent btn--accent--outline">
           ✨ Zobacz Przygotowanie
         </button>
       </div>
@@ -76,6 +76,36 @@ holters.forEach((holter, index) => {
   `;
   holterList.innerHTML += holterHtml;
 });
+
+function showPreparationsForHolter(holterName) {
+  const section = document.getElementById("preparationSection");
+  const title = document.getElementById("holterTitle");
+  const symptoms = document.querySelectorAll("#symptomList li");
+
+  // Znajdź wybrany holter
+  const selectedHolter = holters.find((h) => h.name === holterName);
+
+  // Zmień tytuł
+  title.textContent = `Przygotowanie dla ${selectedHolter.name}`;
+
+  // Wyczyść zaznaczenia
+  symptoms.forEach((item) => item.classList.remove("highlight"));
+
+  // Zaznacz dolegliwości
+  selectedHolter.ailments.forEach((symptom) => {
+    const normalizedSymptom = symptom.toLowerCase();
+    const match = Array.from(document.querySelectorAll("#symptomList li")).find(
+      (li) =>
+        li.getAttribute("data-symptom").toLowerCase() === normalizedSymptom
+    );
+    if (match) match.classList.add("highlight");
+  });
+  // Pokaż sekcję
+  section.classList.remove("hidden");
+
+  // Przewiń do sekcji
+  section.scrollIntoView({ behavior: "smooth" });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   initYouTubeIframeCheck();
