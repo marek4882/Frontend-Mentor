@@ -68,6 +68,9 @@ img {
 a {
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
 
 /* Utilities */
 .highlights {
@@ -611,4 +614,32 @@ a {
 .holter__header {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+/* Preparation */
+
+.preparation {
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  margin-top: 40px;
+  background: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+#symptomList li {
+  list-style: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+#symptomList li.highlight {
+  background-color: #d1f5e0;
+  border-color: #1b9e5e;
+  color: red;
+  font-weight: bold;
 }
