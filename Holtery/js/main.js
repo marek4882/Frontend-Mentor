@@ -108,6 +108,7 @@ function showPreparationsForHolter(holterName) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initOtherSplideSliders();
   initYouTubeIframeCheck();
 });
 
@@ -154,3 +155,84 @@ function initYouTubeIframeCheck() {
     }
   }, 5000);
 }
+
+function initOtherSplideSliders() {
+  const sliders = [
+    {
+      selector: "#benefits-splide",
+      options: {
+        type: "loop",
+        perPage: 5,
+        perMove: 1,
+        focus: "left",
+        autoplay: false,
+        pauseOnHover: true,
+        interval: 3000,
+        breakpoints: {
+          768: { perPage: 1 },
+          1024: { perPage: 2 },
+        },
+      },
+    },
+    {
+      selector: "#splide-kardiolog",
+      options: {
+        type: "loop",
+        perPage: 2,
+        gap: "1rem",
+        perMove: 1,
+        focus: "left",
+        autoplay: false,
+        pauseOnHover: true,
+        interval: 3000,
+        breakpoints: {
+          768: { perPage: 1 },
+          1024: { perPage: 2 },
+        },
+      },
+    },
+    {
+      selector: "#splide-kardiologs",
+      options: {
+        type: "loop",
+        perPage: 2,
+        perMove: 1,
+        focus: "left",
+        gap: "1rem",
+        autoplay: false,
+        pauseOnHover: true,
+        interval: 3000,
+        breakpoints: {
+          768: { perPage: 1 },
+          1024: { perPage: 2 },
+        },
+      },
+    },
+  ];
+
+  sliders.forEach(({ selector, options }) => {
+    const el = document.querySelector(selector);
+    console.log(`Element ${selector}:`, el); // Debug log
+    if (el) {
+      const splideInstance = new Splide(el, options).mount();
+      console.log(`Splide mounted for ${selector}`); // Debug log
+    } else {
+      console.error(`Element ${selector} not found!`); // Error log
+    }
+  });
+}
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("show-more")) {
+    const reviewDiv = e.target.closest(".review");
+    const comment = reviewDiv.querySelector(".comment");
+
+    comment.classList.toggle("expanded");
+    e.target.textContent = comment.classList.contains("expanded")
+      ? "Pokaż mniej"
+      : "Pokaż więcej";
+  }
+});
+// Otwórz konsoli i sprawdź:
+console.log(document.querySelector("#splide-kardiolog"));
+console.log(document.querySelectorAll("#splide-kardiolog .splide__slide"));
