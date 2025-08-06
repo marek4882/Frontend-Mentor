@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holtery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -137,8 +151,8 @@
           </div>
           <div class="grid grid--1x2">
             <div class="symptoms-column">
+              <div class="symptoms-title"></div>
               <ul class="symptoms-list">
-                <h3 class="symptoms-title"></h3>
                 <li>
                   <span class="symptom-icon"></span>
                   Kołatanie serca lub nieregularny rytm
@@ -158,8 +172,8 @@
               </ul>
             </div>
             <div class="symptoms-column">
+              <div class="symptoms-title"></div>
               <ul class="symptoms-list">
-                <h3 class="symptoms-title"></h3>
                 <li>
                   <span class="symptom-icon"></span>
                   Zawroty głowy lub omdlenia
@@ -217,7 +231,10 @@
         <section id="holterList" class="container holter--grid"></section>
       </div>
 
-      <section id="preparationSection" class="preparation hidden">
+      <section
+        id="preparationSection"
+        class="preparation hidden block container"
+      >
         <h2 id="holterTitle">Przygotowanie dla Holtera</h2>
         <p>Wybierz swój holter, aby zobaczyć szczegóły przygotowania.</p>
 
@@ -239,8 +256,9 @@
             <h3>Jak się przygotować?</h3>
             <ul class="grid grid--1x2">
               <li class="card_">
-                <img src="./components/" alt="">
-                Zadbaj o higienę skóry klatki piersiowej</li>
+                <img src="./components/" alt="" />
+                Zadbaj o higienę skóry klatki piersiowej
+              </li>
               <li class="card_">💧 Załóż luźne ubrania</li>
               <li class="card_">💧 Usuń owłosienie z klatki</li>
               <li class="card_">💧 Unikaj kofeiny i alkoholu</li>
@@ -249,30 +267,322 @@
         </div>
       </section>
 
-      <!-- 
-      <div class="block">
-        <section class="container holter">
-          <div class="holter__header">
-            <img src="" alt="" />
-            <h3 class="holter__title"></h3>
-            <p class="holter__description"></p>
-          </div>
-          <div class="grid grid--1x2 grid--1x3 cla__btn-container">
-            <button href="#konsultacja" class="btn btn--accent">
-              ✨ Umów się na badanie
-            </button>
-            <button
-              onclick="showPreparations()"
-              href="#dla-kogo-sa-stymulatory-tkankowe"
-              class="btn btn--accent btn--accent--outline"
-            >
-              ✨ Zobacz Przygotowanie
-            </button>
-          </div>
-        </section>
-      </div> -->
-    </main>
+      <section class="block container">
+        <header class="block__header">
+          <h2 class="poz__title" style="color: #0b2163">
+            Dlaczego warto nas wybrać?
+          </h2>
+        </header>
 
+        <div class="splide" id="benefits-splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-shield-checkered benefits-icon"></i>
+
+                  <div class="benefits-text">
+                    W UniEstetica dbamy o najwyższe standardy bezpieczeństwa
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-asclepius benefits-icon"></i>
+                  <div class="benefits-text">
+                    Zabiegi wykonywane są przez doświadczonych Specjalistów
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-certificate benefits-icon"></i>
+                  <div class="benefits-text">
+                    Stosujemy wyłącznie certyfikowane preparaty
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-clock benefits-icon"></i>
+                  <div class="benefits-text">
+                    Procedura trwa około 30–45 minut
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-drop benefits-icon"></i>
+                  <div class="benefits-text">
+                    Cienkie igły lub kaniula minimalizujące ryzyko siniaków
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-person-simple-run benefits-icon"></i>
+                  <div class="benefits-text">
+                    Możliwość powrotu do codziennych aktywności natychmiast
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opinie naszych Klientów   -->
+      <section class="reviews-section block container">
+        <div class="block__header">
+          <h2>Co mówią o <span class="highlights">Nas Pacjenci</span></h2>
+          <p>Zobacz opinie o Naszych Klinikach</p>
+        </div>
+        <div class="grid grid--1x3 review_gap">
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
+                dr Klulbat i&nbsp;bezcenne, indywidualne podejście do pacjenta -
+                wlasnie tego szukalam. Świetne efekty zabiegów etstycznych,
+                pełen profesjonalizm pani dr Klulbat i&nbsp;bezcenne,
+                indywidualne podejście do pacjenta - wlasnie tego szukalam.
+                Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
+                dr Klulbat i&nbsp;bezcenne, indywidualne podejście do pacjenta -
+                wlasnie tego szukalam. Świetne efekty zabiegów etstycznych,
+                pełen profesjonalizm pani dr Klulbat i&nbsp;bezcenne,
+                indywidualne podejście do pacjenta - wlasnie tego szukalam.
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Pola W.</span>
+            </div>
+          </div>
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
+                dr Klulbat i&nbsp;bezcenne, indywidualne podejście do pacjenta -
+                wlasnie tego szukalam. Świetne efekty zabiegów etstycznych,
+                pełen profesjonalizm pani dr Klulbat i&nbsp;bezcenne,
+                indywidualne podejście do pacjenta - wlasnie tego szukalam.
+                Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
+                dr Klulbat i&nbsp;bezcenne, indywidualne podejście do pacjenta -
+                wlasnie tego szukalam. Świetne efekty zabiegów etstycznych,
+                pełen profesjonalizm pani dr Klulbat i&nbsp;bezcenne,
+                indywidualne podejście do pacjenta - wlasnie tego szukalam.
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Pola W.</span>
+            </div>
+          </div>
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Świetne efekty zabiegów etstycznych, pełen profesjonalizm pani
+                dr Klulbat i&nbsp;bezcenne, indywidualne podejście do pacjenta -
+                wlasnie tego szukalam.
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Pola W.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block container">
+        <div class="block__header">
+          <h2>
+            Poznaj nasz <span class="highlights">Zespół Specjalistów</span>
+          </h2>
+          <p>
+            Doświadczeni lekarze gotowi pomóc Ci w każdej chwili. Pamietaj ze
+            badanie musi zostac skonsultowane przez Lekarza Specjaliste. Poznaj
+            swojego specjalistę
+          </p>
+        </div>
+
+        <div class="specialization-container">
+          <div class="specialization-group">
+            <p>Kardiolog</p>
+          </div>
+          <div class="splide--wrapper">
+            <div class="splide splide-doctors" id="splide-kardiolog">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- więcej lekarzy -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="specialization-container">
+          <div class="specialization-group">
+            <p>Kardiolog Dziecięcy</p>
+          </div>
+          <div class="">
+            <div class="splide splide-doctors" id="splide-kardiologs">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- więcej lekarzy -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
