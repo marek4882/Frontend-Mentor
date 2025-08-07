@@ -330,6 +330,16 @@ ul {
   transform: scaleX(1);
 }
 
+.card_-container {
+  align-items: stretch;
+}
+.card_-container li {
+  text-align: center;
+}
+.card_-container li p {
+  margin-top: 0.7rem;
+}
+
 /* Group Cards */
 .groups {
   display: grid;
@@ -490,6 +500,9 @@ ul {
   grid-template-rows: repeat(6, 1fr);
   gap: 8px;
 }
+.holter__title {
+  font-weight: 600;
+}
 
 .holter--grid .btn {
   padding: 1.25rem 1rem;
@@ -632,16 +645,26 @@ ul {
 
 #symptomList li {
   list-style: none;
-  padding: 5px;
+  padding: 15px;
   box-shadow: 1px 2px rgba(179, 175, 175, 0.342);
-  margin: 4px 0;
+  margin: 8px 0;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 #symptomList li.highlight {
-  box-shadow: 2px 4px rgba(190, 67, 67, 0.662);
+  background-color: #fff6f6;
+  box-shadow: 4px 4px rgba(190, 67, 67, 0.662);
   font-weight: bold;
+}
+#symptomList li.highlight:hover {
+  transform: translateX(4px);
+}
+
+#symptomList li.highlight .symptom-item__indicator {
+  background-color: var(--accent-color);
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 /* SplideJS */
@@ -868,13 +891,16 @@ ul {
 /* review section */
 
 .review {
+  align-items: start;
   position: relative;
   padding: 24px;
   margin-bottom: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.078);
 }
-
+.review__container {
+  align-items: start;
+}
 .review-content {
   flex-grow: 1;
 }
@@ -955,11 +981,12 @@ ul {
     gap: 0rem;
   }
 }
+
 .doctor-card {
   color: #000;
   margin: 0.5rem;
   background: #fff;
-  border-radius: 24px;
+  border-radius: 5px;
   box-shadow: 0 4px 10px rgba(74, 105, 136, 0.2);
   padding: 30px;
   overflow: hidden;
@@ -981,8 +1008,9 @@ ul {
   padding: 20px;
   background-color: var(--primary-color);
   color: white;
-  min-width: 300px;
-  border-radius: 15px;
+  width: 30%;
+  margin: 0 0 1rem 0.5rem;
+  border-radius: 5px;
 }
 .specialization-container {
   margin: 3rem 0;
@@ -993,4 +1021,240 @@ h4 {
 }
 h4 p {
   font-size: 1.2rem;
+}
+
+/* BEM: Preparation Section */
+.preparation {
+  padding: var(--padding-vertical) 0;
+}
+
+.preparation__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.preparation__title {
+  margin-bottom: 1rem;
+  color: var(--headings-color);
+}
+
+.preparation__description {
+  color: var(--body-color);
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.preparation__content {
+  align-items: flex-start;
+}
+
+/* BEM: Instructions Block */
+.instructions {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-base);
+}
+
+.instructions:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.instructions__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.instructions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+/* BEM: Instruction Item */
+.instruction-item {
+  background: #fff;
+  border: 2px solid #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.instruction-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.instruction-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.instruction-item:hover::before {
+  transform: scaleX(1);
+}
+
+.instruction-item__icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform var(--transition-base);
+}
+
+.instruction-item:hover .instruction-item__icon {
+  transform: scale(1.1);
+}
+
+.instruction-item__text {
+  font-weight: bold;
+  color: var(--body-color);
+  margin: 0;
+}
+
+/* BEM: Symptoms Block */
+.symptoms {
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-base);
+}
+
+.symptoms:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.symptoms__title {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.symptoms__title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-hover);
+}
+
+.symptoms__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* BEM: Symptom Item */
+.symptom-item {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.symptom-item:last-child {
+  border-bottom: none;
+}
+
+.symptom-item:hover {
+  padding-left: 1rem;
+  border-radius: 8px;
+  transform: translateX(4px);
+  box-shadow: 0 4px 4px rgba(40, 40, 40, 0.15);
+}
+
+.symptom-item--highlight {
+  background: rgba(205, 26, 45, 0.1);
+  padding-left: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(205, 26, 45, 0.15);
+}
+
+.symptom-item__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent-color);
+  border-radius: 100%;
+  color: var(--accent-color);
+  font-size: 0.7rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.symptom-item__text {
+  flex: 1;
+  color: var(--body-color);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .preparation__content {
+    gap: 2rem;
+  }
+
+  .instructions,
+  .symptoms {
+    padding: 1.5rem;
+  }
+
+  .instructions__list {
+    gap: 1rem;
+  }
+
+  .instruction-item {
+    padding: 1rem;
+  }
+
+  .instruction-item__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .instructions__list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .instruction-item__text {
+    font-size: 0.9rem;
+  }
+}
+.prep__content {
+  align-items: stretch;
 }

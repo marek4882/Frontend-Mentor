@@ -86,7 +86,7 @@ function showPreparationsForHolter(holterName) {
   const selectedHolter = holters.find((h) => h.name === holterName);
 
   // Zmień tytuł
-  title.textContent = `Przygotowanie dla ${selectedHolter.name}`;
+  title.innerHTML = `Przygotowanie dla <span class="highlights">${selectedHolter.name}</span>`;
 
   // Wyczyść zaznaczenia
   symptoms.forEach((item) => item.classList.remove("highlight"));

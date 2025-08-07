@@ -80,7 +80,10 @@
       <div class="block">
         <section class="container">
           <div class="block__header">
-            <h2>Kto powinien wykonać badanie Holter?</h2>
+            <h2>
+              Kto powinien wykonać
+              <span class="highlights">badanie Holter?</span>
+            </h2>
             <p>
               Badanie jest bezpieczne i nieinwazyjne dla wszystkich grup
               wiekowych. Szczególnie polecane osobom z problemami serca lub
@@ -143,7 +146,7 @@
       <div class="block">
         <section class="card_ symptoms-section container">
           <div class="block__header">
-            <h2>Kiedy założyć Holter?</h2>
+            <h2>Kiedy założyć <span class="highlights">Holter?</span></h2>
             <p class="symptoms-intro">
               Zalecamy badanie, jeśli doświadczasz któregoś z poniższych objawów
               lub problemów zdrowotnych:
@@ -233,35 +236,80 @@
 
       <section
         id="preparationSection"
-        class="preparation hidden block container"
+        class="preparation block hidden container"
       >
-        <h2 id="holterTitle">Przygotowanie dla Holtera</h2>
-        <p>Wybierz swój holter, aby zobaczyć szczegóły przygotowania.</p>
+        <div class="block__header">
+          <h2 id="holterTitle"></h2>
+          <p>Wybierz swój holter, aby zobaczyć szczegóły przygotowania.</p>
+        </div>
 
-        <div class="grid grid--1x2 prep-content">
-          <div class="symptoms">
-            <h3>Dolegliwości</h3>
-            <ul id="symptomList">
-              <li data-symptom="Kołatanie serca">✔ Kołatanie serca</li>
-              <li data-symptom="Zawroty głowy">✔ Zawroty głowy</li>
-              <li data-symptom="Ból w klatce piersowiej">
-                ✔ Ból w klatce piersiowej
+        <div class="grid grid--1x2 prep__content">
+          <div class="instructions">
+            <h3 class="instructions__title">Jak się przygotować?</h3>
+            <ul class="instructions__list grid grid--1x2">
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/soap-svgrepo-com (1).svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">
+                  Zadbaj o higienę skóry klatki piersiowej
+                </p>
               </li>
-              <li data-symptom="Duszność bez wyraźnej przyczyny">
-                ✔ Duszność bez wyraźnej przyczyny
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/clothes-shirt-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">Załóż luźne ubrania</p>
+              </li>
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/soap-shampoo-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">
+                  Nie używaj olejków, kremów itp.
+                </p>
+              </li>
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/coffee-cup-paper-cup-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">Unikaj kofeiny i alkoholu</p>
               </li>
             </ul>
           </div>
-          <div class="preparations">
-            <h3>Jak się przygotować?</h3>
-            <ul class="grid grid--1x2">
-              <li class="card_">
-                <img src="./components/" alt="" />
-                Zadbaj o higienę skóry klatki piersiowej
+
+          <div class="symptoms">
+            <h3 class="symptoms__title">Dolegliwości</h3>
+            <ul class="symptoms__list" id="symptomList">
+              <li class="symptom-item" data-symptom="Kołatanie serca">
+                <div class="symptom-item__indicator">✓</div>
+                <span class="symptom-item__text">Kołatanie serca</span>
               </li>
-              <li class="card_">💧 Załóż luźne ubrania</li>
-              <li class="card_">💧 Usuń owłosienie z klatki</li>
-              <li class="card_">💧 Unikaj kofeiny i alkoholu</li>
+              <li class="symptom-item" data-symptom="Zawroty głowy">
+                <div class="symptom-item__indicator">✓</div>
+                <span class="symptom-item__text">Zawroty głowy</span>
+              </li>
+              <li class="symptom-item" data-symptom="Ból w klatce piersowiej">
+                <div class="symptom-item__indicator">✓</div>
+                <span class="symptom-item__text">Ból w klatce piersiowej</span>
+              </li>
+              <li
+                class="symptom-item"
+                data-symptom="Duszność bez wyraźnej przyczyny"
+              >
+                <div class="symptom-item__indicator">✓</div>
+                <span class="symptom-item__text"
+                  >Duszność bez wyraźnej przyczyny</span
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -269,8 +317,8 @@
 
       <section class="block container">
         <header class="block__header">
-          <h2 class="poz__title" style="color: #0b2163">
-            Dlaczego warto nas wybrać?
+          <h2 class="poz__title">
+            Dlaczego warto <span class="highlights">nas wybrać?</span>
           </h2>
         </header>
 
@@ -341,7 +389,7 @@
           <h2>Co mówią o <span class="highlights">Nas Pacjenci</span></h2>
           <p>Zobacz opinie o Naszych Klinikach</p>
         </div>
-        <div class="grid grid--1x3 review_gap">
+        <div class="grid grid--1x3 review_gap review__container">
           <div class="review" data-aos="fade-right">
             <div class="review-content">
               <div class="review-header">
