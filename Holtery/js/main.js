@@ -57,25 +57,44 @@ const preparations = [
 
 const holterList = document.getElementById("holterList");
 
-holters.forEach((holter, index) => {
-  const divClass = `div${index + 1}`; // np. div1, div2, ...
-  const holterHtml = `
-    <div class="${divClass} card_">
-      <div class="holter__header">
-        <img src="" alt="" />
-        <h3 class="holter__title">${holter.name}</h3>
-        <p class="holter__description">${holter.description}</p>
-      </div>
-      <div class="holter__btn-container">
-        <button class="btn btn--accent">✨ Umów się na badanie</button>
-        <button onclick="showPreparationsForHolter('${holter.name}')" class="btn btn--accent btn--accent--outline">
-          ✨ Zobacz Przygotowanie
-        </button>
-      </div>
+if (holterList) {
+  holterList.innerHTML = `
+    <div class="block__header">
+      <h2>Wybierz swój <span class="highlights">Holter</span></h2>
+      <p>
+        Zastanawiasz się, jaki holter będzie dla Ciebie najlepszy? Poniżej
+        znajdziesz krótkie opisy dostępnych opcji – dzięki temu łatwiej
+        podejmiesz decyzję. W razie wątpliwości skontaktuj się z nami – chętnie
+        odpowiemy na pytania i pomożemy umówić wizytę lub konsultację z lekarzem.
+      </p>
     </div>
+    <div class="container holter--grid"></div>
   `;
-  holterList.innerHTML += holterHtml;
-});
+
+  const container = holterList.querySelector(".holter--grid");
+
+  holters.forEach((holter, index) => {
+    const divClass = `div${index + 1}`;
+    const holterHtml = `
+      <div class="${divClass} card_">
+        <div class="holter__header">
+          <h3 class="holter__title">${holter.name}</h3>
+          <p class="holter__description">${holter.description}</p>
+        </div>
+        <div class="holter__btn-container">
+          <button class="btn btn--accent">✨ Umów się na badanie</button>
+          <button
+            onclick="showPreparationsForHolter('${holter.name}')"
+            class="btn btn--accent btn--accent--outline"
+          >
+            ✨ Zobacz Przygotowanie
+          </button>
+        </div>
+      </div>
+    `;
+    container.innerHTML += holterHtml;
+  });
+}
 
 function initFAQToggle() {
   const faqItems = document.querySelectorAll(".faq-item");
