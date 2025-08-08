@@ -1312,7 +1312,7 @@ h4 p {
   padding: 10px 26px;
   max-height: 500px;
   border-left: 4px solid var(--primary-color);
-  border-radius: 8px;
+  background: var(--gradient-glass);
 }
 
 /* Step by step  */
