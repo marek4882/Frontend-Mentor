@@ -1287,7 +1287,7 @@ h4 p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--secondary);
   transition: all 0.3s ease;
 }
