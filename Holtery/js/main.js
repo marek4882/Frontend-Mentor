@@ -77,6 +77,37 @@ holters.forEach((holter, index) => {
   holterList.innerHTML += holterHtml;
 });
 
+function initFAQToggle() {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    const icon = question.querySelector(".icon i");
+
+    // ustaw ikonę na start
+    icon.className = item.classList.contains("active")
+      ? "ph ph-x-circle"
+      : "ph ph-plus-circle";
+
+    question.addEventListener("click", () => {
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item && otherItem.classList.contains("active")) {
+          otherItem.classList.remove("active");
+          const otherIcon = otherItem.querySelector(".icon i");
+          if (otherIcon) otherIcon.className = "ph ph-plus-circle";
+        }
+      });
+
+      item.classList.toggle("active");
+      icon.className = item.classList.contains("active")
+        ? "ph ph-x-circle"
+        : "ph ph-plus-circle";
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initFAQToggle);
+
 function showPreparationsForHolter(holterName) {
   const section = document.getElementById("preparationSection");
   const title = document.getElementById("holterTitle");
