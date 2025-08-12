@@ -1393,7 +1393,7 @@ h4 p {
 
 .card_:hover,
 .card_.hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   transition: all 0.3s ease;
 }
 
