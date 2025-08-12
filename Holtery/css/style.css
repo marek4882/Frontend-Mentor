@@ -127,6 +127,7 @@ ul {
   border-radius: var(--border-radius);
   margin: 0.625rem 0;
   padding: 1.25rem 3vw;
+  font-size: 0.9rem;
   border: 0;
   outline: 0;
   transition: all var(--transition-base);
@@ -1392,7 +1393,7 @@ h4 p {
 
 .card_:hover,
 .card_.hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
   transition: all 0.3s ease;
 }
 
