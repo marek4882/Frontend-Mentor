@@ -40,7 +40,6 @@ const allAilments = [
   "Kołatanie serca",
   "Zawroty głowy",
   "Ból w klatce piersiowej",
-  "Duszność bez wyraźnej przyczyny",
 ];
 
 const preparations = [
@@ -286,3 +285,25 @@ document.addEventListener("click", function (e) {
 // Otwórz konsoli i sprawdź:
 console.log(document.querySelector("#splide-kardiolog"));
 console.log(document.querySelectorAll("#splide-kardiolog .splide__slide"));
+
+document.addEventListener("DOMContentLoaded", () => {
+  const steps = document.querySelectorAll(".process__step");
+
+  // tylko dla mobile
+  if (window.innerWidth <= 768) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("hover"); // symulacja hover
+          } else {
+            entry.target.classList.remove("hover");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    ); // 50% elementu w viewport
+
+    steps.forEach((step) => observer.observe(step));
+  }
+});
