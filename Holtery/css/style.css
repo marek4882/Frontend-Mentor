@@ -305,8 +305,6 @@ ul {
   border: none;
   border-radius: 15px;
 }
-
-/* Card System */
 .card_ {
   padding: 20px;
   border-radius: 5px;
@@ -315,7 +313,8 @@ ul {
   position: relative;
 }
 
-.card_:hover {
+.card_:hover,
+.card_.hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
 }
@@ -333,9 +332,11 @@ ul {
   transition: transform var(--transition-base);
 }
 
-.card_:hover::before {
+.card_:hover::before,
+.card_.hover::before {
   transform: scaleX(1);
 }
+
 
 .card_-container {
   align-items: stretch;
@@ -1015,8 +1016,8 @@ ul {
   padding: 20px;
   background-color: var(--primary-color);
   color: white;
-  width: 30%;
-  margin: 0 0 1rem 0.5rem;
+  width: 100%;
+
   border-radius: 5px;
 }
 .specialization-container {
@@ -1084,7 +1085,11 @@ h4 p {
   align-items: stretch;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 840px) {
+  .specialization-group {
+    width: 30%;
+    margin: 0 0 1rem 0.5rem;
+  }
 }
 
 /* BEM: Instruction Item */
@@ -1383,4 +1388,16 @@ h4 p {
 }
 .card_:hover .process__step-number {
   box-shadow: 0 0 3px rgba(193, 49, 49, 0.7);
+}
+
+.card_:hover,
+.card_.hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.faq-list {
+  list-style: square;
+  margin: 10px 0 10px 30px;
+  line-height: 1.6;
 }
