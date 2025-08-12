@@ -75,7 +75,7 @@ if (holterList) {
   holters.forEach((holter, index) => {
     const divClass = `div${index + 1}`;
     const holterHtml = `
-      <div class="${divClass} card_">
+      <div class="${divClass} process__step card_">
         <div class="holter__header">
           <h3 class="holter__title">${holter.name}</h3>
           <p class="holter__description">${holter.description}</p>
