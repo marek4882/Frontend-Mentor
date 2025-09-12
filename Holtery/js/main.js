@@ -307,3 +307,25 @@ document.addEventListener("DOMContentLoaded", () => {
     steps.forEach((step) => observer.observe(step));
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !animationPlayed) {
+          animationPlayed = true;
+
+          steps.forEach((step, index) => {
+            setTimeout(() => {
+              steps.forEach((s) => s.classList.remove("highlight"));
+              step.classList.add("highlight");
+            }, index * 1000);
+          });
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
+  );
+
+  observer.observe(section);
+});
