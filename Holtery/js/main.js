@@ -81,12 +81,12 @@ if (holterList) {
           <p class="holter__description">${holter.description}</p>
         </div>
         <div class="holter__btn-container">
-          <button class="btn btn--accent">✨ Umów się na badanie</button>
+          <button class="btn btn--accent"><i class="ph ph-phone"></i> Umów się na badanie</button>
           <button
             onclick="showPreparationsForHolter('${holter.name}')"
             class="btn btn--accent btn--accent--outline"
           >
-            ✨ Zobacz Przygotowanie
+            <i class="ph ph-list-checks"></i> Zobacz Przygotowanie
           </button>
         </div>
       </div>
@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initYouTubeIframeCheck() {
   const iframe = document.querySelector('iframe[src*="youtube.com/embed"]');
-  a;
   if (!iframe) {
     console.error("YouTube iframe not found in the DOM.");
     return;
@@ -308,24 +307,102 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !animationPlayed) {
-          animationPlayed = true;
+// Obsługa animacji kart w sekcji proces - POPRAWIONA WERSJA
+document.addEventListener("DOMContentLoaded", function () {
+  const processSection = document.querySelector(".process");
+  // Pobierz tylko karty z sekcji process
+  const cards = document.querySelectorAll(".process .card_");
+  let animationTriggered = false;
 
-          steps.forEach((step, index) => {
-            setTimeout(() => {
-              steps.forEach((s) => s.classList.remove("highlight"));
-              step.classList.add("highlight");
-            }, index * 1000);
-          });
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
-  );
+  console.log("Process section found:", processSection);
+  console.log("Cards found:", cards.length);
 
-  observer.observe(section);
+  // Funkcja do dodawania klasy hover z efektem ::before
+  function activateCard(card, index) {
+    setTimeout(() => {
+      // Dodaj klasę hover dla efektu transformacji i cienia
+      card.classList.add("hover");
+
+      // Dodaj klasę dla efektu ::before (górny pasek)
+      card.classList.add("active-before");
+
+      console.log(`Card ${index + 1} activated`);
+    }, index * 2000); // 2 sekundy odstępu między kartami
+  }
+
+  // Funkcja sprawdzająca czy element jest częściowo widoczny
+  function isElementPartiallyVisible(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+
+    return (
+      rect.top < windowHeight * 0.8 && // Uruchom animację gdy 80% sekcji jest widoczne
+      rect.bottom > 0
+    );
+  }
+
+  // Główna funkcja uruchamiająca animację
+  function triggerCardsAnimation() {
+    if (animationTriggered || cards.length === 0) return;
+
+    console.log("Triggering cards animation...");
+    animationTriggered = true;
+
+    // Usuń wszystkie aktywne klasy przed rozpoczęciem nowej animacji
+    cards.forEach((card) => {
+      card.classList.remove("hover", "active-before", "highlight");
+    });
+
+    // Aktywuj karty kolejno z 2-sekundowym odstępem
+    cards.forEach((card, index) => {
+      activateCard(card, index);
+    });
+
+    console.log("Animacja kart została uruchomiona!");
+  }
+
+  // Event listener dla scroll z throttling
+  let scrollTimeout;
+  function handleScroll() {
+    if (scrollTimeout) return;
+
+    scrollTimeout = setTimeout(() => {
+      if (!processSection) {
+        console.warn("Process section not found!");
+        return;
+      }
+
+      // Sprawdź czy sekcja process jest widoczna
+      if (isElementPartiallyVisible(processSection)) {
+        console.log("Process section is visible, triggering animation");
+        triggerCardsAnimation();
+      }
+
+      scrollTimeout = null;
+    }, 100);
+  }
+
+  // Dodaj event listener dla scroll
+  window.addEventListener("scroll", handleScroll);
+
+  // Sprawdź od razu po załadowaniu strony
+  setTimeout(() => {
+    handleScroll();
+  }, 500);
+
+  // Funkcja resetowania animacji (do testowania)
+  window.resetCardsAnimation = function () {
+    animationTriggered = false;
+    cards.forEach((card) => {
+      card.classList.remove("hover", "active-before", "highlight");
+    });
+    console.log("Animacja zresetowana - można uruchomić ponownie");
+  };
+
+  // Funkcja do manualnego uruchomienia animacji (do testowania)
+  window.triggerAnimation = function () {
+    animationTriggered = false;
+    triggerCardsAnimation();
+  };
 });

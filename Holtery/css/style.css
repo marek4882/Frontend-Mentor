@@ -338,7 +338,9 @@ ul {
   transform: scaleX(1);
 }
 
-
+.card_.active-before::before {
+  transform: scaleX(1);
+}
 .card_-container {
   align-items: stretch;
 }
@@ -896,6 +898,34 @@ ul {
 .ph-star {
   font-size: 1.3rem;
 }
+.ph {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+.ph-phone,
+.ph-chat-circle-text,
+.ph-question,
+.ph-heartbeat,
+.ph-list-checks {
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+@keyframes icon-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon-pulse {
+  display: inline-block;
+  animation: icon-pulse 2s ease-in-out infinite;
+}
 
 /* review section */
 
@@ -1166,7 +1196,7 @@ h4 p {
   padding-bottom: 1rem;
 }
 
-.symptoms__title::after {
+/* .symptoms__title::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -1174,7 +1204,7 @@ h4 p {
   width: 60px;
   height: 3px;
   background: var(--accent-hover);
-}
+} */
 
 .symptoms__list {
   list-style: none;
@@ -1397,11 +1427,11 @@ h4 p {
   transition: all 0.3s ease;
 }
 
- .card_.highlight {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(193, 49, 49, 0.7);
-    transition: all 0.5s ease;
-  }
+.card_.highlight {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(193, 49, 49, 0.7);
+  transition: all 0.5s ease;
+}
 .faq-list {
   list-style: square;
   margin: 10px 0 10px 30px;
