@@ -37,7 +37,7 @@
               placówce przy ul. Kluczborskiej 17.
             </p>
             <div class="hero-buttons btn--flex">
-              <a href="#konsultacja" class="btn btn--accent">
+              <a href="tel:663080808" class="btn btn--accent">
                 <i class="ph ph-phone icon-pulse"></i> Umów badanie
               </a>
               <a
@@ -196,6 +196,14 @@
               </ul>
             </div>
           </div>
+          <div class="solution">
+            <h3 class="solution__title">
+              Jakie rozwiązanie <span class="highlights">wybrać?</span>
+            </h3>
+            <a href="#holterList" class="btn btn--accent btn--accent--outline"
+              ><i class="ph ph-heartbeat icon-pulse"></i> Wybierz swój Holter
+            </a>
+          </div>
         </section>
       </div>
 
@@ -220,10 +228,7 @@
             >
               <i class="ph ph-chat-circle-text"></i> Napisz do Nas
             </a>
-            <a
-              href="#dla-kogo-sa-stymulatory-tkankowe"
-              class="btn btn--accent btn--accent--outline"
-            >
+            <a href="#faq" class="btn btn--accent btn--accent--outline">
               <i class="ph ph-question"></i> Najczęściej zadawane pytania
             </a>
           </div>
@@ -244,6 +249,10 @@
         </div>
 
         <div class="grid grid--1x2 prep__content">
+          <div class="symptoms">
+            <h3 class="symptoms__title">Dolegliwości</h3>
+            <ul class="symptoms__list" id="symptomList"></ul>
+          </div>
           <div class="instructions">
             <h3 class="instructions__title">Jak się przygotować?</h3>
             <ul class="instructions__list grid grid--1x2">
@@ -287,33 +296,6 @@
               </li>
             </ul>
           </div>
-
-          <div class="symptoms">
-            <h3 class="symptoms__title">Dolegliwości</h3>
-            <ul class="symptoms__list" id="symptomList">
-              <li class="symptom-item" data-symptom="Kołatanie serca">
-                <div class="symptom-item__indicator">✓</div>
-                <span class="symptom-item__text">Kołatanie serca</span>
-              </li>
-              <li class="symptom-item" data-symptom="Zawroty głowy">
-                <div class="symptom-item__indicator">✓</div>
-                <span class="symptom-item__text">Zawroty głowy</span>
-              </li>
-              <li class="symptom-item" data-symptom="Ból w klatce piersowiej">
-                <div class="symptom-item__indicator">✓</div>
-                <span class="symptom-item__text">Ból w klatce piersiowej</span>
-              </li>
-              <li
-                class="symptom-item"
-                data-symptom="Duszność bez wyraźnej przyczyny"
-              >
-                <div class="symptom-item__indicator">✓</div>
-                <span class="symptom-item__text"
-                  >Duszność bez wyraźnej przyczyny</span
-                >
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 
@@ -329,54 +311,41 @@
             <ul class="splide__list">
               <li class="splide__slide">
                 <div class="benefits-card">
-                  <i class="ph ph-fill ph-shield-checkered benefits-icon"></i>
+                  <i class="ph ph-fill ph-heartbeat benefits-icon"></i>
+                  <div class="benefits-text">Sprawdzone urządzenia Holter</div>
+                </div>
+              </li>
 
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-user-circle-check benefits-icon"></i>
+                  <div class="benefits-text">Doświadczeni Specjaliści</div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-hand-heart benefits-icon"></i>
                   <div class="benefits-text">
-                    W UniEstetica dbamy o najwyższe standardy bezpieczeństwa
+                    Indywidualne podejście do każdego Pacjenta
                   </div>
                 </div>
               </li>
 
               <li class="splide__slide">
                 <div class="benefits-card">
-                  <i class="ph ph-fill ph-asclepius benefits-icon"></i>
+                  <i class="ph ph-fill ph-handshake benefits-icon"></i>
                   <div class="benefits-text">
-                    Zabiegi wykonywane są przez doświadczonych Specjalistów
+                    Wieloletnie zaufanie naszych Pacjentów
                   </div>
                 </div>
               </li>
 
               <li class="splide__slide">
                 <div class="benefits-card">
-                  <i class="ph ph-fill ph-certificate benefits-icon"></i>
+                  <i class="ph ph-fill ph-scroll benefits-icon"></i>
                   <div class="benefits-text">
-                    Stosujemy wyłącznie certyfikowane preparaty
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
-                <div class="benefits-card">
-                  <i class="ph ph-fill ph-clock benefits-icon"></i>
-                  <div class="benefits-text">
-                    Procedura trwa około 30–45 minut
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
-                <div class="benefits-card">
-                  <i class="ph ph-fill ph-drop benefits-icon"></i>
-                  <div class="benefits-text">
-                    Cienkie igły lub kaniula minimalizujące ryzyko siniaków
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="benefits-card">
-                  <i class="ph ph-fill ph-person-simple-run benefits-icon"></i>
-                  <div class="benefits-text">
-                    Możliwość powrotu do codziennych aktywności natychmiast
+                    Profesjonalne założenie i instruktaż holtera
                   </div>
                 </div>
               </li>
@@ -612,10 +581,7 @@
             >
               <i class="ph ph-chat-circle-text"></i> Napisz do Nas
             </a>
-            <a
-              href="#dla-kogo-sa-stymulatory-tkankowe"
-              class="btn btn--accent btn--accent--outline"
-            >
+            <a href="#faq" class="btn btn--accent btn--accent--outline">
               <i class="ph ph-question"></i> Najczęściej zadawane pytania
             </a>
           </div>
@@ -772,7 +738,7 @@
 
       <!-- FAQ -->
 
-      <section class="block container">
+      <section class="block container" id="faq">
         <div class="block__header">
           <h2>Najczęściej zadawane pytania</h2>
           <p>Znajdź odpowiedzi na najczęstsze pytania</p>

@@ -3,36 +3,61 @@ const holters = [
     id: 1,
     name: "Holter 12-Odprowadzeniowy",
     description:
-      "Całodobowe monitorowanie ciśnienia tętniczego. Idealne dla osób z podejrzeniem nadciśnienia lub w celu oceny skuteczności leczenia.",
-    ailments: ["Zawroty głowy"],
+      "Najbardziej zaawansowane badanie EKG, które pozwala na jednoczesny zapis z aż 12 odprowadzeń serca. Dzięki temu możliwe jest szczegółowe wykrywanie nawet subtelnych zaburzeń przewodnictwa i niedokrwienia mięśnia sercowego. Holter ten rekomendowany jest szczególnie pacjentom z poważniejszymi problemami kardiologicznymi, u których konieczna jest pełna analiza pracy serca.",
+    ailments: [
+      "Zawroty głowy",
+      "Ból w klatce piersiowej",
+      "Omdlenia lub utraty przytomności",
+      "Podejrzenie choroby niedokrwiennej serca",
+    ],
   },
   {
     id: 2,
     name: "Holter 2 w 1 (EKG + ABPM)",
     description:
-      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Kołatanie serca"],
+      "Nowoczesne połączenie monitoringu EKG i ciśnienia tętniczego w jednym urządzeniu. Umożliwia jednoczesną ocenę rytmu serca oraz wahań ciśnienia krwi, co daje lekarzowi pełny obraz funkcjonowania układu krążenia. To szczególnie wygodne rozwiązanie dla osób, które chcą uniknąć wykonywania dwóch osobnych badań.",
+    ailments: [
+      "Kołatanie serca",
+      "Podejrzenie nadciśnienia tętniczego",
+      "Bóle i uciski w klatce piersiowej związane z wahaniami ciśnienia",
+      "Epizody osłabienia lub zmęczenia niewiadomego pochodzenia",
+    ],
   },
   {
     id: 3,
     name: "Holter Premium Life",
     description:
-      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Ból w klatce piersowiej"],
+      "Nowa generacja monitoringu serca – urządzenie lekkie, komfortowe i praktycznie niewyczuwalne podczas noszenia. Dzięki ograniczonej liczbie elektrod i bezprzewodowej konstrukcji jest wyjątkowo wygodne, a jednocześnie bardzo dokładne w wykrywaniu arytmii i zaburzeń rytmu serca. Polecane osobom aktywnym, które chcą prowadzić badanie w naturalnych warunkach dnia codziennego.",
+    ailments: [
+      "Ból w klatce piersiowej",
+      "Kołatania serca",
+      "Nieregularny rytm serca",
+      "Napadowe duszności podczas wysiłku",
+    ],
   },
   {
     id: 4,
     name: "Holter EKG",
     description:
-      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Duszność bez wyraźnej przyczyny"],
+      "Klasyczny Holter EKG, przeznaczony do całodobowego monitorowania pracy serca. To najczęściej wykonywane badanie, które pozwala na wykrycie arytmii, ocenę rytmu zatokowego oraz rejestrację epizodów niedokrwiennych. Dzięki swojej uniwersalności stosowany jest zarówno u osób młodszych, jak i starszych.",
+    ailments: [
+      "Duszność bez wyraźnej przyczyny",
+      "Kołatania serca",
+      "Zawroty głowy i uczucie osłabienia",
+      "Epizody omdleń",
+    ],
   },
   {
     id: 5,
-    name: "Holter Ciśnieniowy",
+    name: "Holter Ciśnieniowy (ABPM)",
     description:
-      "Standardowe, wygodne badanie do wykrywania arytmii i zaburzeń rytmu serca. Najczęściej wybierane przez pacjentów. Mniej elektrod, komfortowe noszenie.",
-    ailments: ["Duszność bez wyraźnej przyczyny", "Zawroty głowy"],
+      "Specjalistyczne urządzenie służące do całodobowego monitorowania ciśnienia tętniczego. Automatycznie dokonuje pomiarów co kilkanaście minut w dzień i w nocy, co pozwala dokładnie ocenić dobowy profil ciśnienia krwi. Idealne dla pacjentów z podejrzeniem nadciśnienia lub tych, którzy chcą sprawdzić skuteczność stosowanej terapii.",
+    ailments: [
+      "Duszność bez wyraźnej przyczyny",
+      "Zawroty głowy",
+      "Nadciśnienie tętnicze",
+      "Objawy niedokrwienia mózgu związane z wahaniami ciśnienia",
+    ],
   },
 ];
 
@@ -54,9 +79,59 @@ const preparations = [
   },
 ];
 
-const holterList = document.getElementById("holterList");
+// Funkcje obsługi Holterów
+function showPreparationsForHolter(holterName) {
+  const section = document.getElementById("preparationSection");
+  const title = document.getElementById("holterTitle");
+  const symptomList = document.getElementById("symptomList");
 
-if (holterList) {
+  if (!section || !title || !symptomList) {
+    console.error("Nie znaleziono wymaganych elementów DOM");
+    return;
+  }
+
+  // Znajdź wybrany holter
+  const selectedHolter = holters.find((h) => h.name === holterName);
+  if (!selectedHolter) {
+    console.error(`Nie znaleziono holtera o nazwie: ${holterName}`);
+    return;
+  }
+
+  // Zmień tytuł
+  title.innerHTML = `Przygotowanie dla <span class="highlights">${selectedHolter.name}</span>`;
+
+  // Wyczyść listę dolegliwości
+  symptomList.innerHTML = "";
+
+  // Wygeneruj wszystkie dolegliwości holtera
+  selectedHolter.ailments.forEach((symptom) => {
+    const li = document.createElement("li");
+    li.classList.add("symptom-item", "highlight");
+    li.setAttribute("data-symptom", symptom);
+
+    li.innerHTML = `
+      <div class="symptom-item__indicator">✓</div>
+      <span class="symptom-item__text">${symptom}</span>
+    `;
+
+    symptomList.appendChild(li);
+  });
+
+  // Pokaż sekcję
+  section.classList.remove("hidden");
+
+  // Przewiń do sekcji
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
+// Inicjalizacja listy Holterów
+function initHolterList() {
+  const holterList = document.getElementById("holterList");
+  
+  if (!holterList) {
+    return; // Element nie istnieje na tej stronie
+  }
+
   holterList.innerHTML = `
     <div class="block__header">
       <h2>Wybierz swój <span class="highlights">Holter</span></h2>
@@ -66,6 +141,8 @@ if (holterList) {
         podejmiesz decyzję. W razie wątpliwości skontaktuj się z nami – chętnie
         odpowiemy na pytania i pomożemy umówić wizytę lub konsultację z lekarzem.
       </p>
+    </div>
+    <div class="container">
     </div>
     <div class="container holter--grid"></div>
   `;
@@ -79,6 +156,19 @@ if (holterList) {
         <div class="holter__header">
           <h3 class="holter__title">${holter.name}</h3>
           <p class="holter__description">${holter.description}</p>
+          <div style="margin-top:0.8rem; text-align:left">
+            <div class="hero-badge__wrapper">
+              <p style="font-weight: bold; margin-bottom: 0.3rem">Wskazania:</p>
+              <div class="hero-badge" style="background: #cd1a2d">Ból w klatce</div>
+              <div class="hero-badge" style="background:#cd1a2d">Duszności</div>
+            </div>
+            <div class="hero-badge__wrapper">
+              <p style="font-weight: bold; margin-bottom: 0.3rem">Dla Kogo:</p>
+              <div class="hero-badge">Dorośli</div>
+              <div class="hero-badge">Dzieci</div>
+              <div class="hero-badge">Młodzież</div>
+            </div>
+          </div>
         </div>
         <div class="holter__btn-container">
           <button class="btn btn--accent"><i class="ph ph-phone"></i> Umów się na badanie</button>
@@ -95,12 +185,16 @@ if (holterList) {
   });
 }
 
+// FAQ Toggle
 function initFAQToggle() {
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
+    if (!question) return;
+    
     const icon = question.querySelector(".icon i");
+    if (!icon) return;
 
     // ustaw ikonę na start
     icon.className = item.classList.contains("active")
@@ -124,47 +218,11 @@ function initFAQToggle() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initFAQToggle);
-
-function showPreparationsForHolter(holterName) {
-  const section = document.getElementById("preparationSection");
-  const title = document.getElementById("holterTitle");
-  const symptoms = document.querySelectorAll("#symptomList li");
-
-  // Znajdź wybrany holter
-  const selectedHolter = holters.find((h) => h.name === holterName);
-
-  // Zmień tytuł
-  title.innerHTML = `Przygotowanie dla <span class="highlights">${selectedHolter.name}</span>`;
-
-  // Wyczyść zaznaczenia
-  symptoms.forEach((item) => item.classList.remove("highlight"));
-
-  // Zaznacz dolegliwości
-  selectedHolter.ailments.forEach((symptom) => {
-    const normalizedSymptom = symptom.toLowerCase();
-    const match = Array.from(document.querySelectorAll("#symptomList li")).find(
-      (li) =>
-        li.getAttribute("data-symptom").toLowerCase() === normalizedSymptom
-    );
-    if (match) match.classList.add("highlight");
-  });
-  // Pokaż sekcję
-  section.classList.remove("hidden");
-
-  // Przewiń do sekcji
-  section.scrollIntoView({ behavior: "smooth" });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  initOtherSplideSliders();
-  initYouTubeIframeCheck();
-});
-
+// YouTube iframe check
 function initYouTubeIframeCheck() {
   const iframe = document.querySelector('iframe[src*="youtube.com/embed"]');
   if (!iframe) {
-    console.error("YouTube iframe not found in the DOM.");
+    console.log("YouTube iframe nie został znaleziony - prawdopodobnie nie ma go na tej stronie.");
     return;
   }
 
@@ -179,10 +237,10 @@ function initYouTubeIframeCheck() {
       rect.width === 0 ||
       rect.height === 0
     ) {
-      console.warn("YouTube iframe is present but not visible.");
+      console.warn("YouTube iframe jest obecny, ale nie jest widoczny.");
       return false;
     } else {
-      console.log("YouTube iframe is present and visible.");
+      console.log("YouTube iframe jest obecny i widoczny.");
       return true;
     }
   };
@@ -192,19 +250,26 @@ function initYouTubeIframeCheck() {
 
   // Listen for iframe load
   iframe.addEventListener("load", () => {
-    console.log("YouTube iframe loaded successfully.");
+    console.log("YouTube iframe załadowany pomyślnie.");
     checkVisibility();
   });
 
   // Timeout warning
   setTimeout(() => {
     if (!iframe.complete) {
-      console.warn("YouTube iframe load event did not fire within 5 seconds.");
+      console.warn("YouTube iframe nie załadował się w ciągu 5 sekund.");
     }
   }, 5000);
 }
 
+// Splide sliders initialization
 function initOtherSplideSliders() {
+  // Sprawdź czy Splide jest dostępny
+  if (typeof Splide === 'undefined') {
+    console.log("Splide nie jest załadowany - slajdery nie będą działać.");
+    return;
+  }
+
   const sliders = [
     {
       selector: "#benefits-splide",
@@ -260,33 +325,42 @@ function initOtherSplideSliders() {
 
   sliders.forEach(({ selector, options }) => {
     const el = document.querySelector(selector);
-    console.log(`Element ${selector}:`, el); // Debug log
     if (el) {
-      const splideInstance = new Splide(el, options).mount();
-      console.log(`Splide mounted for ${selector}`); // Debug log
+      try {
+        const splideInstance = new Splide(el, options).mount();
+        console.log(`Splide zamontowany dla ${selector}`);
+      } catch (error) {
+        console.error(`Błąd podczas montowania Splide dla ${selector}:`, error);
+      }
     } else {
-      console.error(`Element ${selector} not found!`); // Error log
+      console.log(`Element ${selector} nie został znaleziony - prawdopodobnie nie ma go na tej stronie.`);
     }
   });
 }
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("show-more")) {
-    const reviewDiv = e.target.closest(".review");
-    const comment = reviewDiv.querySelector(".comment");
+// Review show more/less functionality
+function initReviewToggle() {
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("show-more")) {
+      const reviewDiv = e.target.closest(".review");
+      if (!reviewDiv) return;
+      
+      const comment = reviewDiv.querySelector(".comment");
+      if (!comment) return;
 
-    comment.classList.toggle("expanded");
-    e.target.textContent = comment.classList.contains("expanded")
-      ? "Pokaż mniej"
-      : "Pokaż więcej";
-  }
-});
-// Otwórz konsoli i sprawdź:
-console.log(document.querySelector("#splide-kardiolog"));
-console.log(document.querySelectorAll("#splide-kardiolog .splide__slide"));
+      comment.classList.toggle("expanded");
+      e.target.textContent = comment.classList.contains("expanded")
+        ? "Pokaż mniej"
+        : "Pokaż więcej";
+    }
+  });
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+// Mobile hover simulation for process steps
+function initMobileHoverSimulation() {
   const steps = document.querySelectorAll(".process__step");
+  
+  if (!steps.length) return;
 
   // tylko dla mobile
   if (window.innerWidth <= 768) {
@@ -301,18 +375,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       { threshold: 0.5 }
-    ); // 50% elementu w viewport
+    );
 
     steps.forEach((step) => observer.observe(step));
   }
-});
+}
 
-// Obsługa animacji kart w sekcji proces - POPRAWIONA WERSJA
-document.addEventListener("DOMContentLoaded", function () {
+// Process cards animation
+function initProcessCardsAnimation() {
   const processSection = document.querySelector(".process");
-  // Pobierz tylko karty z sekcji process
   const cards = document.querySelectorAll(".process .card_");
   let animationTriggered = false;
+
+  if (!processSection || !cards.length) {
+    console.log("Sekcja process lub karty nie zostały znalezione - prawdopodobnie nie ma ich na tej stronie.");
+    return;
+  }
 
   console.log("Process section found:", processSection);
   console.log("Cards found:", cards.length);
@@ -320,24 +398,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funkcja do dodawania klasy hover z efektem ::before
   function activateCard(card, index) {
     setTimeout(() => {
-      // Dodaj klasę hover dla efektu transformacji i cienia
-      card.classList.add("hover");
-
-      // Dodaj klasę dla efektu ::before (górny pasek)
-      card.classList.add("active-before");
-
+      card.classList.add("hover", "active-before");
       console.log(`Card ${index + 1} activated`);
-    }, index * 2000); // 2 sekundy odstępu między kartami
+    }, index * 2000);
   }
 
   // Funkcja sprawdzająca czy element jest częściowo widoczny
   function isElementPartiallyVisible(el) {
     const rect = el.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
     return (
-      rect.top < windowHeight * 0.8 && // Uruchom animację gdy 80% sekcji jest widoczne
+      rect.top < windowHeight * 0.8 &&
       rect.bottom > 0
     );
   }
@@ -346,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function triggerCardsAnimation() {
     if (animationTriggered || cards.length === 0) return;
 
-    console.log("Triggering cards animation...");
+    console.log("Uruchamiam animację kart...");
     animationTriggered = true;
 
     // Usuń wszystkie aktywne klasy przed rozpoczęciem nowej animacji
@@ -368,17 +440,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (scrollTimeout) return;
 
     scrollTimeout = setTimeout(() => {
-      if (!processSection) {
-        console.warn("Process section not found!");
-        return;
-      }
-
       // Sprawdź czy sekcja process jest widoczna
       if (isElementPartiallyVisible(processSection)) {
-        console.log("Process section is visible, triggering animation");
+        console.log("Sekcja process jest widoczna, uruchamiam animację");
         triggerCardsAnimation();
       }
-
       scrollTimeout = null;
     }, 100);
   }
@@ -387,11 +453,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
 
   // Sprawdź od razu po załadowaniu strony
-  setTimeout(() => {
-    handleScroll();
-  }, 500);
+  setTimeout(handleScroll, 500);
 
-  // Funkcja resetowania animacji (do testowania)
+  // Funkcje globalne do testowania
   window.resetCardsAnimation = function () {
     animationTriggered = false;
     cards.forEach((card) => {
@@ -400,9 +464,45 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Animacja zresetowana - można uruchomić ponownie");
   };
 
-  // Funkcja do manualnego uruchomienia animacji (do testowania)
   window.triggerAnimation = function () {
     animationTriggered = false;
     triggerCardsAnimation();
   };
+}
+
+// Główna funkcja inicjalizująca
+function initializeApp() {
+  initHolterList();
+  initFAQToggle();
+  initOtherSplideSliders();
+  initYouTubeIframeCheck();
+  initReviewToggle();
+  initMobileHoverSimulation();
+  initProcessCardsAnimation();
+}
+
+// Event listeners
+document.addEventListener("DOMContentLoaded", initializeApp);
+
+// Dodatkowe sprawdzenie po załadowaniu wszystkich zasobów
+window.addEventListener("load", () => {
+  console.log("Wszystkie zasoby zostały załadowane");
+  // Ponownie sprawdź slajdery w przypadku opóźnionego ładowania Splide
+  setTimeout(() => {
+    initOtherSplideSliders();
+  }, 1000);
 });
+
+// Debug logs (można usunąć w wersji produkcyjnej)
+console.log("Skrypt załadowany pomyślnie");
+
+// Eksportuj funkcje dla compatibility (jeśli potrzebne)
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    holters,
+    allAilments,
+    preparations,
+    showPreparationsForHolter,
+    initializeApp
+  };
+}
