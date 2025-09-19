@@ -239,7 +239,7 @@ ul {
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
-  margin-bottom: 0.6rem;
+  margin: 5px;
   animation: fadeInUp 1s ease-out 0.2s both;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
@@ -555,9 +555,8 @@ ul {
   grid-row-start: 4;
 }
 .div1 .holter__description,
-.div2 .holter__description,
-.div5 .holter__description {
-  max-width: 450px;
+.div2 .holter__description {
+  max-width: 480px;
   margin: 0 auto;
 }
 

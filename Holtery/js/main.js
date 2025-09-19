@@ -3,61 +3,89 @@ const holters = [
     id: 1,
     name: "Holter 12-Odprowadzeniowy",
     description:
-      "Najbardziej zaawansowane badanie EKG, które pozwala na jednoczesny zapis z aż 12 odprowadzeń serca. Dzięki temu możliwe jest szczegółowe wykrywanie nawet subtelnych zaburzeń przewodnictwa i niedokrwienia mięśnia sercowego. Holter ten rekomendowany jest szczególnie pacjentom z poważniejszymi problemami kardiologicznymi, u których konieczna jest pełna analiza pracy serca.",
+      "Zaawansowane badanie EKG z 12 odprowadzeń umożliwiające szczegółowe wykrywanie zaburzeń przewodnictwa i niedokrwienia mięśnia sercowego. Rekomendowany pacjentom z poważniejszymi problemami kardiologicznymi.",
     ailments: [
       "Zawroty głowy",
       "Ból w klatce piersiowej",
       "Omdlenia lub utraty przytomności",
       "Podejrzenie choroby niedokrwiennej serca",
     ],
+    indications: [
+      "Ból w klatce piersiowej",
+      "Dusznosci",
+      "Zaburzenia przewodnictwa w EKG",
+      "Podejrzenie niedokrwienia mięśnia sercowego",
+    ],
+    forWhom: ["Dorośli", "Dzieci", "Młodzież"],
   },
   {
     id: 2,
     name: "Holter 2 w 1 (EKG + ABPM)",
     description:
-      "Nowoczesne połączenie monitoringu EKG i ciśnienia tętniczego w jednym urządzeniu. Umożliwia jednoczesną ocenę rytmu serca oraz wahań ciśnienia krwi, co daje lekarzowi pełny obraz funkcjonowania układu krążenia. To szczególnie wygodne rozwiązanie dla osób, które chcą uniknąć wykonywania dwóch osobnych badań.",
+      "Nowoczesne połączenie monitoringu EKG i ciśnienia tętniczego w jednym urządzeniu. Umożliwia jednoczesną ocenę rytmu serca oraz wahań ciśnienia krwi, dając pełny obraz funkcjonowania układu krążenia.",
     ailments: [
       "Kołatanie serca",
       "Podejrzenie nadciśnienia tętniczego",
       "Bóle i uciski w klatce piersiowej związane z wahaniami ciśnienia",
       "Epizody osłabienia lub zmęczenia niewiadomego pochodzenia",
     ],
+    indications: [
+      "Bóle i uciski w klatce piersiowej",
+      "Kołatania serca",
+      "Podejrzenie nadciśnienia tętniczego",
+      "Objawy osłabienia niewiadomego pochodzenia",
+    ],
+    forWhom: ["Dorośli", "Dzieci", "Młodzież"],
   },
   {
     id: 3,
     name: "Holter Premium Life",
     description:
-      "Nowa generacja monitoringu serca – urządzenie lekkie, komfortowe i praktycznie niewyczuwalne podczas noszenia. Dzięki ograniczonej liczbie elektrod i bezprzewodowej konstrukcji jest wyjątkowo wygodne, a jednocześnie bardzo dokładne w wykrywaniu arytmii i zaburzeń rytmu serca. Polecane osobom aktywnym, które chcą prowadzić badanie w naturalnych warunkach dnia codziennego.",
+      "Lekkie, komfortowe urządzenie praktycznie niewyczuwalne podczas noszenia. Bezprzewodowa konstrukcja i ograniczona liczba elektrod zapewniają wygodę przy wysokiej dokładności wykrywania arytmii.",
     ailments: [
       "Ból w klatce piersiowej",
       "Kołatania serca",
       "Nieregularny rytm serca",
       "Napadowe duszności podczas wysiłku",
     ],
+    indications: [
+      "Ból w klatce piersiowej",
+      "Kołatania serca",
+      "Nieregularny rytm serca",
+    ],
+    forWhom: ["Dorośli", "Dzieci", "Młodzież"],
   },
   {
     id: 4,
     name: "Holter EKG",
     description:
-      "Klasyczny Holter EKG, przeznaczony do całodobowego monitorowania pracy serca. To najczęściej wykonywane badanie, które pozwala na wykrycie arytmii, ocenę rytmu zatokowego oraz rejestrację epizodów niedokrwiennych. Dzięki swojej uniwersalności stosowany jest zarówno u osób młodszych, jak i starszych.",
+      "Klasyczny Holter EKG do całodobowego monitorowania pracy serca. Uniwersalne badanie umożliwiające wykrycie arytmii, ocenę rytmu zatokowego.",
     ailments: [
       "Duszność bez wyraźnej przyczyny",
       "Kołatania serca",
       "Zawroty głowy i uczucie osłabienia",
       "Epizody omdleń",
     ],
+    indications: [
+      "Duszność ",
+      "Kołatania serca",
+      "Zawroty głowy i uczucie osłabienia",
+    ],
+    forWhom: ["Dorośli", "Dzieci", "Młodzież"],
   },
   {
     id: 5,
     name: "Holter Ciśnieniowy (ABPM)",
     description:
-      "Specjalistyczne urządzenie służące do całodobowego monitorowania ciśnienia tętniczego. Automatycznie dokonuje pomiarów co kilkanaście minut w dzień i w nocy, co pozwala dokładnie ocenić dobowy profil ciśnienia krwi. Idealne dla pacjentów z podejrzeniem nadciśnienia lub tych, którzy chcą sprawdzić skuteczność stosowanej terapii.",
+      "Urządzenie do całodobowego monitorowania ciśnienia tętniczego z automatycznymi pomiarami co kilkanaście minut. Pozwala dokładnie ocenić dobowy profil ciśnienia krwi i skuteczność stosowanej terapii.",
     ailments: [
       "Duszność bez wyraźnej przyczyny",
       "Zawroty głowy",
       "Nadciśnienie tętnicze",
       "Objawy niedokrwienia mózgu związane z wahaniami ciśnienia",
     ],
+    indications: ["Nadciśnienie tętnicze", "Zawroty głowy", "Duszność"],
+    forWhom: ["Dorośli", "Dzieci", "Młodzież"],
   },
 ];
 
@@ -127,7 +155,7 @@ function showPreparationsForHolter(holterName) {
 // Inicjalizacja listy Holterów
 function initHolterList() {
   const holterList = document.getElementById("holterList");
-  
+
   if (!holterList) {
     return; // Element nie istnieje na tej stronie
   }
@@ -142,8 +170,7 @@ function initHolterList() {
         odpowiemy na pytania i pomożemy umówić wizytę lub konsultację z lekarzem.
       </p>
     </div>
-    <div class="container">
-    </div>
+    <div class="container"></div>
     <div class="container holter--grid"></div>
   `;
 
@@ -151,6 +178,20 @@ function initHolterList() {
 
   holters.forEach((holter, index) => {
     const divClass = `div${index + 1}`;
+
+    // Generowanie Wskazań
+    const indicationsHtml = holter.indications
+      .map(
+        (ind) =>
+          `<div class="hero-badge" style="background:#cd1a2d">${ind}</div>`
+      )
+      .join("");
+
+    // Generowanie Dla Kogo
+    const forWhomHtml = holter.forWhom
+      .map((fw) => `<div class="hero-badge">${fw}</div>`)
+      .join("");
+
     const holterHtml = `
       <div class="${divClass} process__step card_">
         <div class="holter__header">
@@ -159,14 +200,11 @@ function initHolterList() {
           <div style="margin-top:0.8rem; text-align:left">
             <div class="hero-badge__wrapper">
               <p style="font-weight: bold; margin-bottom: 0.3rem">Wskazania:</p>
-              <div class="hero-badge" style="background: #cd1a2d">Ból w klatce</div>
-              <div class="hero-badge" style="background:#cd1a2d">Duszności</div>
+              ${indicationsHtml}
             </div>
             <div class="hero-badge__wrapper">
               <p style="font-weight: bold; margin-bottom: 0.3rem">Dla Kogo:</p>
-              <div class="hero-badge">Dorośli</div>
-              <div class="hero-badge">Dzieci</div>
-              <div class="hero-badge">Młodzież</div>
+              ${forWhomHtml}
             </div>
           </div>
         </div>
@@ -184,7 +222,6 @@ function initHolterList() {
     container.innerHTML += holterHtml;
   });
 }
-
 // FAQ Toggle
 function initFAQToggle() {
   const faqItems = document.querySelectorAll(".faq-item");
@@ -192,7 +229,7 @@ function initFAQToggle() {
   faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
     if (!question) return;
-    
+
     const icon = question.querySelector(".icon i");
     if (!icon) return;
 
@@ -222,7 +259,9 @@ function initFAQToggle() {
 function initYouTubeIframeCheck() {
   const iframe = document.querySelector('iframe[src*="youtube.com/embed"]');
   if (!iframe) {
-    console.log("YouTube iframe nie został znaleziony - prawdopodobnie nie ma go na tej stronie.");
+    console.log(
+      "YouTube iframe nie został znaleziony - prawdopodobnie nie ma go na tej stronie."
+    );
     return;
   }
 
@@ -265,7 +304,7 @@ function initYouTubeIframeCheck() {
 // Splide sliders initialization
 function initOtherSplideSliders() {
   // Sprawdź czy Splide jest dostępny
-  if (typeof Splide === 'undefined') {
+  if (typeof Splide === "undefined") {
     console.log("Splide nie jest załadowany - slajdery nie będą działać.");
     return;
   }
@@ -333,7 +372,9 @@ function initOtherSplideSliders() {
         console.error(`Błąd podczas montowania Splide dla ${selector}:`, error);
       }
     } else {
-      console.log(`Element ${selector} nie został znaleziony - prawdopodobnie nie ma go na tej stronie.`);
+      console.log(
+        `Element ${selector} nie został znaleziony - prawdopodobnie nie ma go na tej stronie.`
+      );
     }
   });
 }
@@ -344,7 +385,7 @@ function initReviewToggle() {
     if (e.target.classList.contains("show-more")) {
       const reviewDiv = e.target.closest(".review");
       if (!reviewDiv) return;
-      
+
       const comment = reviewDiv.querySelector(".comment");
       if (!comment) return;
 
@@ -359,7 +400,7 @@ function initReviewToggle() {
 // Mobile hover simulation for process steps
 function initMobileHoverSimulation() {
   const steps = document.querySelectorAll(".process__step");
-  
+
   if (!steps.length) return;
 
   // tylko dla mobile
@@ -388,7 +429,9 @@ function initProcessCardsAnimation() {
   let animationTriggered = false;
 
   if (!processSection || !cards.length) {
-    console.log("Sekcja process lub karty nie zostały znalezione - prawdopodobnie nie ma ich na tej stronie.");
+    console.log(
+      "Sekcja process lub karty nie zostały znalezione - prawdopodobnie nie ma ich na tej stronie."
+    );
     return;
   }
 
@@ -406,12 +449,10 @@ function initProcessCardsAnimation() {
   // Funkcja sprawdzająca czy element jest częściowo widoczny
   function isElementPartiallyVisible(el) {
     const rect = el.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
 
-    return (
-      rect.top < windowHeight * 0.8 &&
-      rect.bottom > 0
-    );
+    return rect.top < windowHeight * 0.8 && rect.bottom > 0;
   }
 
   // Główna funkcja uruchamiająca animację
@@ -497,12 +538,12 @@ window.addEventListener("load", () => {
 console.log("Skrypt załadowany pomyślnie");
 
 // Eksportuj funkcje dla compatibility (jeśli potrzebne)
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     holters,
     allAilments,
     preparations,
     showPreparationsForHolter,
-    initializeApp
+    initializeApp,
   };
 }
