@@ -1,11 +1,12 @@
 :root {
-  --primary-color-rgb: 25, 156, 164;
-  --primary-color-rgb-hover: 23, 148, 155;
-  --priamry-color: #199ca4;
-  --priamry-color-hover: #17949b;
-  --highlight-background: #0c6f7c;
-  --border-highlight-color: #0b606b;
+  --primary-color-rgb: 187, 48, 52;
+  --primary-color-rgb-hover: 147, 38, 41;
+  --priamry-color: #bb3034;
+  --priamry-color-hover: #932629;
+  --highlight-background: #b61313;
+  --border-highlight-color: #b61313;
 }
+
 * {
   margin: 0;
   padding: 0;
