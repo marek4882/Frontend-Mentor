@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Preview</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="card">
+          <img
+            src="./assets/images/illustration-article.svg"
+            alt="A stylized abstract illustration featuring geometric shapes and lines in black, white, and yellow, evoking modern digital design elements."
+            class="card__image"
+          />
+          <div class="card__content">
+            <div class="card__category">
+              <p class="card__category-title">Learning</p>
+            </div>
+
+            <p class="card__time-published">
+              Published <time datetime="2023-12-21">21 Dec 2023</time>
+            </p>
+            <h1 class="card__title">
+              <a href="#blog-post" class="card__link">HTML & CSS foundations</a>
+            </h1>
+            <p class="card__description">
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+          <div class="card__creator-info">
+            <img
+              src="./assets/images/image-avatar.webp"
+              alt="Profile photo of the author"
+              class="card__creator-img"
+            />
+            <p class="card__creator-name">Greg Hooper</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

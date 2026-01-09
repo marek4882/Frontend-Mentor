@@ -1,0 +1,141 @@
+:root {
+  --yellow-color: hsl(47, 88%, 63%);
+  --white-color: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: var(--gray-950);
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: var(--yellow-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray-950);
+  border-radius: 20px;
+  box-shadow: 8px 8px #000;
+  padding: 24px;
+  gap: 24px;
+  background-color: var(--white-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 16px 16px #000;
+  cursor: pointer;
+}
+
+.card__link {
+  transition: all 0.3s ease;
+}
+
+.card:hover .card__link {
+  color: var(--yellow-color);
+}
+
+.card__image {
+  border-radius: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.card__category {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 4px 12px;
+  background-color: var(--yellow-color);
+}
+
+.card__category-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.card__time-published {
+  color: var(--gray-950);
+  font-size: 0.75rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--gray-950);
+  transition: color 0.3s ease;
+}
+
+.card__description {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.card__creator-info {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__creator-img {
+  width: 32px;
+  height: 32px;
+}
+.card__creator-name {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 450px) {
+  .card {
+    max-width: 384px;
+  }
+
+  .card__category-title,
+  .card__time-published {
+    font-size: 0.875rem;
+  }
+
+  .card__category {
+    box-shadow: none;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__description {
+    font-size: 1rem;
+  }
+}

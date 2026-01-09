@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holtery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="block container">
+        <section class="grid grid--1x2">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Zadbaj o swoje serce <br />badanie
+              <span class="highlights">holter EKG</span> Kraków
+            </h1>
+            <p class="hero-subtitle">
+              Holter EKG – całodobowe monitorowanie pracy serca. Bezpieczne,
+              nieinwazyjne badanie, które pozwala wykryć arytmie i inne
+              zaburzenia rytmu w codziennych warunkach. Umów badanie w naszej
+              placówce przy ul. Kluczborskiej 17.
+            </p>
+            <div class="hero-buttons btn--flex">
+              <a href="tel:663080808" class="btn btn--accent">
+                <i class="ph ph-phone icon-pulse"></i> Umów badanie
+              </a>
+              <a
+                href="#holterList"
+                class="btn btn--accent btn--accent--outline"
+              >
+                <i class="ph ph-heartbeat"></i> Wybierz swój Holter
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <!-- <div class="hero-badge__wrapper">
+              <div class="hero-badge">✨ Profesjonalna diagnostyka serca</div>
+              <div class="hero-badge">✨ Bezpieczeństwo i&nbsp;komfort</div>
+              <div class="hero-badge">✨ Doświadczeni specjaliści</div>
+              <div class="hero-badge">✨ Personalizowana opieka</div>
+              <div class="hero-badge">✨ Troska o Ciebie</div>
+            </div> -->
+
+            <div class="hero-video">
+              <div class="video-container">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/YropN793jUI?si=9MPI3AiS47KclZ_t"
+                    title="Jak dbać o swoją skórę - poradnik"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Czym Jest Holter -->
+
+      <div class="block">
+        <section class="container">
+          <div class="block__header">
+            <h2>
+              Kto powinien wykonać
+              <span class="highlights">badanie Holter?</span>
+            </h2>
+            <p>
+              Badanie jest bezpieczne i nieinwazyjne dla wszystkich grup
+              wiekowych. Szczególnie polecane osobom z problemami serca lub
+              czynnikami ryzyka.
+            </p>
+          </div>
+          <div class="groups">
+            <div class="card_ group-card active">
+              <img
+                class="group-card__image"
+                src="https://unimedica.com.pl/wp-content/uploads/2024/07/adults-edited.jpg"
+                alt=""
+              />
+              <h3>Dorośli</h3>
+              <p class="group-descritpion">
+                Osoby z podejrzeniem arytmii, zawrotami głowy, omdleniami lub
+                bólem w klatce piersiowej
+              </p>
+            </div>
+            <div class="card_ group-card">
+              <img
+                class="group-card__image"
+                src="https://unimedica.com.pl/wp-content/uploads/2024/07/children-and-youth-edited.jpg"
+                alt=""
+              />
+              <h3>Dzieci</h3>
+              <p class="group-descritpion">
+                Młodzi pacjenci z wadami serca, objawami kardiologicznymi lub
+                podczas kontroli po zabiegach
+              </p>
+            </div>
+            <div class="card_ group-card">
+              <img
+                class="group-card__image"
+                src="https://unimedica.com.pl/wp-content/uploads/2024/07/seniors-edited.jpg"
+                alt=""
+              />
+              <h3>Seniorzy</h3>
+              <p class="group-descritpion">
+                Osoby starsze wymagające regularnego monitorowania pracy serca i
+                wykrywania zaburzeń rytmu
+              </p>
+            </div>
+            <div class="card_ group-card">
+              <img
+                class="group-card__image"
+                src="https://unimedica.com.pl/wp-content/uploads/2025/07/dla-sportowcow.jpg"
+                alt=""
+              />
+              <h3>Sportowcy</h3>
+              <p class="group-descritpion">
+                Aktywni fizycznie wymagający oceny wydolności serca podczas
+                intensywnych treningów
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="block">
+        <section class="card_ symptoms-section container">
+          <div class="block__header">
+            <h2>Kiedy założyć <span class="highlights">Holter?</span></h2>
+            <p class="symptoms-intro">
+              Zalecamy badanie, jeśli doświadczasz któregoś z poniższych objawów
+              lub problemów zdrowotnych:
+            </p>
+          </div>
+          <div class="grid grid--1x2">
+            <div class="symptoms-column">
+              <div class="symptoms-title"></div>
+              <ul class="symptoms-list">
+                <li>
+                  <span class="symptom-icon"></span>
+                  Kołatanie serca lub nieregularny rytm
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  Ból w klatce piersiowej
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  Dyskomfort w klatce piersiowej podczas wysiłku
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  Uczucie ucisku, ciężaru lub kłucia w klatce piersiowej
+                </li>
+              </ul>
+            </div>
+            <div class="symptoms-column">
+              <div class="symptoms-title"></div>
+              <ul class="symptoms-list">
+                <li>
+                  <span class="symptom-icon"></span>
+                  Zawroty głowy lub omdlenia
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  Duszność bez wyraźnej przyczyny
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  Zmęczenie i osłabienie
+                </li>
+                <li>
+                  <span class="symptom-icon"></span>
+                  W celach diagnostycznych
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="solution">
+            <h3 class="solution__title">
+              Jakie rozwiązanie <span class="highlights">wybrać?</span>
+            </h3>
+            <a href="#holterList" class="btn btn--accent btn--accent--outline"
+              ><i class="ph ph-heartbeat icon-pulse"></i> Wybierz swój Holter
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Call To Action -->
+      <div class="block container">
+        <section class="container cla-container">
+          <div>
+            <h2 class="cla__title">Dowiedz się więcej!</h2>
+            <p class="cla__description">
+              Wszystko, co musisz wiedzieć o badaniach holterowskich w jednym
+              miejscu. Umów konsultację, napisz do nas lub sprawdź odpowiedzi na
+              popularne pytania.
+            </p>
+          </div>
+          <div class="grid grid--1x2 grid--1x3 cla__btn-container">
+            <a href="tel:663080808" class="btn btn--accent">
+              <i class="ph ph-phone icon-pulse"></i> Umów konsultację
+            </a>
+            <a
+              href="mailto:recepcja@unicardia.pl"
+              class="btn btn--accent btn--accent--outline"
+            >
+              <i class="ph ph-chat-circle-text"></i> Napisz do Nas
+            </a>
+            <a href="#faq" class="btn btn--accent btn--accent--outline">
+              <i class="ph ph-question"></i> Najczęściej zadawane pytania
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="block">
+        <section id="holterList" class="container"></section>
+      </div>
+
+      <section
+        id="preparationSection"
+        class="preparation block hidden container"
+      >
+        <div class="block__header">
+          <h2 id="holterTitle"></h2>
+          <p>Wybierz swój holter, aby zobaczyć szczegóły przygotowania.</p>
+        </div>
+
+        <div class="grid grid--1x2 prep__content">
+          <div class="symptoms">
+            <h3 class="symptoms__title">Dolegliwości</h3>
+            <ul class="symptoms__list" id="symptomList"></ul>
+          </div>
+          <div class="instructions">
+            <h3 class="instructions__title">Jak się przygotować?</h3>
+            <ul class="instructions__list grid grid--1x2">
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/soap-svgrepo-com (1).svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">
+                  Zadbaj o higienę skóry klatki piersiowej
+                </p>
+              </li>
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/clothes-shirt-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">Załóż luźne ubrania</p>
+              </li>
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/soap-shampoo-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">
+                  Nie używaj olejków, kremów itp.
+                </p>
+              </li>
+              <li class="instruction-item card_">
+                <img
+                  class="instruction-item__icon"
+                  src="./assets/coffee-cup-paper-cup-svgrepo-com.svg"
+                  alt=""
+                />
+                <p class="instruction-item__text">
+                  Unikaj kofeiny, alkoholu i papierosów
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block container">
+        <header class="block__header">
+          <h2 class="poz__title">
+            Dlaczego warto <span class="highlights">nas wybrać?</span>
+          </h2>
+        </header>
+
+        <div class="splide" id="benefits-splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-heartbeat benefits-icon"></i>
+                  <div class="benefits-text">Sprawdzone urządzenia Holter</div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-user-circle-check benefits-icon"></i>
+                  <div class="benefits-text">Doświadczeni Specjaliści</div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-hand-heart benefits-icon"></i>
+                  <div class="benefits-text">
+                    Indywidualne podejście do każdego Pacjenta
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-handshake benefits-icon"></i>
+                  <div class="benefits-text">
+                    Wieloletnie zaufanie naszych Pacjentów
+                  </div>
+                </div>
+              </li>
+
+              <li class="splide__slide">
+                <div class="benefits-card">
+                  <i class="ph ph-fill ph-scroll benefits-icon"></i>
+                  <div class="benefits-text">
+                    Profesjonalne założenie i instruktaż holtera
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opinie naszych Klientów   -->
+      <section class="reviews-section block container">
+        <div class="block__header">
+          <h2>Co mówią o <span class="highlights">Nas Pacjenci</span></h2>
+          <p>Zobacz opinie o Naszych Klinikach</p>
+        </div>
+        <div class="grid grid--1x3 review_gap review__container">
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph ph-fill ph-star"></i
+                  ><i class="ph ph-fill ph-star"></i
+                  ><i class="ph ph-fill ph-star"></i
+                  ><i class="ph ph-fill ph-star"></i
+                  ><i class="ph ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Jestem bardzo pozytywnie zaskoczona począwszy od rejestracji,
+                rozmowy telefonciznej do usługi. Zakładałam holter i spotkałam
+                same przemiłe osoby. Holter nowoczesny, inny niż na fundusz.
+                Zostałam poinformowana o wszystkim. Wynik na maila. Miejsce
+                także bardzo przyjazne i ładnie urządzone. Byłam świadkiem
+                sytuacji jak dziecko bało się pobierana krwii. Panie bardzo
+                zajęły się chłopcem, dały mu dyplom i po rozmowie z uśmiechem na
+                twarzy poszedł do gabinetu na pobranie krwii. Super podejście
+                nawet do dzieci. Polecam :)
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Barbara B.</span>
+            </div>
+          </div>
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Mam ochotę powiedzieć, że mnie uratowali i chyba na to by wyszło
+                bo po 3 latach latania po lekarzach dopiero tutaj dano mi dobrą
+                diagnozę. Sama diagnoza też trwałą bo zajęła prawie 2 miesiące
+                różnych badań no i mierzenia ciśnień, holtery, testy dobrania
+                leków itd. Nie było łatwo, wymagało to ode mnie sporo pracy i
+                systematyczności ale w pewnym momencie zaczęłam czuć się lepiej
+                a obecnie już normalnie funkcjonuję. Dla mnie są bezcenni, warto
+                dojechać!
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Włodzimierz K.</span>
+            </div>
+          </div>
+          <div class="review" data-aos="fade-right">
+            <div class="review-content">
+              <div class="review-header">
+                <span class="stars"
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                  ><i class="ph-fill ph-star"></i>
+                </span>
+                <img
+                  src="https://uniestetica.pl/wp-content/uploads/2025/04/Google_Icons-09-512.webp"
+                  alt="Google"
+                  class="icon"
+                />
+              </div>
+              <div class="comment">
+                Zdecydowanie polecam... Sama osobiście miałam okazję przebadac
+                się już u kilku ze specjalistów, m.in. dermatolog (dr Rutkowska)
+                , kardiolog (dr Bednarek - i tu na szczęście szybko i sprawnie
+                mogłam wykonać wszystkie niezbędne i wazne badania na miejscu:
+                echo, holter, ekg wysiłków), pulmonologa (dr Tyfel-Paluszek -
+                gdzie dowiedziałam się o badaniu USG płuc bo nikt nigdzie
+                wcześniej nie uświadomił mnie jak bardzo to badanie jest ważne i
+                jak wiele ono wykazuje) miałam też okazję przebadac się u
+                świetnej Pani radiolog (dr Mikos) , która wszystko mi dokładnie
+                wytłumaczyła, pokierowala co dalej i co najważniejsze dokładnie
+                mi wszystko pokazała na telewizorze w czasie przeprowadzanego
+                badania ażebym sama mogła lepiej wszystko zrozumieć i dokładnie
+                zobaczyc... Z czystym sumieniem i sercem polecam to miejsce
+                każdemu, komfort wizyty - bez pośpiechu, w miłych
+                pomieszczeniach, wszystko co niezbędne na miejscu, bardzo krótki
+                czas oczekiwania na wizytę oraz obsługa, która za każdym razem
+                trafiła w specjalistę najlepszego dla mnie i moich potrzeb i
+                przede wszystkim co najważniejsze cudowni specjaliści ❤️❤️❤️❤️❤️
+                i to wszystko w jednym miejscu !!!!!! Zdecydowanie polecam i
+                jeżeli czytacie Państwo ta opinie to bardzo dziękuję i po raz
+                kolejny powtórzę... POLECAM, Polecam kazdemu!!!
+              </div>
+              <button class="show-more" onclick="toggleComment(this)">
+                Pokaż więcej
+              </button>
+              <span class="name">Monika C.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Krok po kroku -->
+
+      <section class="block container">
+        <div class="block__header">
+          <div class="header__logo">
+            <div class="header__icon">H</div>
+            <p class="header__brand">Holter krok po kroku</p>
+          </div>
+          <h2 class="holter__title">
+            Zobacz krok po kroku proces badania Holter
+          </h2>
+        </div>
+        <div class="process container">
+          <div class="grid grid--1x2 grid--1x4 process__container">
+            <article class="process__step card_">
+              <div class="process__step-visual">
+                <div class="process__step-icon process__step-icon--contact">
+                  <img
+                    class="icon"
+                    src="./assets/telephone-call-call-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="process__step-number">Krok 1</div>
+              </div>
+              <h4 class="process__step-title">Umów się</h4>
+              <p class="process__step-description">
+                Skontaktuj się z nami telefonicznie lub osobiście, aby
+                zarezerwować termin badania. Otrzymasz wszystkie niezbędne
+                informacje.
+              </p>
+            </article>
+            <article class="process__step card_">
+              <div class="process__step-visual">
+                <div class="process__step-icon process__step-icon--setup">
+                  <img
+                    src="./assets/heart-pulse-svgrepo-com.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+                <div class="process__step-number">Krok 2</div>
+              </div>
+              <h4 class="process__step-title">Założenie Holter</h4>
+              <p class="process__step-description">
+                Przyjdź na umówioną wizytę, podczas której nasz personel założy
+                Holter.
+              </p>
+            </article>
+
+            <article class="process__step card_">
+              <div class="process__step-visual">
+                <div class="process__step-icon process__step-icon--monitoring">
+                  <img
+                    src="./assets/clock-svgrepo-com.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+                <div class="process__step-number">Krok 3</div>
+              </div>
+              <h4 class="process__step-title">Przebieg badania</h4>
+              <p class="process__step-description">
+                Przez 24 godziny (lub dłużej) noś urządzenie, prowadząc normalny
+                tryb życia.
+              </p>
+            </article>
+
+            <article class="process__step card_">
+              <div class="process__step-visual">
+                <div class="process__step-icon process__step-icon--analysis">
+                  <img
+                    src="./assets/hospital-svgrepo-com.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+                <div class="process__step-number">Krok 4</div>
+              </div>
+              <h4 class="process__step-title">Ściągnięcie</h4>
+              <p class="process__step-description">
+                Wróć do placówki w wyznaczonym terminie, aby zdjąć urządzenie.
+                Dane zostaną przekazane do analizy, a wyniki otrzymasz w
+                umówionym czasie.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call To Action -->
+      <div class="block container">
+        <section class="container cla-container">
+          <div>
+            <h2 class="cla__title">Dowiedz się więcej!</h2>
+            <p class="cla__description">
+              Wszystko, co musisz wiedzieć o badaniach holterowskich w jednym
+              miejscu. Umów konsultację, napisz do nas lub sprawdź odpowiedzi na
+              popularne pytania.
+            </p>
+          </div>
+          <div class="grid grid--1x2 grid--1x3 cla__btn-container">
+            <a href="tel:663080808" class="btn btn--accent">
+              <i class="ph ph-phone icon-pulse"></i> Umów konsultację
+            </a>
+            <a
+              href="mailto:recepcja@unicardia.pl"
+              class="btn btn--accent btn--accent--outline"
+            >
+              <i class="ph ph-chat-circle-text"></i> Napisz do Nas
+            </a>
+            <a href="#faq" class="btn btn--accent btn--accent--outline">
+              <i class="ph ph-question"></i> Najczęściej zadawane pytania
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Specjaliści
+      <section class="block container">
+        <div class="block__header">
+          <h2>
+            Poznaj nasz <span class="highlights">Zespół Specjalistów</span>
+          </h2>
+          <p>
+            Doświadczeni lekarze gotowi pomóc Ci w każdej chwili. Pamietaj ze
+            badanie musi zostac skonsultowane przez Lekarza Specjaliste. Poznaj
+            swojego specjalistę
+          </p>
+        </div>
+
+        <div class="specialization-container">
+          <div class="specialization-group">
+            <p>Kardiolog</p>
+          </div>
+          <div class="splide--wrapper">
+            <div class="splide splide-doctors" id="splide-kardiolog">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="specialization-container">
+          <div class="specialization-group">
+            <p>Kardiolog Dziecięcy</p>
+          </div>
+          <div class="">
+            <div class="splide splide-doctors" id="splide-kardiologs">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <h4>Dr Madalena Szymańska</h4>
+                          <p>Specjalista Kardiolog</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#">
+                      <div class="doctor-card">
+                        <img
+                          src="./assets/LOGA PAKIETY.png"
+                          alt=""
+                          class="doctor-icon"
+                        />
+                        <div>
+                          <div>
+                            <h4>Dr Madalena Szymańska</h4>
+                            <p>Specjalista Kardiolog</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- FAQ -->
+
+      <section class="block container" id="faq">
+        <div class="block__header">
+          <h2>Najczęściej zadawane pytania</h2>
+          <p>Znajdź odpowiedzi na najczęstsze pytania</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Czy można się kąpać z założonym Holterem?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <p class="faq-answer">
+              Nie, urządzenia Holter EKG nie są wodoodporne. Podczas noszenia
+              aparatu należy unikać kąpieli w wannie, prysznica, pływania oraz
+              innych aktywności związanych z kontaktem z wodą. Można jedynie
+              wykonywać podstawową toaletę ciała przy użyciu wilgotnej
+              chusteczki, uważając przy tym, aby nie namoczyć elektrod i
+              urządzenia. W przypadku konieczności umycia się, należy wcześniej
+              skonsultować się z personelem medycznym.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span>Co zrobić, jeśli odklei się elektroda?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Jeśli elektroda odklei się podczas badania, należy:</p>
+              <ul class="faq-list">
+                <li>Nie panikować - to stosunkowo częsta sytuacja</li>
+                <li>
+                  Starannie umyć i osuszyć skórę w miejscu, gdzie była elektroda
+                </li>
+                <li>Przykleić elektrodę z powrotem w tym samym miejscu</li>
+                <li>Upewnić się, że elektroda dobrze przylega do skóry</li>
+                <li>
+                  W przypadku problemów z ponownym przyklejeniem skontaktować
+                  się z placówką, która wydała urządzenie
+                </li>
+                <li>
+                  Nie pozostawiać odkleionych elektrod - może to wpłynąć na
+                  jakość badania
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span>Czy można wykonać badanie u kobiet w ciąży?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Tak, badanie Holter EKG jest całkowicie bezpieczne dla kobiet w
+                ciąży. Urządzenie jedynie rejestruje aktywność elektryczną
+                serca, nie emituje żadnych fal ani promieniowania, które mogłyby
+                zagrozić matce lub dziecku. Jest to nieinwazyjne badanie, które
+                często wykonuje się u ciężarnych kobiet w celu monitorowania
+                pracy serca, szczególnie gdy występują dolegliwości
+                kardiologiczne lub niepokojące objawy.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span>Czy badanie jest bezpieczne dla dzieci?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Badanie Holter EKG jest całkowicie bezpieczne dla dzieci w
+                każdym wieku, w tym dla niemowląt. Urządzenie nie powoduje
+                żadnego dyskomfortu ani bólu. Jedynym wyzwaniem może być
+                zapewnienie, aby dziecko nie zdjęło elektrod podczas zabawy.
+                Warto poinformować dziecko o wadze badania i wyjaśnić, że nie
+                wolno bawić się urządzeniem. U bardzo małych dzieci można
+                zastosować dodatkowe zabezpieczenia elektrod.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span
+                >Czy można wykonać badanie Holter EKG z wszczepionym
+                rozrusznikiem serca?</span
+              >
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Tak, można wykonać badanie Holter EKG u pacjentów z wszczepionym
+                rozrusznikiem serca (stymulatorem). Urządzenie Holter nie wpływa
+                na działanie rozrusznika, a rozrusznik nie zakłóca pracy aparatu
+                rejestrującego. Wręcz przeciwnie, badanie to często wykonuje się
+                u pacjentów z rozrusznikami w celu oceny jego prawidłowego
+                funkcjonowania oraz monitorowania rytmu serca. Przed badaniem
+                należy poinformować personel medyczny o posiadaniu rozrusznika.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span
+                >Czy mogę pracować i wykonywać codzienne czynności podczas
+                noszenia holtera?</span
+              >
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Tak, podczas noszenia urządzenia Holter można wykonywać
+                czynnośći życia codziennego. Zaleca się umiarkowany wysiłek
+                fizyczny. - zmienić moj tekst Należy jednak unikać:
+              </p>
+              <ul class="faq-list">
+                <li>
+                  Intensywnych ćwiczeń fizycznych (chyba że lekarz zaleci
+                  inaczej)
+                </li>
+                <li>Kontaktu z wodą</li>
+                <li>Sytuacji, które mogą doprowadzić do odłączenia elektrod</li>
+              </ul>
+              <p>
+                Warto również prowadzić dziennik aktywności, notując objawy i
+                wykonywane czynności.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span>Czy urządzenie można oddać przez inną osobę?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Tak, urządzenie Holter może zostać zwrócone przez inną osobę niż
+                pacjent, pod warunkiem że:
+              </p>
+              <ul class="faq-list">
+                <li>
+                  Osoba odbierająca ma przy sobie dokument tożsamości pacjenta
+                  lub upoważnienie
+                </li>
+                <li>
+                  Zwraca kompletny zestaw: urządzenie, przewody, elektrody i
+                  dokumentację
+                </li>
+                <li>
+                  Przekazuje wypełniony dziennik pacjenta (jeśli był wymagany)
+                </li>
+                <li>Placówka medyczna akceptuje taką procedurę</li>
+              </ul>
+              <p>
+                Zaleca się wcześniejsze skontaktowanie się z placówką w celu
+                potwierdzenia możliwości zwrotu przez osobę trzecią oraz
+                ustalenia szczegółów procedury.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <!-- zmiana z faq__item -->
+            <div class="faq-question">
+              <span>Co zrobić, jeśli urządzenie przestanie działać?</span>
+              <span class="icon"><i class="ph ph-plus-circle"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>W przypadku awarii urządzenia należy:</p>
+              <ul class="faq-list">
+                <li>Sprawdzić, czy baterie są prawidłowo włożone</li>
+                <li>Upewnić się, że wszystkie przewody są podłączone</li>
+                <li>
+                  Skontaktować się niezwłocznie z placówką medyczną, która
+                  wydała urządzenie
+                </li>
+                <li>Nie próbować samodzielnie naprawiać aparatu</li>
+                <li>Zanotować godzinę, o której zauważono problem</li>
+                <li>
+                  Nie zdejmować urządzenia bez konsultacji z personelem
+                  medycznym
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
