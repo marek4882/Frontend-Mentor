@@ -175,8 +175,6 @@ a {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column; /* Dodane */
 }
 
 .portfolio-item:hover {
@@ -202,9 +200,6 @@ a {
 
 .portfolio-content {
   padding: 20px;
-  display: flex; /* Dodane */
-  flex-direction: column; /* Dodane */
-  flex-grow: 1; /* Dodane - zajmuje dostępną przestrzeń */
 }
 
 .portfolio-category {
@@ -234,8 +229,6 @@ a {
   padding: 15px;
   margin-top: 15px;
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .testimonial::before {
@@ -268,10 +261,8 @@ a {
   color: #222;
   font-weight: 500;
   text-decoration: none;
-  margin-top: auto;
-  padding-top: 15px;
+  margin-top: 10px;
   transition: color 0.3s ease;
-  align-self: flex-start;
 }
 
 .portfolio-link:hover {
@@ -668,4 +659,92 @@ ul {
 }
 .icon-container--accent {
   background: var(--accent-color);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 1200px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.close-modal {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* ===== MASONRY GRID ===== */
+.masonry {
+  column-count: 3;
+  column-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .masonry { column-count: 2; }
+}
+@media (max-width: 600px) {
+  .masonry { column-count: 1; }
+}
+
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.back-btn {
+  margin: 2rem 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
 }
