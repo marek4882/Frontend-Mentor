@@ -24,27 +24,37 @@
   <body>
     <main>
       <div class="dec"></div>
-      <header class="container nav collapsible">
-        <nav class="nav__brand">
-          <ul class="list nav__list left">
-            <li class="nav__item"><a href="#">Strona Główna</a></li>
-            <li class="nav__item">
-              <a href="#specializations-section">Specjalizacje</a>
-            </li>
-          </ul>
-          <div class="middle">
-            <a href="" class="logo">
-              <img src="./assets/logo.svg" alt="" />
-            </a>
-          </div>
-          <ul class="list nav__list right">
-            <li class="nav__item">
-              <a href="#realizations-section">Realizacje</a>
-            </li>
-            <li class="nav__item"><a href="#contact-section">Kontakt</a></li>
-          </ul>
-        </nav>
+      <header class="header">
+        <div class="header__container">
+          <!-- Logo -->
+          <a href="#home-section" class="header__logo">
+            <img src="./assets/logo.svg" alt="Marek Foto – fotograf" />
+          </a>
+
+          <!-- Hamburger -->
+          <button
+            class="header__toggle"
+            aria-label="Otwórz menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Navigation -->
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li><a href="#home-section">Strona główna</a></li>
+              <li><a href="#specializations-section">Specjalizacje</a></li>
+              <li><a href="#realizations-section">Realizacje</a></li>
+              <li><a href="#contact-section">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
+
+
       <section class="container" id="home-section">
         <div class="splide" id="ferrari-gallery">
           <div class="splide__track">
@@ -242,7 +252,6 @@
         </div>
       </section>
 
-      <!-- footer -->
       <section class="container contact-container" id="contact-section">
         <h2 class="section-title">Opowiedz mi o swojej wizji</h2>
         <p class="section-subtitle">
@@ -283,9 +292,35 @@
           </div>
         </section>
       </section>
+      <footer class="footer">
+        <div class="container footer-content">
+          <p>
+            &copy; <span id="current-year">2026</span> Marek-Foto. Wszelkie
+            prawa zastrzeżone.
+          </p>
+
+          <div class="footer-links">
+            <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+            <a href="regulamin.html">Regulamin</a>
+          </div>
+        </div>
+      </footer>
     </main>
 
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ta strona korzysta z plików cookies w celu zapewnienia najlepszej
+        jakości usług. <a href="#">Dowiedz się więcej</a>.
+      </p>
+      <button
+        id="accept-cookies"
+        class="category-btn"
+        style="padding: 8px 20px; font-size: 12px"
+      >
+        Akceptuję
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>

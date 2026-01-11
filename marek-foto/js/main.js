@@ -302,10 +302,72 @@ function initApp() {
     });
   }
 
-  /* ===== MOBILE MENU ===== */
-  document.querySelectorAll(".collapsible").forEach((item) => {
-    item.addEventListener("click", function () {
-      this.classList.toggle("collapsible--expanded");
+  /* ===== COOKIES ===== */
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+
+  // Sprawdź czy użytkownik już zaakceptował
+  if (!localStorage.getItem("cookiesAccepted")) {
+    setTimeout(() => {
+      cookieBanner.classList.add("show");
+    }, 2000); // Pokaż po 2 sekundach
+  } else {
+    cookieBanner.style.display = "none"; // Ukryj całkowicie jeśli zaakceptowane
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBanner.classList.remove("show");
+  });
+
+  /* ===== AUTO DATE FOOTER ===== */
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+ /* ===== HAMBURGER MENU ===== */
+const header = document.querySelector(".header");
+const toggle = document.querySelector(".header__toggle");
+const navLinks = document.querySelectorAll(".header__nav a");
+
+if (header && toggle) {
+  toggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("header--open");
+    toggle.setAttribute("aria-expanded", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("header--open");
+      toggle.setAttribute("aria-expanded", false);
+      document.body.classList.remove("menu-open");
     });
   });
+}
+
+
+  /* ===== SCROLL SPY (ACTIVE LINK) ===== */
+  const sections = document.querySelectorAll("section[id]");
+
+  const spyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) =>
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${entry.target.id}`
+            )
+          );
+        }
+      });
+    },
+    {
+      rootMargin: "-50% 0px -50% 0px",
+    }
+  );
+
+  sections.forEach((section) => spyObserver.observe(section));
 }
