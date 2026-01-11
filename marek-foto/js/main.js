@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const backBtn = document.getElementById("back-to-projects");
       const gallery = document.getElementById("project-gallery");
       const titleEl = document.getElementById("project-title");
-      const descEl = document.getElementById("project-description");
+      // const descEl = document.getElementById("project-description"); // USUNIĘTE: Nie pobieramy opisu
 
       /* ===== OTWIERANIE GALERII ===== */
       portfolioContainer.addEventListener("click", function (e) {
@@ -44,24 +44,31 @@ document.addEventListener("DOMContentLoaded", function () {
         portfolioContainer.style.display = "none";
         galleryView.style.display = "block";
 
+        // WYŚRODKOWANIE NAGŁÓWKA
         titleEl.textContent = project.title;
-        descEl.textContent = project.fullDescription || "";
-        gallery.innerHTML = "";
+        titleEl.style.textAlign = "center";
 
-        project.images.forEach((src) => {
+        // USUNIĘTE: descEl.textContent = project.fullDescription || ""; // Nie wyświetlamy opisu
+
+        gallery.innerHTML = "";
+        // ZMIANA TUTAJ: Używamy indexu (i) oraz przekazujemy całą tablicę project.images
+        project.images.forEach((src, index) => {
           const img = document.createElement("img");
           img.src = src;
-          img.alt = project.title;
+          img.alt = `Zdjęcie ${index + 1} z galerii ${project.title}`; // WCAG: Lepszy alt
           img.loading = "lazy";
+          img.classList.add("gallery-detail-image");
 
-          img.addEventListener("click", () => openLightbox(src));
+          // Przekazujemy indeks klikniętego zdjęcia i całą listę zdjęć
+          img.addEventListener("click", () =>
+            openLightbox(index, project.images)
+          );
+
           gallery.appendChild(img);
         });
 
-        window.scrollTo({
-          top: galleryView.offsetTop - 40,
-          behavior: "smooth",
-        });
+        // POPRAWA SKROLLOWANIA: Zjazd do sekcji ze zdjęciami (galleryView) zamiast na samą górę strony
+        galleryView.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       /* ===== POWRÓT ===== */
@@ -69,13 +76,86 @@ document.addEventListener("DOMContentLoaded", function () {
         returnToPortfolio();
       });
 
-      /* ===== LIGHTBOX ===== */
-      function openLightbox(src) {
+      /* ===== LIGHTBOX Z NAWIGACJĄ (WCAG) ===== */
+      function openLightbox(startIndex, images) {
+        let currentIndex = startIndex;
+
+        // 1. Struktura HTML
         const lb = document.createElement("div");
         lb.className = "lightbox";
-        lb.innerHTML = `<img src="${src}" alt="">`;
-        lb.addEventListener("click", () => lb.remove());
+        lb.setAttribute("role", "dialog");
+        lb.setAttribute("aria-modal", "true");
+        lb.setAttribute("aria-label", "Podgląd zdjęcia");
+
+        // SVG ikony dla lepszego wyglądu (możesz użyć swoich ikon Phosphor, tutaj daję uniwersalne SVG)
+        const closeIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+        const leftIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
+        const rightIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+        lb.innerHTML = `
+          <button class="lb-btn lb-close" aria-label="Zamknij galerię">${closeIcon}</button>
+          <div class="lightbox-content">
+             <button class="lb-btn lb-prev" aria-label="Poprzednie zdjęcie">${leftIcon}</button>
+             <img src="${images[currentIndex]}" alt="Powiększone zdjęcie">
+             <button class="lb-btn lb-next" aria-label="Następne zdjęcie">${rightIcon}</button>
+          </div>
+        `;
+
         document.body.appendChild(lb);
+
+        // 2. Elementy DOM
+        const imgEl = lb.querySelector("img");
+        const closeBtn = lb.querySelector(".lb-close");
+        const prevBtn = lb.querySelector(".lb-prev");
+        const nextBtn = lb.querySelector(".lb-next");
+
+        // 3. Funkcja zmiany zdjęcia
+        const showImage = (index) => {
+          // Pętla (loop): jeśli koniec, idź do początku
+          if (index < 0) index = images.length - 1;
+          if (index >= images.length) index = 0;
+
+          currentIndex = index;
+          imgEl.src = images[currentIndex];
+        };
+
+        // 4. Obsługa zdarzeń (Mysz)
+        closeBtn.addEventListener("click", closeLb);
+        prevBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(currentIndex - 1);
+        });
+        nextBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(currentIndex + 1);
+        });
+
+        // Kliknięcie w tło zamyka (ale nie w zdjęcie)
+        lb.addEventListener("click", (e) => {
+          if (
+            e.target === lb ||
+            e.target.classList.contains("lightbox-content")
+          ) {
+            closeLb();
+          }
+        });
+
+        // 5. Obsługa Klawiatury (WCAG)
+        const handleKeydown = (e) => {
+          if (e.key === "Escape") closeLb();
+          if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+          if (e.key === "ArrowRight") showImage(currentIndex + 1);
+        };
+        document.addEventListener("keydown", handleKeydown);
+
+        // 6. Funkcja zamykająca
+        function closeLb() {
+          document.removeEventListener("keydown", handleKeydown); // Ważne: sprzątanie po sobie
+          lb.remove();
+        }
+
+        // 7. Focus trap (Dla dostępności - fokus na przycisk zamknięcia przy otwarciu)
+        closeBtn.focus();
       }
     })
     .catch((err) => console.error(err));
@@ -87,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function returnToPortfolio() {
   const galleryView = document.getElementById("project-gallery-view");
   const portfolioContainer = document.getElementById("portfolio-grid");
+  const section = document.getElementById("realizations-section");
 
   if (!galleryView || !portfolioContainer) return;
 
@@ -94,10 +175,8 @@ function returnToPortfolio() {
   portfolioContainer.style.display = "grid";
   isGalleryOpen = false;
 
-  window.scrollTo({
-    top: portfolioContainer.offsetTop - 40,
-    behavior: "smooth",
-  });
+  // Scroll powrotny do sekcji realizacji
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 /* ===============================
@@ -123,13 +202,8 @@ function renderPortfolio(projects, container) {
 
     const displayCategory = categoryNames[project.category] || project.category;
 
-    const testimonialHTML = project.testimonial
-      ? `
-        <div class="testimonial">
-          <p class="testimonial-text">${project.testimonial.text}</p>
-          <p class="testimonial-author">— ${project.testimonial.author}</p>
-        </div>`
-      : "";
+    // USUNIĘTE: Kod generujący opinie (testimonialHTML) został usunięty,
+    // aby nie wyświetlać ich na kartach, ale JSON pozostaje bez zmian.
 
     item.innerHTML = `
       <div class="portfolio-image">
@@ -139,7 +213,7 @@ function renderPortfolio(projects, container) {
         <div class="portfolio-category">${displayCategory}</div>
         <h3 class="portfolio-title">${project.title}</h3>
         <p class="portfolio-description">${project.shortDescription}</p>
-        ${testimonialHTML}
+        
         <a href="#" class="portfolio-link" data-id="${project.id}">
           Zobacz więcej →
         </a>
@@ -156,51 +230,53 @@ function renderPortfolio(projects, container) {
 function initApp() {
   console.log("Init app");
 
-  /* ===== SLIDER ===== */
+  /* ===== SLIDER (POPRAWIONY POD RÓŻNE EKRANY) ===== */
   const splideEl = document.querySelector("#ferrari-gallery");
   if (splideEl) {
     new Splide("#ferrari-gallery", {
       type: "loop",
-      perPage: 3,
+      perPage: 3, // Desktop: 3 zdjęcia
+      perMove: 1,
       gap: "1rem",
       arrows: true,
       pagination: true,
       autoplay: true,
       interval: 4000,
       breakpoints: {
-        1024: { perPage: 2 },
-        768: { perPage: 1 },
+        1200: { perPage: 3 }, // Duże ekrany
+        992: { perPage: 2 }, // Tablety poziome / małe laptopy
+        768: { perPage: 1, gap: "0.5rem" }, // Tablety pionowe / Telefony - jedno zdjęcie wygląda lepiej
       },
     }).mount();
   }
 
   /* ===== KATEGORIE ===== */
-  document.querySelectorAll(".category-btn").forEach((button) => {
-    button.addEventListener("click", function () {
-      if (isGalleryOpen) returnToPortfolio();
+  // WAŻNE: Selektor został zmieniony, aby nie łapał linków social media z footera!
+  // Teraz łapie tylko przyciski w sekcji specjalizacji.
+  document
+    .querySelectorAll("#specializations-section .category-btn")
+    .forEach((button) => {
+      button.addEventListener("click", function () {
+        if (isGalleryOpen) returnToPortfolio();
 
-      const category = this.dataset.category;
-      const section = document.getElementById("realizations-section");
+        const category = this.dataset.category;
+        const section = document.getElementById("realizations-section");
 
-      section?.scrollIntoView({ behavior: "smooth", block: "start" });
+        section?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      setTimeout(() => {
-        document
-          .querySelectorAll(".filter-btn")
-          .forEach((btn) => btn.classList.remove("active"));
+        setTimeout(() => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((btn) => btn.classList.remove("active"));
 
-        document
-          .querySelector(`[data-filter="${category}"]`)
-          ?.classList.add("active");
+          document
+            .querySelector(`[data-filter="${category}"]`)
+            ?.classList.add("active");
 
-        document.querySelectorAll(".portfolio-item").forEach((item) => {
-          const cat = item.dataset.category;
-          item.style.display =
-            category === "all" || cat?.includes(category) ? "block" : "none";
-        });
-      }, 300);
+          filterItems(category);
+        }, 300);
+      });
     });
-  });
 
   /* ===== FILTRY ===== */
   document.querySelectorAll(".filter-btn").forEach((btn) => {
@@ -214,13 +290,17 @@ function initApp() {
         .forEach((b) => b.classList.remove("active"));
       this.classList.add("active");
 
-      document.querySelectorAll(".portfolio-item").forEach((item) => {
-        const cat = item.dataset.category;
-        item.style.display =
-          filter === "all" || cat?.includes(filter) ? "block" : "none";
-      });
+      filterItems(filter);
     });
   });
+
+  function filterItems(category) {
+    document.querySelectorAll(".portfolio-item").forEach((item) => {
+      const cat = item.dataset.category;
+      item.style.display =
+        category === "all" || cat?.includes(category) ? "block" : "none";
+    });
+  }
 
   /* ===== MOBILE MENU ===== */
   document.querySelectorAll(".collapsible").forEach((item) => {
