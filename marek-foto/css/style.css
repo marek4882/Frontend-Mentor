@@ -30,7 +30,7 @@ body {
   background-color: white;
   color: #333;
 }
-img{
+img {
   width: 100%;
 }
 
@@ -723,7 +723,6 @@ ul {
   position: relative;
   border-radius: 24px; /* Mocno zaokrąglone rogi jak w przykładzie */
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   background: #2b235a; /* Tło karty zanim załaduje się zdjęcie */
   min-height: 450px; /* Wysokość kart - ważne dla równego wyglądu */
