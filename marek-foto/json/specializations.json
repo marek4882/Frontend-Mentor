@@ -1,0 +1,44 @@
+[
+  {
+    "id": "wedding",
+    "title": "Śluby",
+    "description": "Uwieczniam najpiękniejsze momenty z Waszego wyjątkowego dnia w niepowtarzalny sposób.",
+    "image": "./assets/photography/automotive/2025-10-01-Ferrari-Roma/DSC05746.jpg",
+    "btnText": "Zobacz realizacje"
+  },
+  {
+    "id": "automotive",
+    "title": "Motoryzacja",
+    "description": "Profesjonalne sesje zdjęciowe pojazdów podkreślające ich dynamikę i charakter.",
+    "image": "./assets/photography/automotive/2025-10-01-Ferrari-Roma/DSC01427.jpg",
+    "btnText": "Zobacz realizacje"
+  },
+  {
+    "id": "portrait",
+    "title": "Portrety",
+    "description": "Piękne portrety oddające osobowość i charakter fotografowanej osoby.",
+    "image": "assets/portrait-julia-main.jpg",
+    "btnText": "Zobacz realizacje"
+  },
+  {
+    "id": "nature",
+    "title": "Natura",
+    "description": "Zachwycające krajobrazy i majestatyczna natura uchwycona w najlepszym świetle.",
+    "image": "assets/tatry-sunrise-main.jpg",
+    "btnText": "Zobacz realizacje"
+  },
+  {
+    "id": "events",
+    "title": "Wydarzenia",
+    "description": "Profesjonalna obsługa fotograficzna imprez, konferencji i eventów firmowych.",
+    "image": "assets/tech-summit-main.jpg",
+    "btnText": "Zobacz realizacje"
+  },
+   {
+    "id": "realestate",
+    "title": "Nieruchomości",
+    "description": "Zdjęcia wnętrz, które sprzedają. Przestrzeń, światło i design.",
+    "image": "assets/apartment-central-main.jpg",
+    "btnText": "Zobacz realizacje"
+  }
+]

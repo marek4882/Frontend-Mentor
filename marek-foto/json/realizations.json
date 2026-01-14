@@ -48,12 +48,14 @@
     "title": "Ferrari LaFerrari",
     "shortDescription": "Profesjonalna sesja zdjęciowa włoskiego supersamochodu o mocy 963 KM. Dynamiczne ujęcia podkreślające linię i charakter pojazdu.",
     "fullDescription": "Sesja fotograficzna Ferrari LaFerrari była prawdziwym wyzwaniem technicznym i artystycznym. Ten wyjątkowy supersamochód, będący flagowym modelem Ferrari, zasługiwał na odpowiednie podejście fotograficzne. Sesja odbyła się w kilku lokalizacjach - od industrialnych hal, poprzez górskie serpentyny, aż po nowoczesną architekturę miasta. Wykorzystałem różnorodne techniki fotograficzne, aby podkreślić aerodynamiczne linie pojazdu, jego agresywny charakter oraz luksusowe wykończenie wnętrza. Szczególny nacisk położyłem na dynamiczne ujęcia pokazujące samochód w ruchu.",
-    "mainImage": "assets/DSC06572.jpg",
+    "basePath": "./assets/photography/automotive/2025-10-01-Ferrari-Roma/",
+    "mainImage": "DSC01365.jpg",
     "images": [
-      "assets/DSC06572.jpg",
-      "assets/DSC03458.jpg",
-      "assets/DSC05934.jpg",
-      "assets/DSC05934.jpg"
+      "DSC01365.jpg",
+      "DSC01365.jpg",
+      "DSC01427.jpg",
+      "DSC01310.jpg",
+      "DSC01310.jpg"
       
     ],
     "testimonial": {
