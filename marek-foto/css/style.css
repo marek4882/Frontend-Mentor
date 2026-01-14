@@ -625,18 +625,7 @@ ul {
 .hero-section {
   position: relative;
   /* Fioletowy gradient zbliżony do zdjęcia referencyjnego */
-  background: radial-gradient(
-      circle at 20% 20%,
-      rgba(124, 245, 166, 0.08),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(140, 120, 255, 0.15),
-      transparent 40%
-    ),
-    linear-gradient(180deg, #2b235a 0%, #1f1b3a 100%);
-  color: #fff;
+
   overflow: hidden;
   min-height: 90vh; /* Sekcja zajmie większość ekranu */
   display: flex;
@@ -677,7 +666,7 @@ ul {
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #222;
 }
 
 /* Opcjonalnie: Jeśli dodasz <span> w JSON, to będzie zielone */
@@ -690,7 +679,7 @@ ul {
   max-width: 600px; /* Szerszy opis dla lepszej czytelności */
   font-size: 1.125rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7); /* Lekko szary dla kontrastu */
+  color: #333;
   margin-bottom: 2.5rem;
 }
 
@@ -701,8 +690,8 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: #67fcaa; /* Miętowy zielony z referencji */
-  color: #1a1a2e; /* Ciemny tekst dla kontrastu */
+  background-color: #222;
+  color: #fff; /* Ciemny tekst dla kontrastu */
   font-size: 1rem;
   font-weight: 600;
   padding: 1rem 2.5rem;
@@ -713,7 +702,7 @@ ul {
 
 .hero-btn:hover {
   transform: translateY(-2px);
-  background-color: #7effab;
+  background-color: #000;
 }
 
 /* ===============================
