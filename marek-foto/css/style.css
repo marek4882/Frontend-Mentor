@@ -1,3 +1,10 @@
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 :root {
   --header-height: 90px;
 }
@@ -29,7 +36,7 @@ a {
 }
 section,
 #back-to-projects,
-#project-gallery-view {  /* <--- DODAJ TĘ LINIĘ */
+#project-gallery-view {
   scroll-margin-top: var(--header-height);
 }
 
@@ -344,6 +351,13 @@ section,
   transform: scale(1.05);
 }
 
+.gallery-image {
+  aspect-ratio: 2 /3;
+}
+.portfolio-image {
+  aspect-ratio: 3 /2;
+}
+
 /* Photo Caption */
 .photo-caption {
   display: flex;
@@ -462,6 +476,7 @@ ul {
 }
 
 /* ===== HEADER ===== */
+
 .header {
   position: sticky;
   top: 0;
@@ -484,7 +499,8 @@ ul {
   height: 55px;
 }
 
-/* Hamburger */
+/* ===== HAMBURGER ===== */
+
 .header__toggle {
   display: flex;
   flex-direction: column;
@@ -492,23 +508,17 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
-  touch-action: manipulation;
-}
-@media (prefers-reduced-motion: reduce) {
-  .header__toggle span {
-    transition: none;
-  }
+  z-index: 1001;
 }
 
 .header__toggle span {
-  display: block;
   width: 24px;
   height: 2px;
   background: #111;
   transition: transform 0.35s ease, opacity 0.25s ease;
 }
 
-/* ANIMACJA → X */
+/* X animation */
 .header--open .header__toggle span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -521,65 +531,69 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-.header__menu a.active {
-  font-weight: 600;
-}
-
-.header__menu a.active::after {
-  width: 100%;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
+/* ===== MOBILE MENU OVERLAY ===== */
 
 .header__nav {
   position: fixed;
   inset: 0;
-  background: #fff;
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
-  z-index: 999;
-  will-change: transform;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
 .header--open .header__nav {
-  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-@media (min-width: 768px) {
-  .header__nav {
-    position: static;
-    transform: none;
-  }
-
-  .header__toggle {
-    display: none;
-  }
-}
-
+/* Menu list */
 .header__menu {
   list-style: none;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .header__menu a {
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   font-weight: 500;
-  color: #222;
-  text-decoration: none;
+  color: #111;
+  position: relative;
 }
 
-/* ACTIVE */
-.header--open .header__nav {
-  transform: translateX(0);
+.header__menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 40%;
+  height: 2px;
+  background: #111;
+  transform: translateX(-50%);
 }
 
 /* ===== DESKTOP ===== */
+
 @media (min-width: 768px) {
+  .header__toggle {
+    display: none;
+  }
+
+  .header__nav {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: none;
+    background: transparent;
+  }
+
   .header__menu {
     flex-direction: row;
     gap: 3rem;
@@ -587,14 +601,13 @@ body.menu-open {
 
   .header__menu a {
     font-size: 1.1rem;
-    position: relative;
   }
 
   .header__menu a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -6px;
     width: 0;
     height: 2px;
     background: #222;
@@ -603,6 +616,199 @@ body.menu-open {
 
   .header__menu a:hover::after {
     width: 100%;
+  }
+}
+
+/* ===============================
+   HERO SECTION
+=============================== */
+.hero-section {
+  position: relative;
+  /* Fioletowy gradient zbliżony do zdjęcia referencyjnego */
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(124, 245, 166, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(140, 120, 255, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #2b235a 0%, #1f1b3a 100%);
+  color: #fff;
+  overflow: hidden;
+  min-height: 90vh; /* Sekcja zajmie większość ekranu */
+  display: flex;
+  align-items: center; /* Centrowanie w pionie */
+}
+
+/* Kontener główny - Zmiana na Flex Column dla układu pionowego */
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Układamy tekst NAD sliderem */
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Odstęp między tekstem a galerią */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* ===============================
+   TYPOGRAFIA & TEXT (Góra)
+=============================== */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: sans-serif; /* Upewnij się, że masz ładny font np. Inter/Poppins */
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Opcjonalnie: Jeśli dodasz <span> w JSON, to będzie zielone */
+.hero-title span {
+  color: #98f9c3;
+}
+
+.hero-description {
+  text-align: center;
+  max-width: 600px; /* Szerszy opis dla lepszej czytelności */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7); /* Lekko szary dla kontrastu */
+  margin-bottom: 2.5rem;
+}
+
+/* ===============================
+   PRZYCISK (Zielona pastylka)
+=============================== */
+.hero-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #67fcaa; /* Miętowy zielony z referencji */
+  color: #1a1a2e; /* Ciemny tekst dla kontrastu */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px; /* Kształt pastylki */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  background-color: #7effab;
+}
+
+/* ===============================
+   SLIDER / GALERIA (Dół)
+=============================== */
+.hero-gallery {
+  width: 100%;
+  max-width: 1200px;
+  /* Efekt wyłaniania się z dołu (opcjonalny, pasuje do stylu modern) */
+  mask-image: linear-gradient(to bottom, transparent, black 5%, black 100%);
+}
+
+/* Stylizacja kart w sliderze */
+.gallery-item {
+  position: relative;
+  border-radius: 24px; /* Mocno zaokrąglone rogi jak w przykładzie */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  background: #2b235a; /* Tło karty zanim załaduje się zdjęcie */
+  min-height: 450px; /* Wysokość kart - ważne dla równego wyglądu */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Kluczowe: wypełnia kartę bez deformacji */
+  display: block;
+}
+
+/* Podpis na zdjęciu (gradient od dołu) */
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  pointer-events: none; /* Żeby kliknięcie w tekst też przesuwało slider */
+}
+
+.photo-caption__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+.photo-caption__date {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  display: block;
+}
+
+/* ===============================
+   RESPONSYWNOŚĆ
+=============================== */
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 30px 20px;
+    gap: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  /* Na mobilce karty mogą być niższe */
+  .gallery-item {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .gallery-item {
+    height: 300px;
+    border-radius: 16px;
+  }
+
+  .hero-btn {
+    width: 100%; /* Pełna szerokość przycisku na telefonie */
   }
 }
 
@@ -732,7 +938,7 @@ body.menu-open {
 
 /* ===== MASONRY GRID ===== */
 .masonry {
-  column-count: 3;
+  column-count: 4;
   column-gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -841,6 +1047,22 @@ body.menu-open {
 .lb-next {
   right: -70px; /* Poza zdjęciem */
 }
+.lb-counter {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  z-index: 10002;
+  pointer-events: none;
+}
 
 /* Dostosowanie do mobilnych (przyciski na krawędziach ekranu) */
 @media (max-width: 768px) {
@@ -860,6 +1082,10 @@ body.menu-open {
   }
   .lightbox img {
     max-height: 70vh;
+  }
+  .lb-counter {
+    top: 14px;
+    font-size: 0.8rem;
   }
 }
 
@@ -935,4 +1161,148 @@ body.menu-open {
 .cookie-banner p {
   margin: 0;
   font-size: 14px;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity0.8s ease, transform0.8s ease;
+}
+
+.animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- STYLE DLA STRON BŁĘDÓW (404, 500) --- */
+
+.error-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.error-container {
+  flex: 1; /* Rozciąga sekcję, by stopka była na dole */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.error-content {
+  max-width: 500px;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #e0e0e0; /* Bardzo jasny szary, subtelny */
+  margin-bottom: -1rem;
+  position: relative;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a; /* Twój główny kolor tekstu */
+}
+
+.error-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Style przycisków (dopasuj kolory do swojego brandu) */
+.btn-primary {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+/* Wizualny element po prawej stronie */
+.error-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15rem; /* Rozmiar ikony */
+  color: #f0f0f0;
+  animation: floatIcon 6s ease-in-out infinite;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+  .error-container {
+    flex-direction: column-reverse; /* Ikona nad tekstem lub pod */
+    text-align: center;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .error-visual {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+  }
+
+  .error-actions {
+    justify-content: center;
+  }
+
+  .error-code {
+    font-size: 5rem;
+  }
+
+  .error-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Subtelna animacja pływania ikony */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
