@@ -269,11 +269,13 @@ function setupEventListeners() {
 function handleCategoryFilter(category) {
   if (appState.isGalleryOpen) returnToPortfolio();
 
-  // Scroll do sekcji
-  CONFIG.dom.realizationsSection?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  // ZMIANA: Sprawdź szerokość ekranu (np. mniej niż 768px to mobile)
+  if (window.innerWidth < 768) {
+    CONFIG.dom.realizationsSection?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 
   // Przeładowanie portfolio z filtrem
   renderPortfolio(appState.projects, category);
