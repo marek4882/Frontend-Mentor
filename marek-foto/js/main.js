@@ -95,12 +95,29 @@ function renderHero(data) {
   // B. Renderowanie Slidera
   if (CONFIG.dom.heroSliderList) {
     const slidesHTML = data.sliderImages
-      .map(
-        (img) => `
+      .map((img, index) => {
+        // Sprawdzamy, czy to pierwszy slajd (index 0)
+        const isFirst = index === 0;
+
+        // Logika atrybutów dla wydajności:
+        // 1. fetchpriority="high" tylko dla pierwszego, reszta auto
+        // 2. loading="eager" dla pierwszego, reszta "lazy"
+        const priorityAttr = isFirst ? 'fetchpriority="high"' : "";
+        const loadingAttr = isFirst ? 'loading="eager"' : 'loading="lazy"';
+
+        return `
       <li class="splide__slide">
         <figure class="gallery-item">
           <div class="gallery-image-container">
-            <img src="${img.src}" alt="${img.alt}" class="gallery-image" />
+            <img 
+              src="${img.src}" 
+              alt="${img.alt}" 
+              class="gallery-image"
+              width="1365" 
+              height="2048"
+              ${priorityAttr}
+              ${loadingAttr}
+            />
           </div>
           <figcaption class="photo-caption">
             <p class="photo-caption__title">${img.caption}</p>
@@ -108,13 +125,13 @@ function renderHero(data) {
           </figcaption>
         </figure>
       </li>
-    `
-      )
+    `;
+      })
       .join("");
 
     CONFIG.dom.heroSliderList.innerHTML = slidesHTML;
 
-    // C. Uruchomienie Splide DOPIERO TERAZ (gdy slajdy są w HTML)
+    // C. Uruchomienie Splide
     initHeroSlider();
   }
 }
