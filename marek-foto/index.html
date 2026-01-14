@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marek-Foto</title>
+    <meta
+      name="description"
+      content="Profesjonalny fotograf z Krakowa. Fotografia ślubna, motoryzacyjna, portretowa i eventowa. Sprawdź portfolio i skontaktuj się."
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -19,6 +23,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -36,6 +41,7 @@
             class="header__toggle"
             aria-label="Otwórz menu"
             aria-expanded="false"
+            aria-controls="main-navigation"
           >
             <span></span>
             <span></span>
@@ -43,7 +49,12 @@
           </button>
 
           <!-- Navigation -->
-          <nav class="header__nav">
+          <nav
+            class="header__nav"
+            id="main-navigation"
+            role="navigation"
+            aria-label="Główna nawigacja"
+          >
             <ul class="header__menu">
               <li><a href="#home-section">Strona główna</a></li>
               <li><a href="#specializations-section">Specjalizacje</a></li>
@@ -54,160 +65,26 @@
         </div>
       </header>
 
-
-      <section class="container" id="home-section">
-        <div class="splide" id="ferrari-gallery">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <figure class="gallery-item">
-                  <div class="gallery-image-container">
-                    <img
-                      src="./assets/DSC05746.jpg"
-                      alt="Ferrari Roma - szczegóły wnętrza"
-                      class="gallery-image"
-                    />
-                  </div>
-                  <figcaption class="photo-caption">
-                    <p class="photo-caption__title">Ferrari Roma</p>
-                    <time datetime="2025-05-10" class="photo-caption__date"
-                      >10.05.2025</time
-                    >
-                  </figcaption>
-                </figure>
-              </li>
-
-              <!-- Additional slides for demonstration -->
-              <li class="splide__slide">
-                <figure class="gallery-item">
-                  <div class="gallery-image-container">
-                    <img
-                      src="./assets/DSC06572.jpg"
-                      alt="Ferrari Roma - tylne światła"
-                      class="gallery-image"
-                    />
-                  </div>
-                  <figcaption class="photo-caption">
-                    <p class="photo-caption__title">Ferrari Roma</p>
-                    <time datetime="2025-05-10" class="photo-caption__date"
-                      >10.05.2025</time
-                    >
-                  </figcaption>
-                </figure>
-              </li>
-
-              <li class="splide__slide">
-                <figure class="gallery-item">
-                  <div class="gallery-image-container">
-                    <img
-                      src="./assets/./DSC00117.jpg"
-                      alt="Ferrari Roma - kokpit"
-                      class="gallery-image"
-                    />
-                  </div>
-                  <figcaption class="photo-caption">
-                    <p class="photo-caption__title">Ferrari Roma</p>
-                    <time datetime="2025-05-10" class="photo-caption__date"
-                      >10.05.2025</time
-                    >
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
+      <section class="hero-section" id="home-section">
+        <div class="container hero-container">
+          <div class="hero-content" id="hero-text-container"></div>
+          <div class="hero-gallery">
+            <div class="splide" id="ferrari-gallery">
+              <div class="splide__track">
+                <ul class="splide__list" id="hero-slider-list"></ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Specializations-section -->
       <section class="container" id="specializations-section">
-        <h2 class="section-title">Moje specjalizacje fotograficzne</h2>
-        <div class="categories-grid">
-          <!-- Karta 1: Śluby -->
-          <div class="category-card">
-            <div class="category-image">
-              <img src="./assets/DJI_0118.jpg" alt="Fotografia ślubna" />
-            </div>
-            <div class="category-content">
-              <h3 class="category-title">Śluby</h3>
-              <p class="category-description">
-                Uwieczniam najpiękniejsze momenty z Waszego wyjątkowego dnia w
-                niepowtarzalny sposób.
-              </p>
-              <button class="category-btn" data-category="wedding">
-                Wybierz
-              </button>
-            </div>
-          </div>
-          <!-- Karta 2: Motoryzacja -->
-          <div class="category-card">
-            <div class="category-image">
-              <img src="./assets/DSC05746.jpg" alt="Fotografia motoryzacyjna" />
-            </div>
-            <div class="category-content">
-              <h3 class="category-title">Motoryzacja</h3>
-              <p class="category-description">
-                Profesjonalne sesje zdjęciowe pojazdów podkreślające ich
-                dynamikę i charakter.
-              </p>
-              <button class="category-btn" data-category="automotive">
-                Wybierz
-              </button>
-            </div>
-          </div>
-
-          <!-- Karta 4: Portrety -->
-          <div class="category-card">
-            <div class="category-image">
-              <img src="./assets/DSC05746.jpg" alt="Fotografia portretowa" />
-            </div>
-            <div class="category-content">
-              <h3 class="category-title">Portrety</h3>
-              <p class="category-description">
-                Piękne portrety oddające osobowość i charakter fotografowanej
-                osoby.
-              </p>
-              <button class="category-btn" data-category="portrait">
-                Wybierz
-              </button>
-            </div>
-          </div>
-          <!-- Karta 5: Natura -->
-          <div class="category-card">
-            <div class="category-image">
-              <img src="./assets/DSC05746.jpg" alt="Fotografia krajobrazowa" />
-            </div>
-            <div class="category-content">
-              <h3 class="category-title">Natura</h3>
-              <p class="category-description">
-                Zachwycające krajobrazy i majestatyczna natura uchwycona w
-                najlepszym świetle.
-              </p>
-              <button class="category-btn" data-category="nature">
-                Wybierz
-              </button>
-            </div>
-          </div>
-          <!-- Karta 6: Wydarzenia -->
-          <div class="category-card">
-            <div class="category-image">
-              <img src="./assets/DSC05746.jpg" alt="Fotografia eventowa" />
-            </div>
-            <div class="category-content">
-              <h3 class="category-title">Wydarzenia</h3>
-              <p class="category-description">
-                Profesjonalna obsługa fotograficzna imprez, konferencji i
-                eventów firmowych.
-              </p>
-              <button class="category-btn" data-category="events">
-                Wybierz
-              </button>
-            </div>
-          </div>
-        </div>
+        <h2 class="section-title">Specjalizacje fotograficzne</h2>
+        <div class="categories-grid" id="specializations-grid"></div>
       </section>
 
       <section class="container" id="realizations-section">
-        <h2 class="section-title">Moje realizacje</h2>
+        <h2 class="section-title">Realizacje</h2>
         <p class="section-subtitle">
           Zobacz wybrane projekty z mojego portfolio. Kliknij w kategorię, aby
           filtrować projekty.
