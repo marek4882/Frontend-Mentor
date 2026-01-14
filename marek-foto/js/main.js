@@ -230,6 +230,17 @@ function setupEventListeners() {
     if (e.target.classList.contains("category-btn")) {
       const category = e.target.dataset.category;
       handleCategoryFilter(category);
+
+      // Podświetlanie aktywnego przycisku w sekcji specjalizacji
+      CONFIG.dom.specializationsGrid
+        .querySelectorAll(".category-btn")
+        .forEach((btn) => btn.classList.remove("active"));
+      e.target.classList.add("active");
+
+      // Podświetlanie aktywnego przycisku w górnym menu filtrów
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.filter === category);
+      });
     }
   });
 
