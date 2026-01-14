@@ -352,6 +352,7 @@ function openLightbox(startIndex, images) {
   const prevBtn = lb.querySelector(".lb-prev");
   const nextBtn = lb.querySelector(".lb-next");
   const counterEl = lb.querySelector(".lb-counter");
+  const contentEl = lb.querySelector(".lightbox-content");
 
   const updateCounter = () => {
     counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
@@ -406,6 +407,47 @@ function openLightbox(startIndex, images) {
   closeBtn.focus();
 
   updateCounter();
+
+  /* =========================================
+     8. NOWOŚĆ: Obsługa gestów dotykowych (SWIPE)
+     ========================================= */
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const minSwipeDistance = 50; // Minimalna odległość w px, żeby uznać za swipe
+
+  // Zapisz punkt początkowy dotyku
+  contentEl.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+
+  // Zapisz punkt końcowy i sprawdź różnicę
+  contentEl.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    },
+    { passive: true }
+  );
+
+  function handleSwipe() {
+    const distance = touchStartX - touchEndX;
+
+    // Jeśli przesunięcie było większe niż 50px
+    if (Math.abs(distance) > minSwipeDistance) {
+      if (distance > 0) {
+        // Swipe w lewo (palec idzie w lewo -> następne zdjęcie)
+        showImage(currentIndex + 1);
+      } else {
+        // Swipe w prawo (palec idzie w prawo -> poprzednie zdjęcie)
+        showImage(currentIndex - 1);
+      }
+    }
+  }
 }
 
 /* ===============================
