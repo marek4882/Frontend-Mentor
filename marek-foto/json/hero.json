@@ -5,22 +5,22 @@
   "ctaLink": "#realizations-section",
   "sliderImages": [
     {
-      "src": "./assets/img/automotive/2025-10-01-Ferrari-Roma/DSC01310.jpg",
-      "alt": "Ferrari Roma - Detal wnętrza",
-      "caption": "BMW M4",
-      "date": "10.05.2025"
+      "src": "./assets/img/automotive/2025-06-29-Ford-GT-1/Ford-GT-1_Cover.webp",
+      "alt": "Ford GT 1",
+      "caption": "Ford GT 1",
+      "date": "29.06.2025"
     },
     {
-      "src": "./assets/img/automotive/2025-10-01-Ferrari-Roma/DSC01310.jpg",
-      "alt": "Ferrari Roma - Tył",
-      "caption": "Ferrari Roma",
-      "date": "10.05.2025"
-    },
-   {
-      "src": "./assets/img/automotive/2025-10-01-Ferrari-Roma/DSC01310.jpg",
-      "alt": "Ferrari Roma - Detal wnętrza",
-      "caption": "BMW M4",
-      "date": "10.05.2025"
+       "src": "./assets/img/automotive/Ultrace/ultrace.webp",
+       "alt": "Chevrolet Corvette C8",
+       "caption": "Chevrolet Corvette C8",
+       "date": "29.06.2025"
+     },
+    {
+      "src": "./assets/img/automotive/Speedland/speedland.webp",
+      "alt": "Nissan GTR",
+      "caption": "Nissan GTR",
+      "date": "10.07.2025"
     }
   ]
 }
