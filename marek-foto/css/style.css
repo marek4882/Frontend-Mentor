@@ -199,6 +199,9 @@ section,
 }
 
 .portfolio-item {
+  display: flex; /* Włącza Flexbox */
+  flex-direction: column; /* Układa elementy jeden pod drugim */
+  height: 100%;
   background: white;
   border-radius: 8px;
   overflow: hidden;
@@ -228,6 +231,9 @@ section,
 }
 
 .portfolio-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 20px;
 }
 
@@ -245,11 +251,56 @@ section,
   color: #222;
 }
 
+.portfolio-description-container {
+  position: relative;
+}
+
 .portfolio-description {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
   line-height: 1.6;
+  color: #555;
+}
+
+/* Obcięty tekst (3 linie) */
+.portfolio-description.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Rozwinięty tekst */
+.portfolio-description.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+/* Przycisk "Rozwiń/Zwiń" - teraz poza paragrafem */
+.desc-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #444;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  margin-top: -4px; /* Przybliż do tekstu */
+}
+
+.desc-toggle:hover {
+  color: #444;
+  text-decoration: underline;
+}
+
+.desc-toggle:focus {
+  outline: 2px solid #222;
+  outline-offset: 2px;
+}
+
+.desc-toggle[hidden] {
+  display: none;
 }
 
 .testimonial {

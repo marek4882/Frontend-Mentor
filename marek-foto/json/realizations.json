@@ -5,13 +5,9 @@
     "title": "Ślub Krzysiek i Barbara",
     "shortDescription": "Urzekająca ceremonia w rustykalnym stylu w otoczeniu natury. Piękne momenty, wzruszające gesty i radosne chwile.",
     "fullDescription": "Magiczna ceremonia ślubna Krzyśka i Barbary odbyła się w przepięknej scenerii rustykalnego dworu otoczonego dziewiczą naturą. Para młoda zdecydowała się na kameralne wesele w gronie najbliższych rodziny i przyjaciół. Ceremonia rozpoczęła się o złotej godzinie, kiedy promienie słońca idealnie oświetlały miejsce ceremonii. Każdy moment tego wyjątkowego dnia został uchwycony z wyjątkową dbałością o detale - od przygotowań panny młodej, poprzez wzruszające przyrzeczenia, aż po szalone tańce do białego rana.",
-    "mainImage": "./assets/DJI_0118.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/DJI_0118.jpg",
-      "./assets/DJI_0118.jpg",
-      "./assets/DJI_0118.jpg",
-      "./assets/DJI_0118.jpg",
-      "./assets/DJI_0118.jpg"
+    
     ],
     "testimonial": {
       "text": "Zdjęcia przeszły nasze najśmielsze oczekiwania! Każda emocja i każdy ważny moment zostały uchwycone w idealny sposób. Te fotografie to najpiękniejsza pamiątka z najważniejszego dnia w naszym życiu.",
@@ -27,12 +23,9 @@
     "title": "Ślub Anny i Michała",
     "shortDescription": "Romantyczna ceremonia w stylu vintage z wspaniałymi dekoracjami kwiatowymi.",
     "fullDescription": "Anna i Michał wybrali dla swojego ślubu klimat vintage, który idealnie odzwierciedlał ich osobowości. Ceremonia odbyła się w zabytkowym kościele, a przyjęcie weselne w eleganckim pałacu z początku XX wieku. Dekoracje kwiatowe w pastelowych kolorach, antyczne meble i romantyczne oświetlenie świecami stworzyły niepowtarzalną atmosferę. Szczególnie zapadły w pamięć pierwsze spojrzenie pary młodej oraz wzruszające przemówienie ojca panny młodej.",
-    "mainImage": "./assets/wedding-anna-main.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/wedding-anna-1.jpg",
-      "./assets/wedding-anna-2.jpg",
-      "./assets/wedding-anna-3.jpg",
-      "./assets/wedding-anna-4.jpg"
+
     ],
     "testimonial": {
       "text": "Marek uchwycił magię naszego dnia w sposób, którego nigdy nie zapomnimy. Każde zdjęcie opowiada historię i budzi piękne wspomnienia.",
@@ -48,7 +41,7 @@
     "title": "Ferrari LaFerrari",
     "shortDescription": "Profesjonalna sesja zdjęciowa włoskiego supersamochodu o mocy 963 KM. Dynamiczne ujęcia podkreślające linię i charakter pojazdu.",
     "fullDescription": "Sesja fotograficzna Ferrari LaFerrari była prawdziwym wyzwaniem technicznym i artystycznym. Ten wyjątkowy supersamochód, będący flagowym modelem Ferrari, zasługiwał na odpowiednie podejście fotograficzne. Sesja odbyła się w kilku lokalizacjach - od industrialnych hal, poprzez górskie serpentyny, aż po nowoczesną architekturę miasta. Wykorzystałem różnorodne techniki fotograficzne, aby podkreślić aerodynamiczne linie pojazdu, jego agresywny charakter oraz luksusowe wykończenie wnętrza. Szczególny nacisk położyłem na dynamiczne ujęcia pokazujące samochód w ruchu.",
-    "basePath": "./assets/photography/automotive/2025-10-01-Ferrari-Roma/",
+    "basePath": "./assets/img/automotive/2025-10-01-Ferrari-Roma/",
     "mainImage": "DSC01365.jpg",
     "images": [
       "DSC01365.jpg",
@@ -72,12 +65,9 @@
     "title": "Apartament Central Park",
     "shortDescription": "Luksusowy apartament w centrum miasta. Sesja zdjęciowa wnętrz z wykorzystaniem naturalnego światła i kompozycji podkreślających przestrzeń.",
     "fullDescription": "Apartament Central Park to wyjątkowa nieruchomość zlokalizowana w sercu miasta z przepięknym widokiem na park. Sesja fotograficzna została zaplanowana tak, aby maksymalnie wykorzystać naturalne światło wpadające przez panoramiczne okna. Każde pomieszczenie zostało sfotografowane w najlepszym oświetleniu, podkreślając przestronność, wysokiej klasy wykończenie oraz designerskie rozwiązania. Szczególną uwagę poświęciłem salonowi z kominkiem, nowoczesnej kuchni oraz luksusowej łazience z wanną wolnostojącą.",
-    "mainImage": "./assets/apartment-central-main.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/apartment-central-1.jpg",
-      "./assets/apartment-central-2.jpg",
-      "./assets/apartment-central-3.jpg",
-      "./assets/apartment-central-4.jpg"
+     
     ],
     "testimonial": {
       "text": "Po opublikowaniu tych zdjęć na portalu nieruchomości, apartament sprzedał się w ciągu tygodnia! Fotografie idealnie podkreśliły wszystkie atuty mieszkania, pokazując jego przestrzeń i światło.",
@@ -93,12 +83,9 @@
     "title": "Sesja portretowa Julii",
     "shortDescription": "Naturalna sesja portretowa w miejskiej scenerii. Uchwycenie osobowości i naturalnego piękna modelki.",
     "fullDescription": "Julia zgłosiła się do mnie z potrzebą profesjonalnych zdjęć portretowych. Chciała uchwycić swoją naturalną osobowość w miejskiej scenerii. Sesja odbywała się w kilku lokalizacjach - od nowoczesnych biurowców, poprzez zabytkowe uliczki, aż po kolorowe murale w dzielnicy artystycznej. Skupiłem się na naturalnych emocjach i autentycznych reakcjach, rezygnując z sztucznego pozowania. Wykorzystałem naturalne światło oraz miejskie refleksy, aby stworzyć dynamiczne i żywe portrety oddające charakter Julii.",
-    "mainImage": "./assets/portrait-julia-main.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/portrait-julia-1.jpg",
-      "./assets/portrait-julia-2.jpg",
-      "./assets/portrait-julia-3.jpg",
-      "./assets/portrait-julia-4.jpg"
+     
     ],
     "testimonial": {
       "text": "Nigdy nie lubiłam swoich zdjęć, ale te portrety zmieniły moje podejście. Czułam się komfortowo podczas całej sesji, a efekt końcowy przeszedł moje oczekiwania. Dziękuję!",
@@ -114,14 +101,9 @@
     "title": "Tatry o wschodzie słońca",
     "shortDescription": "Projekt fotograficzny przedstawiający najpiękniejsze szczyty Tatr w magicznym świetle poranka. 14 dni wędrówek po górach.",
     "fullDescription": "Ten projekt był jednym z najbardziej wymagających w mojej karierze. Przez 14 dni wędrował po tatrzańskich szlakach, aby uchwycić najpiękniejsze szczyty w magicznym świetle wschodzącego słońca. Każdy dzień rozpoczynał się o 4:00 rano, aby dotrzeć na punkt obserwacyjny przed wschodem słońca. Warunki pogodowe były różnorodne - od mglistych poranków, przez czyste niebo, aż po dramatyczne chmury. Efektem jest seria fotografii pokazujących majestat Tatr w różnych nastrojach i oświetleniach, od delikatnego różowego światła alpenglow po dramatyczne kontrasty cieni i światła.",
-    "mainImage": "./assets/tatry-sunrise-main.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/tatry-sunrise-1.jpg",
-      "./assets/tatry-sunrise-2.jpg",
-      "./assets/tatry-sunrise-3.jpg",
-      "./assets/tatry-sunrise-4.jpg",
-      "./assets/tatry-sunrise-5.jpg",
-      "./assets/tatry-sunrise-6.jpg"
+     
     ],
     "testimonial": {
       "text": "Ogromny panoramiczny wydruk zawisł w naszym salonie i wzbudza zachwyt każdego gościa. Jedno zdjęcie, a pozwala nam codziennie przenosić się w góry!",
@@ -137,13 +119,9 @@
     "title": "Konferencja Tech Summit",
     "shortDescription": "Kompleksowa obsługa fotograficzna międzynarodowej konferencji technologicznej. Zdjęcia z prezentacji, networkingu i części warsztatowej.",
     "fullDescription": "Tech Summit 2024 była największą konferencją technologiczną w regionie, gromadząc ponad 500 uczestników z całego świata. Moja rola obejmowała kompleksową obsługę fotograficzną całego wydarzenia - od zdjęć prelegentów podczas prezentacji, poprzez dokumentowanie sesji networkingowych, aż po warsztaty i panele dyskusyjne. Szczególnym wyzwaniem było uchwycenie dynamiki wydarzenia przy różnorodnym oświetleniu sal konferencyjnych. Dostarczyłem ponad 200 wyselekcjonowanych zdjęć w ciągu 24 godzin po zakończeniu wydarzenia.",
-    "mainImage": "./assets/tech-summit-main.jpg",
+    "mainImage": "",
     "images": [
-      "./assets/tech-summit-1.jpg",
-      "./assets/tech-summit-2.jpg",
-      "./assets/tech-summit-3.jpg",
-      "./assets/tech-summit-4.jpg",
-      "./assets/tech-summit-5.jpg"
+    
     ],
     "testimonial": {
       "text": "Profesjonalna obsługa i imponujące efekty! Zdjęcia z naszej konferencji doskonale oddają jej atmosferę i energię. Szczególnie doceniam dyskretną obecność fotografa i szybki czas dostarczenia materiałów.",

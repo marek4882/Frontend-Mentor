@@ -17,28 +17,28 @@
     "id": "portrait",
     "title": "Portrety",
     "description": "Piękne portrety oddające osobowość i charakter fotografowanej osoby.",
-    "image": "assets/portrait-julia-main.jpg",
+    "image": "",
     "btnText": "Zobacz realizacje"
   },
   {
     "id": "nature",
     "title": "Natura",
     "description": "Zachwycające krajobrazy i majestatyczna natura uchwycona w najlepszym świetle.",
-    "image": "assets/tatry-sunrise-main.jpg",
+    "image": "",
     "btnText": "Zobacz realizacje"
   },
   {
     "id": "events",
     "title": "Wydarzenia",
     "description": "Profesjonalna obsługa fotograficzna imprez, konferencji i eventów firmowych.",
-    "image": "assets/tech-summit-main.jpg",
+    "image": "",
     "btnText": "Zobacz realizacje"
   },
    {
     "id": "realestate",
     "title": "Nieruchomości",
     "description": "Zdjęcia wnętrz, które sprzedają. Przestrzeń, światło i design.",
-    "image": "assets/apartment-central-main.jpg",
+    "image": "",
     "btnText": "Zobacz realizacje"
   }
 ]
