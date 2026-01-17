@@ -48,8 +48,7 @@
     "id": "portrait-1",
     "category": "portrait",
     "title": "EXPO FotoPlus",
-    "shortDescription": "Nowoczesny samochód wyścigowy Ford GT z turbodoładowaniem, agresywną aerodynamiką i zawieszeniem H&R.",
-    "fullDescription": "Nowoczesny samochód wyścigowy Ford GT z turbodoładowaniem, agresywną aerodynamiką i zawieszeniem H&R. Ten samochód wyścigowy kontynuuje wyścigowe dziedzictwo Forda, oferując nowoczesną inżynierię i osiągi zorientowane na tor.",
+    "shortDescription": "Zestaw artystycznych portretów studyjnych o zróżnicowanej kolorystyce i klimacie z wydarzenia FotoPlus",
     "basePath": "./assets/img/portrait/",
     "mainImage": "DSC03686.webp",
     "images": [
